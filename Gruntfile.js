@@ -5,52 +5,33 @@ var profiles = require('./profiles');
 module.exports = function(grunt) {
     'use strict';
 
-    var target = grunt.option('target') || '*';
-    var theme  = grunt.option('theme') || '*';
-    var profile  = grunt.option('profile');
-
-    if (!profile) {
-        throw new Error('Please select a profile: grunt compile -profile={PROFILE}');
-    }
-
-    if (!profiles[profile]) {
-        throw new Error('Unknow profile ' + profile + ', please check your profiles.js');
-    }
-
-    var src = profiles[profile].src;
-    var dest = profiles[profile].dest;
+    var profile = getSelectedProfile(grunt);
 
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-
-        pkg    : grunt.file.readJSON('package.json'),
-        target : target,
-        theme  : theme,
-        style  : grunt.option('style') || 'compressed',
+        pkg: grunt.file.readJSON('package.json'),
 
         clean : {
             options: {
                 force: true
             },
-            sass : [dest]
+            sass : [profile.dest]
         },
 
         sass : {
             options: {
                 noCache: true,
                 unixNewlines : true,
-                loadPath : [src],
-                lineNumbers : false,
-                style : '<%=style%>'
+                lineNumbers : false
             },
             compile : {
                 files: [{
                     expand: true,
-                    cwd: src,
-                    src: ['themes/<%=target%>/<%=theme%>/theme.scss', '!themes/<%=target%>/_common/theme.scss'],
-                    dest: dest,
+                    cwd: profile.src,
+                    src: ['themes/*/*/theme.scss', '!themes/*/_common/theme.scss'],
+                    dest: profile.dest,
                     ext : '.css'
                 }]
             }
@@ -58,7 +39,7 @@ module.exports = function(grunt) {
 
         watch: {
             sass : {
-                files : ['scss/**/*.scss'],
+                files : [profile.src + '/**/*.scss'],
                 tasks : ['sass:compile', 'notify:sass'],
                 options : {
                     debounceDelay : 500,
@@ -108,6 +89,19 @@ module.exports = function(grunt) {
             }
         }
     });
+
+    function getSelectedProfile(grunt) {
+        var profile = grunt.option('profile');
+
+        //todo: define a default behaviour with scss and dist folders ?
+        if (!profile) {
+            throw new Error('Please select a profile: grunt compile -profile={PROFILE}');
+        }
+        if (!profiles[profile]) {
+            throw new Error('Unknow profile ' + profile + ', please check your profiles.js');
+        }
+        return profiles[profile];
+    }
 
     grunt.registerTask('compile', "Compile themes", ['clean:sass', 'sass:compile']);
     grunt.registerTask('dev', "Develop themes", ['compile', 'connect:dev', 'open:dev', 'watch:sass']);
