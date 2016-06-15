@@ -1,5 +1,5 @@
 var fs = require('fs');
-var through = require('through2');
+
 var profiles = require('./profiles.json');
 
 module.exports = function(grunt) {
@@ -55,38 +55,6 @@ module.exports = function(grunt) {
                     message: 'Sass files compiled'
                 }
             }
-        },
-
-        connect : {
-            dev : {
-                options: {
-                    base : '.',
-                    host : '<%=pkg.config.host%>',
-                    port : '<%=pkg.config.port%>',
-                    livereload : true,
-                    middleware: function(connect, options, middlewares) {
-                        middlewares.unshift(function indexHtml(req, res, next){
-                            if(/index\.html$/.test(req.url)){
-
-                                return fs.createReadStream('test/index.html')
-                                  .pipe(through(function(chunk, enc, done){
-                                        done(null, chunk.toString().replace('{{target}}', target).replace('{{theme}}', theme));
-                                  }))
-                                  .pipe(res);
-                            }
-                            return next();
-                        });
-                        return middlewares;
-                    }
-                }
-            }
-        },
-
-        open : {
-            dev : {
-                path : 'http://<%=pkg.config.host%>:<%=pkg.config.port%>/test/index.html',
-                app : '<%=pkg.config.browser%>'
-            }
         }
     });
 
@@ -104,5 +72,4 @@ module.exports = function(grunt) {
     }
 
     grunt.registerTask('compile', "Compile themes", ['clean:sass', 'sass:compile']);
-    grunt.registerTask('dev', "Develop themes", ['compile', 'connect:dev', 'open:dev', 'watch:sass']);
 };
