@@ -1,6 +1,6 @@
 var fs = require('fs');
 var through = require('through2');
-var profiles = require('./profiles');
+var profiles = require('./profiles.json');
 
 module.exports = function(grunt) {
     'use strict';
