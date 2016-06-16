@@ -1,19 +1,21 @@
 var fs = require('fs');
-var allProfiles;
-
-try {
-    allProfiles = require('./profiles.json');
-} catch (e) {
-    grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
-}
 
 module.exports = function(grunt) {
     'use strict';
 
-    var profile = getSelectedProfile(grunt);
+    var allProfiles;
+    var profile;
 
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
+
+    try {
+        allProfiles = require('./profiles.json');
+    } catch (err) {
+        grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
+    }
+
+    profile = getSelectedProfile(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
