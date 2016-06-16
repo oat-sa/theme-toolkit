@@ -1,8 +1,8 @@
 var fs = require('fs');
-var profiles;
+var allProfiles;
 
 try {
-    profiles = require('./profiles.json');
+    allProfiles = require('./profiles.json');
 } catch (e) {
     throw new Error('no profiles.json found. Please copy and customize profiles.json.dist');
 }
@@ -10,7 +10,7 @@ try {
 module.exports = function(grunt) {
     'use strict';
 
-    var profile = getSelectedProfile(grunt);
+    var profile = getSelectedProfile(grunt.option('p'));
 
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
@@ -18,42 +18,43 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        clean : {
+        clean: {
             options: {
                 force: true
             },
-            sass : [profile.dest]
+            sass: [profile.dest]
         },
 
-        sass : {
+        sass: {
             options: {
                 noCache: true,
-                unixNewlines : true,
-                lineNumbers : false
+                unixNewlines: true,
+                lineNumbers: false,
+                style: 'compressed'
             },
-            compile : {
+            compile: {
                 files: [{
                     expand: true,
                     cwd: profile.src,
                     src: ['themes/*/*/theme.scss', '!themes/*/_common/theme.scss'],
                     dest: profile.dest,
-                    ext : '.css'
+                    ext: '.css'
                 }]
             }
         },
 
         watch: {
-            sass : {
-                files : [profile.src + '/**/*.scss'],
-                tasks : ['sass:compile', 'notify:sass'],
-                options : {
-                    debounceDelay : 500,
-                    livereload : true
+            sass: {
+                files: [profile.src + '/**/*.scss'],
+                tasks: ['sass:compile', 'notify:sass'],
+                options: {
+                    debounceDelay: 500,
+                    livereload: true
                 }
             }
         },
 
-        notify : {
+        notify: {
             sass: {
                 options: {
                     title: '<%=pkg.description%>',
@@ -63,17 +64,15 @@ module.exports = function(grunt) {
         }
     });
 
-    function getSelectedProfile(grunt) {
-        var profile = grunt.option('p');
-
+    function getSelectedProfile(profile) {
         //todo: define a default behaviour with scss and dist folders ?
         if (!profile) {
             throw new Error('Please select a profile: grunt compile -p={PROFILE}');
         }
-        if (!profiles[profile]) {
-            throw new Error('Unknow profile ' + profile + ', please check your profiles.js');
+        if (!allProfiles[profile]) {
+            throw new Error('Unknown profile ' + profile + '');
         }
-        return profiles[profile];
+        return allProfiles[profile];
     }
 
     grunt.registerTask('compile', "Compile themes", ['clean:sass', 'sass:compile']);
