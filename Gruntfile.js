@@ -64,7 +64,6 @@ module.exports = function(grunt) {
     });
 
     function getSelectedProfile(profile) {
-        //todo: define a default behaviour with scss and dist folders ?
         if (!profile) {
             throw new Error('Please select a profile: grunt compile -p={PROFILE}');
         }
@@ -74,5 +73,6 @@ module.exports = function(grunt) {
         return allProfiles[profile];
     }
 
-    grunt.registerTask('compile', "Compile themes", ['clean:sass', 'sass:compile']);
+    grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
+    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
 };
