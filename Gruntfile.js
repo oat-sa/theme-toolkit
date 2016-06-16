@@ -1,6 +1,11 @@
 var fs = require('fs');
+var profiles;
 
-var profiles = require('./profiles.json');
+try {
+    profiles = require('./profiles.json');
+} catch (e) {
+    throw new Error('no profiles.json found. Please copy and customize profiles.json.dist');
+}
 
 module.exports = function(grunt) {
     'use strict';
@@ -59,11 +64,11 @@ module.exports = function(grunt) {
     });
 
     function getSelectedProfile(grunt) {
-        var profile = grunt.option('profile');
+        var profile = grunt.option('p');
 
         //todo: define a default behaviour with scss and dist folders ?
         if (!profile) {
-            throw new Error('Please select a profile: grunt compile -profile={PROFILE}');
+            throw new Error('Please select a profile: grunt compile -p={PROFILE}');
         }
         if (!profiles[profile]) {
             throw new Error('Unknow profile ' + profile + ', please check your profiles.js');
