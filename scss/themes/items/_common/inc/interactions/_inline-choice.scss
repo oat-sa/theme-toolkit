@@ -1,0 +1,31 @@
+////
+/// TAO CSS SDK
+/// QTI inline choice interaction
+/// @see http://select2.github.io/
+/// @group Item interactions
+////
+
+/// Note: The inline choice interaction is based on select2. Not all
+/// parts of select2 are located inside .qti-item
+/// For these parts refer to ./_outside-item-scope.scss
+
+.qti-inlineChoiceInteraction {
+    &.select2-container-active {
+    }
+    .select2-choice {
+        .select2-chosen {
+        }
+        .select2-arrow {
+            b {
+                &:before {
+                }
+                &:hover {
+                }
+            }
+        }
+    }
+    &.select2-dropdown-open {
+        .select2-choice {
+        }
+    }
+}

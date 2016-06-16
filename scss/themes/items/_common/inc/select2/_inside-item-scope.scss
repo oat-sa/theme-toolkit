@@ -1,0 +1,31 @@
+////
+/// TAO CSS SDK
+/// Select2, all item themes
+/// @group Item Forms
+////
+
+/// Select boxes in items are likely to be inline-choice interactions. In this case
+/// it would be better to edit interactions/_inline-choice.scss instead.
+
+/// Note: not all parts of select2 are located inside .qti-item
+/// For these parts refer to ./_outside-item-scope.scss
+.select2-container {
+    &.select2-container-active{
+    }
+    .select2-choice {
+        .select2-chosen {
+        }
+        .select2-arrow {
+            b {
+                &:before {
+                }
+                &:hover {
+                }
+            }
+        } 
+    }
+    &.select2-dropdown-open {
+        .select2-choice {
+        }
+    }
+}

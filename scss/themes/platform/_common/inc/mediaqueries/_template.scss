@@ -1,0 +1,14 @@
+////
+/// TAO CSS SDK
+/// Media query template
+/// @see http://tinyurl.com/using-media-queries to understand the concept of media queries
+/// Note that variables are not available in the scope of a media query, though functions and mixins are.
+/// @group Item media queries
+////
+
+@media /* your rules go here */ {
+    html {
+        body {
+        }
+    }
+}

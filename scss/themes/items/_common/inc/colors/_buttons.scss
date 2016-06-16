@@ -1,0 +1,12 @@
+////
+/// TAO CSS SDK
+/// Color definitions all item themes
+/// @group Item Colors - Buttons
+////
+
+$btnColors : (
+    'error': map-get($signalColors, 'error'),
+    'info': map-get($signalColors, 'info'),
+    'success': map-get($signalColors, 'success'),
+    'warning': map-get($signalColors, 'warning')
+);

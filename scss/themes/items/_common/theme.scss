@@ -1,0 +1,75 @@
+////
+/// TAO CSS SDK
+/// Generic item theme
+/// @group Item themes
+////
+
+/// include @font-face declarations here
+@import './inc/font-face';
+
+/// The cascade html body div.qti-item is meant to make sure that all style modifications affect
+/// the item only.
+/// Warning: Any style that is applied outside the item scope can influence the look of the whole
+/// platform! Handle those cases with great care and test them well!
+html {
+    body {        
+        &.tao-item-scope {            
+            /// Outside the item scope - read the warning above!
+        }
+        div.qti-item {
+
+            // Generic HTML elements, CSS classes and such
+            @import './inc/generic';
+
+            /// Generic imports
+            /// These files will cover the most common scenarios. If you need to take your modifications even
+            /// further browse through https://github.com/oat-sa/tao-core/tree/develop/views/scss/inc.
+            /// Essentially you can copy each file from there to here and modify it as needed.
+            @import './inc/select2/inside-item-scope';
+            @import './inc/table';
+            @import './inc/feedback';
+            @import './inc/buttons';
+
+            /// These files are already pre-filled with values. Comment them in only if you really need them.
+            //@import './inc/forms';
+
+            /// This applies to all interactions
+            @import './inc/interactions/all-interactions';
+
+            /// These apply to specific interactions
+            @import './inc/interactions/associate';
+            @import './inc/interactions/choice';
+            @import './inc/interactions/extended-text';
+            @import './inc/interactions/gap-match';
+            @import './inc/interactions/graphic';
+            @import './inc/interactions/graphic-gap';
+            @import './inc/interactions/graphic-order';
+            @import './inc/interactions/hottext';
+            @import './inc/interactions/inline-choice';
+            @import './inc/interactions/match';
+            @import './inc/interactions/media';
+            @import './inc/interactions/order';
+            @import './inc/interactions/rubric-block';
+            @import './inc/interactions/slider';
+            @import './inc/interactions/text-entry';
+            @import './inc/interactions/upload';
+
+            &.runtime {
+                /// styles/imports not used in authoring
+            }
+        }
+    }
+}
+
+
+/// Everything below here is outside the item scope - read the warning above!
+
+/// Select2 and maybe other frameworks have some parts that are outside the item,
+/// usually directly attached to the document body
+@import './inc/select2/outside-item-scope';
+
+/// Media queries also need to be done outside the item scope.
+/// @see ./inc/mediaqueries/template.scss
+/// This example targets IE 10+
+@import './inc/mediaqueries/ie10+';
+@import './inc/mediaqueries/print';

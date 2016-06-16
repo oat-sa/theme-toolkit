@@ -1,0 +1,116 @@
+////
+/// TAO CSS SDK
+/// Tables, all themes
+/// @group Item Assets
+////
+
+/// ::input
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+
+    &.disabled, &[disabled] {
+    }
+
+    &.readonly, &[readonly] {
+    }
+
+    &:focus {
+    }
+}
+
+
+// checkboxes and radio buttons
+
+label {
+    [class^="icon-checkbox"],
+    [class*=" icon-checkbox"] {
+        &:after {
+        }
+    }
+    [class^="icon-radio"],
+    [class*=" icon-radio"] {
+        &:after {
+        }
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        &:after {
+        }
+        &:before {
+        }
+    }
+
+    &:hover {
+        .icon-checkbox,
+        .icon-radio {
+            &:after {
+            }
+        }
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        &:focus, &.active {
+            & ~ [class^="icon-"], & ~ [class^="icon-"] {
+            }
+        }
+        &:checked {
+            & ~ .icon-checkbox, & ~ .icon-radio {
+                &:before {
+                }
+            }
+            & ~ .icon-checkbox:before { 
+            }
+            & ~ .icon-checkbox.cross::before {
+            } 
+            & ~ .icon-radio:before {  
+            }
+        }    
+
+        &:focus {
+            & ~ .icon-checkbox,
+            & ~ .icon-checkbox-crossed,
+            & ~ .icon-radio { 
+                &::after {  
+                }
+            }
+        }
+        &.disabled, &[disabled], &[readonly] {
+            & ~[class^="icon-"],
+            & ~[class*=" icon-"]{
+                &::after {
+                }
+            }
+        }
+    }
+}
+
+.pseudo-label-box {
+    & > label {
+        & + div {
+
+        }
+    }
+    &:hover {
+        .icon-checkbox,
+        .icon-radio {
+            &:after {
+            }
+        }
+    }
+}

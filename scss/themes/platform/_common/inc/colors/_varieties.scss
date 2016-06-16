@@ -1,0 +1,25 @@
+////
+/// TAO CSS SDK
+/// Color varieties all platform themes
+/// @group Item Colors - Varieties
+////
+
+/// Formulas to compute color variations
+/// - fn: any custom, build-in or CSS-function to convert base color
+/// - args: list of arguments to pass to above function
+/// - () means no transformation
+/// Override rules for your theme in your-theme/inc/colors/_varieties.scss:$themeColorVarieties
+$colorVarieties: (
+    menu: (
+        bg: (),
+        text: (fn: rgba, args: (.85)),
+        active-bg: (),
+        hover-bg: (fn: rgba, args: (.5)),
+        active-text: (fn: rgba, args: (1)),
+        hover-text: (fn: rgba, args: (1)),
+        separator-text: (fn: rgba, args: (.8)),
+    ),
+    tab: (
+        active-border: (fn: whiten, args: (.8)),
+    )
+);

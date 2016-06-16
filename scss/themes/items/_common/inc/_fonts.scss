@@ -1,0 +1,15 @@
+////
+/// TAO CSS SDK
+/// Fonts, all item themes
+/// Note, that font-face declarations must be made in _font-face.scss
+/// @group Item fonts
+////
+
+/// Font used for the whole item
+$regularFont: Verdana, Geneva, sans-serif;
+
+/// Font used for headings
+$headingFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/// Font used in elements such as `<pre>` or `<code>`
+$monospaceFont: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter','Courier New', monospace;

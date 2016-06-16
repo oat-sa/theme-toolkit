@@ -1,0 +1,39 @@
+////
+/// TAO CSS SDK
+/// Color definitions, all item themes
+/// @group Item Colors
+////
+
+@import './varieties';
+@import '../../../../_common/mixins';
+
+/// Item text color
+$textColor: rgb(34,34,34);
+
+/// Item background color
+$itemBg: rgb(255,255,255);
+
+/// Transparent white overlay
+$transWhiteBg: white(.26);
+
+/// Transparent black overlay
+$transBlackBg: black(.04);
+
+/// Borders
+$borderColor: rgba($textColor,.22);
+
+/// Shadows
+$boxShadowColor: rgba($textColor,.17);
+
+// Feedback and Buttons, can individually be overridden in colors/feedback | colors/buttons
+$signalColors : (
+    'error': '',
+    'info': '',
+    'success': '',
+    'warning': ''
+);
+
+@import './forms';
+@import './feedback';
+@import './buttons';
+@import './tables';

@@ -1,0 +1,34 @@
+////
+/// TAO CSS SDK
+/// Media query which targets smaller screens (back end only)
+/// @group Item media queries
+////
+
+@media (max-width: 1024px) {
+    html {
+        body {
+            &:not(.delivery-scope){
+                @include theme-mobile-navi($menuActiveBg, $menuActiveText);
+            }
+            &.oversized-nav {
+                &:not(.delivery-scope) {
+                    .dark-bar {
+                        nav {
+                            .settings-menu {
+                                .reduced-menu-trigger {
+                                    &:hover {
+                                        // should be in main TAO code by now but still useful on projects prior to April 2016
+                                        // -webkit-transition: none;
+                                        // transition: none;
+                                        // transition-delay: initial;
+                                        // opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+////
+/// TAO CSS SDK
+/// Buttons, all item themes
+/// @group Item Assets
+////
+
+[class^="btn-"], [class*=" btn-"], .btn-default,
+button, input[type="submit"], input[type="reset"] {
+
+    &.small {
+    }
+
+    &:hover {
+    }
+
+    &:focus {
+    }
+
+    @each $btnType, $btnColor in $btnColors {
+        @if($btnColor != '') {
+            &#{'.btn-' + $btnType} {
+                $btnColorBg: colorVariation($btnColor, 'button', 'background');
+                $btnColorText: white;
+                background-color: $btnColor;
+                text-shadow: 1px 1px 0 autoTextShadowColor($btnColorBg, $btnColorText) !important;
+                color: $btnColorText !important;
+            }
+        }
+    }
+}
+

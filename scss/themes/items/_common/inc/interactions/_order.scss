@@ -1,0 +1,25 @@
+////
+/// TAO CSS SDK
+/// QTI order interaction
+/// @group Item interactions
+////
+
+.qti-orderInteraction {
+    .arrow-bar {
+    }
+
+    &.qti-vertical {
+    }
+
+    &.qti-horizontal {
+    }
+
+    .choice-area {
+        & > .qti-choice {
+        }
+    }
+    .result-area {
+        & > .qti-choice {
+        }
+    }
+}

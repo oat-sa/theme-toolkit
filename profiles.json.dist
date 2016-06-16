@@ -1,0 +1,16 @@
+{
+    Format:
+    =======
+    "profileId": {
+        "src": "path/to/scss/files"
+        "dest": "path/to/css/files"
+    }
+
+    Example:
+    ========
+    "unisa": {
+        "src": "/tao/package-eon/unisaTheme/views/scss",
+        "dest": "/tao/package-eon/unisaTheme/views/css"
+    }
+}
+

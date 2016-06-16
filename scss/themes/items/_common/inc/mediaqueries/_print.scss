@@ -1,0 +1,14 @@
+////
+/// TAO CSS SDK
+/// Media query for print
+/// @group Item media queries
+////
+
+@media print {
+    html {
+        body {
+            .qti-item {
+            }
+        }
+    }
+}

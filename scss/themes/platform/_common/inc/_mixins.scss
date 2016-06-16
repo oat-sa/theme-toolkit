@@ -1,0 +1,268 @@
+////
+/// TAO CSS SDK
+/// Functions and mixins, all platform themes
+/// These mixins are mostly conditionally and only generate code when they all arguments have values other than ''
+/// @group Themes
+////
+
+/// Create a custom loading bar
+/// @param {string} $loadingBarColor
+@mixin custom-loading-bar($loadingBarColor) {
+    @if($loadingBarColor != '') {
+        .loading-bar {
+            &.loading {
+                &:before {
+                    background: linear-gradient(to right, transparent 0%, $loadingBarColor 20%, $loadingBarColor 80%, transparent 100%);
+                    transform: translateZ(0);
+                }
+            }
+        }
+    }
+}
+
+
+/// Colorize header and footer - does NOT include navigation
+/// @param {string} $headerBg
+/// @param {string} $headerText
+/// @param {string} $footerBg
+/// @param {string} $footerText
+@mixin header-footer-color-scheme($headerBg, $headerText, $footerBg, $footerText) {
+    @if($headerBg != '' and $headerText != '' and $headerBg == $footerBg and $headerText == $footerText) {
+        .dark-bar {
+            color: $headerText;
+            background-color: backgroundColor($headerBg);
+            a {
+                color: currentColor !important;
+            }
+        }
+    }
+    @else {
+        @if($headerBg != '' and $headerText != '') {
+            header.dark-bar {
+                color: $headerText;
+                background-color: backgroundColor($headerBg);
+                a {
+                    color: currentColor !important;
+                }
+            }
+        }
+
+        @if($footerBg != '' and $footerText != '') {
+            footer.dark-bar {
+                color: $footerText;
+                background-color: backgroundColor($footerBg);
+                text-shadow: 1px 1px 0 autoTextShadowColor($footerBg, $footerText);
+                a {
+                    color: currentColor !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+/// submenu
+/// @param {string} $menuActiveBg
+@mixin submenu ($menuActiveBg)  {
+    background: $menuActiveBg !important;
+    border-color: colorVariation($menuActiveBg, 'menu', 'active-bg') !important;
+    li {
+        background: colorVariation($menuActiveBg, 'menu', 'active-bg');
+        border-color: colorVariation($menuActiveBg, 'menu', 'active-bg');
+        a {
+            background: colorVariation($menuActiveBg, 'menu', 'active-bg');
+            border: none;
+            &:hover {
+                background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
+            }
+        }
+    }
+}
+
+
+
+/// navigation
+/// @param {string} $menuActiveBg
+/// @param {string} $menuActiveText
+@mixin navigation($menuActiveBg, $menuActiveText) {
+    @if($menuActiveBg != '' and $menuActiveText != '') {
+        .dark-bar {
+            nav {
+                li {
+                    text-shadow: 1px 1px 1px autoTextShadowColor($menuActiveBg, $menuActiveText);
+                    .glyph {
+                        text-shadow: inherit !important;
+                    }
+                    & > a, & > .a {
+                        color: colorVariation($menuActiveText, 'menu', 'text');
+                    }
+                    &.active {
+                        & > a, & > a:hover {
+                            background: colorVariation($menuActiveBg, 'menu', 'active-bg') !important;
+                            color: colorVariation($menuActiveText, 'menu', 'active-text');
+                        }
+                    }
+                    & > .a {
+                        cursor: default;
+                    }
+                    & > a {
+                        &:hover {
+                            background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
+                            color: colorVariation($menuActiveText, 'menu', 'hover-text');
+                        }
+                    }
+                    ul {
+                        @include submenu($menuActiveBg);
+                                }
+                            }
+                & > ul > li, & > .settings-menu > ul > li {
+                    &:hover {
+                        & > a, & >.a, .reduced-menu-trigger {
+                            opacity: 1;
+                            background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
+                            color: colorVariation($menuActiveText, 'menu', 'hover-text');
+                        }
+                    }
+
+                }
+            }
+        }
+
+        /// rules that apply when the screen isn't wide enough
+        /// to hold a full size navi
+        /// & refers to body
+        &.oversized-nav {
+            &:not(.delivery-scope) {
+                @include theme-mobile-navi($menuActiveBg, $menuActiveText);
+            }
+        }
+    }
+}
+
+
+/// everything required for mobile navi
+/// @param {string} $menuActiveBg
+/// @param {string} $menuActiveText
+@mixin theme-mobile-navi ($menuActiveBg, $menuActiveText) {
+    @if($menuActiveBg != '' and $menuActiveText != '') {
+        .dark-bar {
+            nav {
+                .settings-menu{
+                    & > ul {
+                        @include submenu($menuActiveBg);
+                    }
+                    &:hover {
+                        .reduced-menu-trigger {
+                            background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
+                        }
+                    }
+                    .reduced-menu-trigger {
+                        text-shadow: 1px 1px 1px autoTextShadowColor($menuActiveBg, $menuActiveText);
+                        padding: 13px 10px 11px;
+                        color: colorVariation($menuActiveText, 'menu', 'text');
+                        &:hover {
+                            background: colorVariation($menuActiveBg, 'menu', 'bg');
+                            border-color: colorVariation($menuActiveBg, 'menu', 'bg');
+                            -webkit-transition: none;
+                            transition: none;
+                            transition-delay: unset;
+                            opacity: 1;
+                        }
+                        [class^="icon-"], [class*=" icon-"] {
+                            color:colorVariation($menuActiveText, 'menu', 'text');
+                            text-shadow: inherit !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/// Colors of the action bar
+/// @param {string} $actionBarBg
+/// @param {string} $actionBarText
+@mixin action-bar($actionBarBg, $actionBarText) {
+    @if($actionBarBg !='' and $actionBarText != '') {
+        .action-bar {
+            // works around test-runner.scss:control-box
+            & > .control-box {
+                color: $actionBarText !important;
+                text-shadow: 1px 1px 0 autoTextShadowColor($actionBarBg, $actionBarText) !important;
+            }
+            &.horizontal-action-bar{
+                background: backgroundColor($actionBarBg);
+            }
+            &.content-action-bar, &.search-action-bar {
+                .btn-info, .search-area {
+                    .glyph, .a, a, .icon-help {
+                        color: $actionBarText;
+                        text-shadow: 1px 1px 0 autoTextShadowColor($actionBarBg, $actionBarText) !important;
+                    }
+                }
+            }
+            &.content-action-bar {
+                li {
+                    &.btn-info {
+                        &:hover, &.active {
+                            border-color: rgba($actionBarText, .3);
+                        }
+                    }
+                }
+            }
+            & #item-editor-label,
+            & > .control-box {
+                color: $actionBarText !important;
+                text-shadow: 1px 1px 0 autoTextShadowColor($actionBarBg, $actionBarText) !important;
+            }
+        }
+
+        .preview-overlay #preview-console {
+            background: backgroundColor($actionBarBg);
+            .preview-console-closer {
+                color: $actionBarText;
+                text-shadow: 1px 1px 0 autoTextShadowColor($actionBarBg, $actionBarText) !important;
+
+                &:hover {
+                    color: $actionBarText;
+                }
+            }
+        }
+    }
+}
+
+
+
+/// Colors of the action bar
+/// @param {string} $activeTabBg
+/// @param {string} $activeTabText
+@mixin active-tab($activeTabBg, $activeTabText) {
+    @if($activeTabBg !='' and $activeTabText != '') {
+        .section-container {
+            .tab-container {
+                &[style^="display: block"],
+                &[style*=" display: block"],
+                &[style^="display:block"],
+                &[style*=" display:block"] {
+                    li {
+                        &.active, &:hover {
+                            background:  backgroundColor($activeTabBg) !important;
+                            border-color: colorVariation($activeTabBg, 'tab', 'active-border') !important;
+                            text-shadow: 1px 1px 0 autoTextShadowColor($activeTabBg, $activeTabText) !important;
+                        }
+                    }
+                    & ~ .content-wrapper {
+                        & > .content-container {
+                            & > .horizontal-action-bar {
+                                background: backgroundColor($activeTabBg);
+                                text-shadow: 1px 1px 0 autoTextShadowColor($activeTabBg, $activeTabText) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

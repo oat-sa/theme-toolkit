@@ -1,0 +1,28 @@
+////
+/// TAO CSS SDK
+/// Generic platform theme
+/// @group Platform themes
+////
+
+html {
+    body {
+
+        /// optional custom loading bar
+        @include custom-loading-bar($loadingBar);
+
+        /// header/footer colors
+        @include header-footer-color-scheme($headerBg, $headerText, $footerBg, $footerText);
+
+        /// navigation
+        @include navigation($menuActiveBg, $menuActiveText);
+
+        /// action bar
+        @include action-bar($actionBarBg, $actionBarText);
+
+        /// everything else
+    }
+}
+
+/// Media queries also need to be done outside the html scope.
+/// @see ./inc/mediaqueries/template.scss
+@import './inc/mediaqueries/max-width-1024';

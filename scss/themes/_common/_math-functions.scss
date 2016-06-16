@@ -1,0 +1,56 @@
+////
+/// Math functions
+/// Most of these functions go back to various sources on the internet
+/// @see https://gist.github.com/voxpelli/6304812
+/// @group Third Party
+////
+
+
+/// From: http://rosettacode.org/wiki/Greatest_common_divisor#JavaScript
+@function gcd($a, $b) {
+    @if ($b != 0) {
+        @return gcd($b, $a % $b);
+    } @else {
+        @return abs($a);
+    }
+}
+
+
+// From: http://rosettacode.org/wiki/Nth_root#JavaScript
+@function nthRoot($num, $n: 2, $prec: 12) {
+    $x: 1;
+
+    @for $i from 0 through $prec {
+        $x: 1 / $n * (($n - 1) * $x + ($num / pow($x, $n - 1)));
+    }
+
+    @return $x;
+}
+
+/// square root wrapper around nthRoot to make the expected function name available
+@function sqrt($num, $prec: 12) {
+    @return nthRoot($num, 2, $prec);
+}
+
+/// Handles decimal exponents by trying to convert them into a fraction and then use a nthRoot-algorithm for parts of the calculation
+@function pow($base, $exponent, $prec: 12) {
+    @if (floor($exponent) != $exponent) {
+        $prec2 : pow(10, $prec);
+        $exponent: round($exponent * $prec2);
+        $denominator: gcd($exponent, $prec2);
+        @return nthRoot(pow($base, $exponent / $denominator), $prec2 / $denominator, $prec);
+    }
+
+    $value: $base;
+    @if $exponent > 1 {
+        @for $i from 2 through $exponent {
+            $value: $value * $base;
+        }
+    } @else if $exponent < 1 {
+        @for $i from 0 through -$exponent {
+            $value: $value / $base;
+        }
+    }
+
+    @return $value;
+}
