@@ -28,7 +28,7 @@ You can create the CSS for all these scenarios with the CSS SDK. In all cases th
 
 ### Setup and install
 
-Ensure you've node.js and sass installed.
+Ensure you've node.js installed.
 
 From the project root, run 
 
@@ -36,43 +36,25 @@ From the project root, run
 npm install
 ```
 
+Create a copy of profiles.json.dist and rename it profiles.json
+Customise the content according to your local environment. Each profile is defined as a source path (for *.scss files) and an destination path (for *.css files) 
+
 ### Tasks
 
 #### Compiles
 
-Compile everything
-
 ```sh
-grunt compile
-```
-
-Compile a particular theme
-
-```sh
-grunt compile --target items --theme theme-template
-
+grunt compile -p=profile
 ```
 
 #### Development mode 
 
 ```sh
-grunt dev --target platform --theme theme-template
-```
-
-To configure the development mode, you can change the configuration in the `package.json` file : 
-
-```json
-  "config": {
-    "host": "127.0.0.1",
-    "port": 4321,
-    "browser": "fxdev --no-remote --devtools"
-  }
+grunt dev -p=profile
 ```
 
 #### Options for the tasks
-- `--target` compile for either platform or items
-- `--theme` the theme to select
-- `--style` e. g. expanded, default is compressed ([SASS docs](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style))
+- `-p` profile to use, as defined in profiles.json
 
 ### Grunt built-in options
 [See options in the Grunt documentation](http://gruntjs.com/using-the-cli)
