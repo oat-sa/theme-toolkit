@@ -27,10 +27,9 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
-                noCache: true,
-                unixNewlines: true,
-                lineNumbers: false,
-                style: 'compressed'
+                linefeed: 'lf',
+                sourceMap: true,
+                outputStyle: 'compressed'
             },
             compile: {
                 files: [{
