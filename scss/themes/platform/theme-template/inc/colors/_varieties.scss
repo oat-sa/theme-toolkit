@@ -1,0 +1,13 @@
+////
+/// TAO CSS SDK
+/// Color varieties current platform theme
+/// @see ../../../_common/inc/colors/_varieties.scss for reference
+/// @group Item Colors - Varieties
+////
+
+/// Formulas to compute color variations
+/// - fn: any custom, build-in or CSS-function to convert base color
+/// - args: list of arguments to pass to above function
+/// - () means no transformation
+/// $themeColorVarieties overrides rules from ../../../_common/inc/colors/_varieties.scss:$colorVarieties
+$themeColorVarieties: ();

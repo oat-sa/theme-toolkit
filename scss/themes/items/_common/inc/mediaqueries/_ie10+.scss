@@ -1,0 +1,14 @@
+////
+/// TAO CSS SDK
+/// Example media query which targets targets IE 10+
+/// @group Item media queries
+////
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    html {
+        body {
+            div.qti-item {
+            }
+        }
+    }
+}

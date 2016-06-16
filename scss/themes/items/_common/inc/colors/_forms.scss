@@ -1,0 +1,44 @@
+////
+/// TAO CSS SDK
+/// Color definitions all item themes
+/// @group Item Colors - Forms
+////
+
+/// Form field borders
+$formFieldBorder: $borderColor;
+
+/// Form field background
+$formFieldBg: $itemBg;
+
+/// Form field active
+////
+/// TAO CSS SDK
+/// Color definitions all item themes
+/// @group Item Colors - Forms
+////
+
+$formFieldActive: rgb(34,34,34);
+
+/// Form field background
+$formFieldChecked: $textColor;
+$formFieldDisabledBg: rgb(235,235,235);
+$formFieldDisabled: rgba(0,0,0,.22);
+$formFieldHover: rgb(235,235,235);
+$formFieldFocus: $formFieldChecked;
+$formFieldFocusBorder: whiten($formFieldFocus,.28);
+$formFieldFocusShadow: whiten($formFieldFocus,.28);
+
+//$radioCheckBg: whiten($itemBg, .26);
+
+$radioCheckBg: whiten($itemBg,.26);
+
+
+$formFieldFocusTest: blacken($formFieldFocus,.28);
+
+$formFieldSuccess: rgb(164,187,84);
+$formFieldError: rgb(187,84,101);
+
+$formOptionBg: $transBlackBg;
+$formOptionHighlightBg: $transWhiteBg;
+
+$formFieldContrastColor: $textColor;

@@ -1,0 +1,32 @@
+////
+/// TAO CSS SDK
+/// QTI match interaction
+/// @group Item interactions
+////
+
+.qti-sliderInteraction {
+    .qti-slider-values {
+    }
+    &.qti-slider-horizontal {
+        .qti-slider-values {
+        }
+        .slider-min, .slider-max, .slider-middle {
+        }
+        .slider-min {
+        }
+        .slider-max {
+        }
+    }
+    &.qti-slider-vertical {
+        .qti-slider-values {
+        }
+        .slider-min, .slider-max, .slider-middle {
+        }
+        .slider-min {
+        }
+        .slider-max {
+        }
+        .ui-slider-handle {
+        }
+    }
+}

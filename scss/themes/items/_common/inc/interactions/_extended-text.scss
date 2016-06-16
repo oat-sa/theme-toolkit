@@ -1,0 +1,76 @@
+////
+/// TAO CSS SDK
+/// QTI extended text interaction
+/// @group Item interactions
+////
+
+.qti-extendedTextInteraction {
+
+    .solid, .bordered {
+        &textarea {
+        }   
+    }
+
+    /// Style for the CkEditor inside the interaction
+    .cke {
+        .cke_top {
+        }
+
+        .cke_bottom {
+            &.cke_reset_all {
+            }
+        }
+
+        .cke_combo {
+            .cke_combo_button {
+            }
+        }
+
+        .cke_toolbox {
+        }
+
+        .cke_resizer {
+            &.cke_resizer_ltr {
+            }
+        }
+
+        .cke_wysiwyg_frame {
+        }
+
+        .cke_combo_off a.cke_combo_button:hover,
+        .cke_combo_off a.cke_combo_button:focus,
+        .cke_combo_off a.cke_combo_button:active {
+        }
+
+        .cke_combo_button:hover {
+            .cke_combo_text {
+            }
+        }
+
+        .cke_combo_on {
+            .cke_combo_button {
+                .cke_combo_text {
+                }
+            }
+        }
+    }
+
+
+    .active {
+        & > input,
+        & > textarea,
+        input.active,
+        textarea.active {
+        }
+    }
+
+
+    .text-counter{
+        .count-words,
+        .count-chars{
+        }
+    }
+
+    &:focus {
+    }
+}

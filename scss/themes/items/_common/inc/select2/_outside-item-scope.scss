@@ -1,0 +1,25 @@
+////
+/// TAO CSS SDK
+/// Select2, all item themes
+/// @group Item Forms
+////
+
+/// Warning: Theses styles are applied outside the item scope can influence the look of the whole
+/// platform! Handle those cases with great care and test them well!
+
+/// Note: not all parts of select2 are located outside .qti-item
+/// For these parts refer to ./_inside-item-scope.scss
+
+.select2-drop.qti-inlineChoiceInteraction-dropdown {
+
+    .select2-results {
+        .select2-result-label {
+        }
+
+        .select2-result-selectable {
+        }
+
+        .select2-highlighted {
+        }
+    }
+}

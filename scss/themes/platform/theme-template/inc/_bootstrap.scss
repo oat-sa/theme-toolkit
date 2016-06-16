@@ -1,0 +1,18 @@
+////
+/// TAO CSS SDK
+/// Bootstrap, current platform theme
+/// @group Item Themes
+////
+
+// custom patterns for color variations
+@import './colors/varieties';
+
+/// configuration inherited from item base theme
+@import '../../_common/inc/bootstrap';
+
+/// variable overrides if any
+@import './colors/base';
+@import './fonts';
+
+/// code from the item base theme
+@import '../../_common/theme';

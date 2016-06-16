@@ -1,0 +1,252 @@
+////
+/// TAO CSS SDK
+/// Functions and mixins, all themes
+/// @group Themes
+////
+
+@import './math-functions';
+@import './color-contrast';
+@import './string-functions';
+@import './list-functions';
+
+/// Add white to a color
+/// @param {string} $color - base color
+/// @param {float} $white - the amount of white to add
+/// @return {string} $color
+@function whiten($color, $white: 0.3) {
+    @return mix(#fff, $color, ($white * 100) * 1%);
+}
+
+/// Add black to a color
+/// @param {string} $color - base color
+/// @param {float} $white - the amount of white to add
+/// @return {string} $color
+@function blacken($color, $black: 0.3) {
+    @return mix(#000, $color, ($black * 100) * 1%);
+}
+
+/// Create an rgba value based on black
+/// @param {float} $alpha - degree of transparency
+/// @return {string} $color - rgba()
+@function black($alpha: 1) {
+    @return (rgba(0, 0, 0, $alpha))
+}
+
+/// Create an rgba value based on black
+/// @param {float} $alpha - degree of transparency
+/// @return {string} $color - rgba()
+@function white($alpha: 1) {
+    @return (rgba(255, 255, 255, $alpha))
+}
+
+/// From an array of colors as used for gradient generation return the value in the middle.
+/// If the number of elements is even the element with the smaller index will be returned.
+/// If $colors is a single color it will be returned directly.
+/// Mind you that the returned value is literally the one in the middle and not an average of all values.
+/// @param {string|list} $backgroundColor, gradient list format: ((color:#000[, position:0%])[,(...)])
+/// @throw Error on invalid input
+/// @return {color} color
+@function getMiddleColor($colors) {
+
+    @if (type-of($colors) == 'color') {
+        @return $colors;
+    }
+
+        // in the case of list use a solid color from the middle of the list
+    @elseif (type-of($colors) == 'list') {
+        $colors: nth($colors, floor(length($colors) / 2));
+        @return map-get($colors, 'color');
+    }
+
+    @error #{"'" + $colors + "' is not a parameter"};
+}
+
+
+/// Create a color variation based on $colorVarieties
+/// @param {string|list} $baseColor, gradient list format: ((color:#000[, position:0%])[,(...)])
+/// @param {string} $section refers to the first level of $colorVarieties
+/// @param {string} $key refers to the second level of $colorVarieties
+/// @throw Error when section doesn't exist
+/// @throw Error when key doesn't exist
+/// @throw Error when the function $section[$key]['fn'] doesn't exist
+/// @see items resp. platform/inc/colors/_varieties.scss
+/// @return {color} color value
+@function colorVariation($baseColor, $section, $key) {
+
+    // in the case of list use a solid color from the middle of the list
+    $baseColor: getMiddleColor($baseColor);
+    $varieties: $colorVarieties;
+    @if global-variable-exists('themeColorVarieties') {
+        $varieties: map-merge($colorVarieties, $themeColorVarieties);
+    }
+    @if (not map-has-key($varieties, $section)) {
+        @error #{"Neither $colorVarieties nor $themeColorVarieties have a section '" + $section + "'"};
+    }
+    $sectionMap: map-get($varieties, $section);
+    @if (not map-has-key($sectionMap, $key)) {
+        @error #{"Neither $colorVarieties['" + $section + "'] nor $themeColorVarieties['" + $section + "'] have a key '" + $key + "'"};
+    }
+    $keyMap: map-merge((
+        fn: '',
+        args: ()),
+        map-get($sectionMap, $key)
+    );
+    $fn: map-get($keyMap, 'fn');
+    @if ($fn == '') {
+        @return $baseColor;
+    }
+    @else if (not function_exists($fn) ) {
+        @error #{"'" + $fn + "' is not a function"};
+    }
+    $args: join($baseColor, map-get($keyMap, 'args'));
+
+    @return call($fn, $args...);
+}
+
+
+/// Generate a text shadow color in rgba()
+/// This function will also help to achieve conformity with WCAG 2.0
+/// Contrasts are between 1:1 and 21:1 - higher means better.
+/// @see http://www.w3.org/WAI/GL/wiki/Contrast_ratio
+/// The contrast ratio between background and text should be at least 3:1
+/// @see http://www.w3.org/TR/2014/NOTE-WCAG20-TECHS-20140916/G183
+/// If the ratio is lower a text shadow can increase the ratio. The color
+/// of the text shadow will either be white or black with a certain transparency.
+/// @param {color|list} $backgroundColor, gradient list format: ((color:#000[, position:0%])[,(...)])
+/// @param {color} $foregroundColor
+@function autoTextShadowColor($backgroundColor, $foregroundColor) {
+
+    // in the case of list use a solid color from the middle of the list (uses floor rather than ceil)
+    $backgroundColor: getMiddleColor($backgroundColor);
+
+    // no text shadow if the contrast is at least 7:1 which is pretty decent
+    $contrast: color_contrast($backgroundColor, $foregroundColor);
+    @if($contrast >= 7) {
+        @return transparent;
+    }
+
+    // are background and text rather dark or light?
+    // > 50 lighter, <= 50 = darker
+    $bgBrightness: color_brightness($backgroundColor);
+    $fgBrightness: color_brightness($foregroundColor);
+
+    // light text / dark background
+    $shadowColor: black;
+
+    // light text / light background
+    @if($fgBrightness > 50 and $bgBrightness > 50) {
+        $shadowColor: black;
+    }
+    // dark text / dark background
+    @elseif($fgBrightness <= 50 and $bgBrightness <= 50){
+        $shadowColor: white;
+    }
+    // dark text / light background
+    @elseif($fgBrightness <= 50 and $bgBrightness > 50){
+        $shadowColor: white;
+    }
+
+    // the lower the contrast the higher the opacity
+    @return rgba($shadowColor, (1 / 21 * $contrast));
+}
+
+
+/// Generate a background color either as solid color or linear gradient
+/// @param {color|list} $color, gradient list format: ((color:#000[, position:0%])[,(...)])
+/// @param {string} $direction
+@function backgroundColor($color, $direction: 'to bottom') {
+    @if(type-of($color) == 'list') {
+        $returnValue: #{'linear-gradient(' + $direction + ', '};
+        @each $entry in $color {
+            $returnValue: $returnValue + map-get($entry, 'color');
+            $position: map-get($entry, 'position');
+            @if($position != null) {
+                $returnValue: $returnValue + ' ' + $position;
+            }
+            $returnValue: $returnValue + ', ';
+        }
+        @return str-slice($returnValue, 0, (length($returnValue) - 4)) + ')';
+    }
+    @else {
+        @return $color;
+    }
+}
+
+
+/// Add vendor prefixes
+/// @param {string} $property - e.g. border-radius
+/// @param {mixed} $value
+/// @param {string} $whatToPrefix [property] property|value
+/// @param {list} $prefixes [(-webkit-, -moz-, -ms-)]
+@mixin vendor-prefix($property, $value, $whatToPrefix: property, $prefixes: (-webkit-, -moz-, -ms-)) {
+    $prefixes: append($prefixes, '');
+    @if $whatToPrefix == 'property' {
+        @each $prefix in $prefixes {
+            #{$prefix + $property}: #{$value};
+        }
+    } @else if $whatToPrefix == 'value' {
+        @each $prefix in $prefixes {
+            #{$property}: #{$prefix + $value};
+        }
+    }
+}
+
+/// The TAO standard border so to speak
+/// @param {color} $color [#ddd] - border color
+/// @param {mixed} $radius [2] - border-radius (in px if unit is missing)
+@mixin simple-border($color: #ddd, $radius: 2) {
+    @if(unitless($radius)) {
+        $radius: $radius * 1px;
+    }
+    border: 1px solid $color;
+    border-radius: $radius;
+}
+
+
+/// Generate the code for a font-face declaration
+/// @param {string} $family the name by which you want to use the font
+/// @param {map} $emphases, note that {EXT} will be replaced by the font's extension
+/// (
+///     'bold': './{EXT}/OpenDyslexic-Bold.{EXT}',
+///     'bold-italic': './{EXT}/OpenDyslexic-BoldItalic.{EXT}',
+///     'italic': './{EXT}/OpenDyslexic-Italic.{EXT}',
+///     'regular': './{EXT}/OpenDyslexic-Regular.{EXT}'
+/// )
+/// @param {list} $formats [('woff2', 'woff', 'ttf')] list of extensions
+@mixin font-face($family, $emphases, $formats: ('woff2', 'woff', 'ttf')) {
+    $formatsMap: (
+        'woff2': 'woff2',
+        'woff': 'woff',
+        'ttf': 'truetype'
+    );
+
+    @each $emphasis, $path in $emphases {
+        $sourceLst: ();
+
+        @each $extension in $formats {
+            $format: map-get($formatsMap, $extension);
+            @if($format != null) {
+                $extPath: str-replace($path, '{EXT}', $extension);
+                $value: #{"url('" + $extPath + "') format('" + $format + "')"};
+                $sourceLst: append($sourceLst, $value);
+            }
+        }
+        @font-face {
+            font-family: #{"'" + $family + "'"};
+            src: to-string($sourceLst, ', ');
+            @if(str-index($emphasis, 'bold') != null) {
+                font-weight: bold;
+            }
+            @else {
+                font-weight: normal;
+            }
+
+            @if(str-index($emphasis, 'italic') != null) {
+                font-style: italic;
+            }
+            @else {
+                font-style: normal;
+            }
+        }
+    }
+}

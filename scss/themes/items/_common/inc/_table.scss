@@ -1,0 +1,27 @@
+////
+/// TAO CSS SDK
+/// Tables, all themes
+/// @group Item Assets
+////
+
+/// Tables in items are likely to be match interactions. In this case
+/// it would be better to edit interactions/_match.scss instead.
+table {
+    &.matrix {
+
+        th {
+        }
+        td {
+            &.numeric {
+            }
+            label {
+            }
+        }
+        tr {
+            &:nth-child(even){
+            }
+            &:nth-child(odd){
+            }
+        }
+    }
+}
