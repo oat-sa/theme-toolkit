@@ -38,3 +38,6 @@ jspm_packages
 
 # Jetbrains IDE files
 .idea
+
+# theme-toolkit specific
+profiles.json
