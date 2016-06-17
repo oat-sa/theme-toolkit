@@ -19,7 +19,7 @@
  * 
  */
 
-namespace oat\unisaTheme\model\theme;
+namespace oat\__customerExtension__\model\theme;
 
 use oat\tao\helpers\Template;
 use oat\tao\model\theme\DefaultTheme;
@@ -27,13 +27,13 @@ use oat\tao\model\theme\Theme;
 
 class PlatformDefault extends DefaultTheme
 {
-    const EXTENSION_ID = 'unisaTheme';
-    const THEME_LABEL = 'Unisa default theme';
+    const EXTENSION_ID = '__customerExtension__';
+    const THEME_LABEL = 'Customer default theme';
 
     /**
      * Theme's id, by default label without spec chars
      */
-    const THEME_ID = 'unisaTheme';
+    const THEME_ID = '__customerExtension__';
 
 
     /**

@@ -18,25 +18,23 @@
  *
  *
  */
+namespace oat\__customerExtension__\scripts\install;
 
-namespace oat\unisaTheme\scripts\update;
+use oat\__customerExtension__\model\theme\PlatformDefault;
+use oat\oatbox\service\ServiceManager;
+use oat\tao\model\theme\ThemeService;
 
-use \common_ext_ExtensionUpdater;
-use oat\unisaTheme\scripts\install\SetPlatformTheme;
-
-
-class Updater extends common_ext_ExtensionUpdater
+class SetPlatformTheme extends \common_ext_action_InstallAction
 {
-    public function update($initialVersion)
+    public function __invoke($params)
     {
-        $currentVersion = $initialVersion;
+        $serviceManager = ServiceManager::getServiceManager();
+        $themeService = $serviceManager->get(ThemeService::SERVICE_ID);
+        
+        $themeService->setTheme(new PlatformDefault());
+        $serviceManager->register(ThemeService::SERVICE_ID, $themeService);
 
-        if ($currentVersion === 'A.B.C') {
-
-            $setPlatformTheme = new SetPlatformTheme();
-            $setPlatformTheme([]);
-
-            $this->setVersion('X.Y.Z');
-        }
+        return new \common_report_Report(\common_report_Report::TYPE_SUCCESS, 'Plaform theme registered');
     }
 }
+

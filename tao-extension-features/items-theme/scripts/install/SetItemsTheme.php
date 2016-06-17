@@ -16,7 +16,7 @@
  *
  * Copyright (c) 2016 (original work) Open Assessment Technologies SA;
  */
-namespace oat\unisaTheme\scripts\install;
+namespace oat\__customerExtension__\scripts\install;
 
 use oat\tao\model\ThemeRegistry;
 use oat\tao\model\ThemeNotFoundException;
@@ -39,7 +39,7 @@ class SetItemsTheme extends \common_ext_action_InstallAction
         ThemeRegistry::getRegistry()->registerTheme(
             $itemsTheme,
             'Default custom theme',
-            implode(DIRECTORY_SEPARATOR, array('unisaTheme', 'views', 'css', 'themes', 'items', $itemsTheme, 'theme.css')),
+            implode(DIRECTORY_SEPARATOR, array('__customerExtension__', 'views', 'css', 'themes', 'items', $itemsTheme, 'theme.css')),
             array('items')
         );
         ThemeRegistry::getRegistry()->setDefaultTheme('items', $itemsTheme);

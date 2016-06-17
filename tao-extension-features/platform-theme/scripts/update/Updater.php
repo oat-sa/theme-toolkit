@@ -19,10 +19,10 @@
  *
  */
 
-namespace oat\unisaTheme\scripts\update;
+namespace oat\__customerExtension__\scripts\update;
 
-use oat\unisaTheme\scripts\install\SetItemsTheme;
 use \common_ext_ExtensionUpdater;
+use oat\__customerExtension__\scripts\install\SetPlatformTheme;
 
 
 class Updater extends common_ext_ExtensionUpdater
@@ -33,8 +33,8 @@ class Updater extends common_ext_ExtensionUpdater
 
         if ($currentVersion === 'A.B.C') {
 
-            $setItemTheme = new SetItemsTheme();
-            $setItemTheme([]);
+            $setPlatformTheme = new SetPlatformTheme();
+            $setPlatformTheme([]);
 
             $this->setVersion('X.Y.Z');
         }
