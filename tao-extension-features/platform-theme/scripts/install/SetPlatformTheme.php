@@ -24,6 +24,11 @@ use oat\__customerExtension__\model\theme\PlatformDefault;
 use oat\oatbox\service\ServiceManager;
 use oat\tao\model\theme\ThemeService;
 
+/**
+ * You can check the result of this script by opening:
+ * tao/config/tao/theming.conf.php
+ */
+
 class SetPlatformTheme extends \common_ext_action_InstallAction
 {
     public function __invoke($params)

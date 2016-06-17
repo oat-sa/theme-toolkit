@@ -21,6 +21,11 @@ namespace oat\__customerExtension__\scripts\install;
 use oat\tao\model\ThemeRegistry;
 use oat\tao\model\ThemeNotFoundException;
 
+/**
+ * You can check the result of this script by opening:
+ * tao/config/tao/themes.conf.php
+ */
+
 class SetItemsTheme extends \common_ext_action_InstallAction
 {
     public function __invoke($params)
