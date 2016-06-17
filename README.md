@@ -36,21 +36,21 @@ From the project root, run
 npm install
 ```
 
-Create a copy of profiles.json.dist and rename it profiles.json
-Customise the content according to your local environment. Each profile is defined as a source path (for *.scss files) and an destination path (for *.css files) 
+Create a copy of profiles.json.dist and rename it profiles.json.
+Customise the content according to your local environment. Each profile is composed by a source path (for *.scss files) and an destination path (for *.css files). 
 
 ### Tasks
 
-#### Compiles
+#### Compile
 
 ```sh
-grunt compile -p=profile
+grunt compile -p=profileId
 ```
 
-#### Development mode 
+#### Auto-compile
 
 ```sh
-grunt dev -p=profile
+grunt dev -p=profileId
 ```
 
 #### Options for the tasks
