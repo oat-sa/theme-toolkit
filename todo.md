@@ -5,5 +5,6 @@
 - add the template from sam ?
 - define default behaviour
 - document theme registration verification in config/generis (or config/tao)
-- how to allow development without a TAO instance ? git checkout core et qtiItem / involve QA ? / develop regression testing tools
+- how to allow development without a TAO instance ? git checkout core et qtiItem / involve QA ? / 
+- how to improve regression testing tool / living style guide
 
