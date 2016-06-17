@@ -1,0 +1,117 @@
+////
+/// TAO CSS SDK
+/// QTI choice interaction
+/// @group Item interactions
+////
+
+.qti-choiceInteraction {
+
+    ////
+    //// Display multiple choice interactions as one table
+    ////
+    display: flex;
+    flex-flow: row nowrap;
+    display: -ms-flexbox;
+    margin-top: 30px;
+    padding: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+
+    .qti-prompt-container {
+        flex: 4 1 0;
+        -ms-flex: 4;
+        padding: 3px 5px;
+    }
+
+    .instruction-container {
+        display: none;
+    }
+
+    .notification-container {
+        display: none;
+    }
+
+    .choice-area {
+        display: flex;
+        flex-flow: row nowrap;
+        display: -ms-flexbox;
+        flex: 1 1 120px;
+        -ms-flex: 1 1 120px;
+        border: 0;
+        padding: 0;
+    }
+
+    .qti-choice {
+        flex: 1 1 0;
+        -ms-flex: 1;
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        &:hover {
+            // background-color: transparent!important; // just in case client asks... fight fire with fire!
+        }
+
+        .real-label {
+            width: 100%;
+            padding: 0;
+        }
+
+        .icon-checkbox,
+        .icon-radio {
+            display: block;
+            margin: 0 auto;
+            padding: 3px 0 0 2px;
+        }
+
+        .label-box {
+            display: none;
+        }
+    }
+
+    // show only the labels for the first interaction
+    > div:first-of-type .qti-choiceInteraction .qti-choice {
+        .label-box {
+            display: block;
+            position: relative;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .label-content {
+            position: absolute;
+            top: -50px;
+            width: 100%;
+            display: table;
+
+            .qti-block {
+                display: table-cell;
+                height: 50px;
+                text-align: center;
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    ////
+    /// Display list bullets on the left of the checkboxes
+    ////
+    ol[class^="list-style-"], ol[class*=" list-style-"] {
+
+        .qti-choice {
+            position: relative;
+
+            .real-label {
+                position: absolute;
+                left: 25px;
+            }
+        }
+
+        li:before {
+            position: absolute;
+            margin-left: -25px;
+        }
+    }
+}

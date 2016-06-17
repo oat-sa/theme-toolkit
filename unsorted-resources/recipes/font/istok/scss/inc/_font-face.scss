@@ -1,0 +1,17 @@
+////
+/// TAO CSS SDK
+/// font-face declarations, current item theme
+/// @group Item fonts
+////
+
+$fontPath: 'fonts/istok';
+
+@include font-face(
+    'Istok',
+    (
+        'bold': #{$fontPath + '/{EXT}/istok-bold-webfont.{EXT}'},
+        'bold-italic': #{$fontPath + '/{EXT}/istok-bolditalic-webfont.{EXT}'},
+        'italic': #{$fontPath + '/{EXT}/istok-italic-webfont.{EXT}'},
+        'regular': #{$fontPath + '/{EXT}/istok-regular-webfont.{EXT}'},
+    )
+);

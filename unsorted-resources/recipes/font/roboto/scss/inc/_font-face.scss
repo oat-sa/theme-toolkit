@@ -1,0 +1,17 @@
+////
+/// TAO CSS SDK
+/// font-face declarations, current item theme
+/// @group Item fonts
+////
+
+$fontPath: 'fonts/roboto';
+
+@include font-face(
+    'Roboto',
+    (
+        'bold': #{$fontPath + '/{EXT}/roboto-bold-webfont.{EXT}'},
+        'bold-italic': #{$fontPath + '/{EXT}/roboto-bolditalic-webfont.{EXT}'},
+        'italic': #{$fontPath + '/{EXT}/roboto-italic-webfont.{EXT}'},
+        'regular': #{$fontPath + '/{EXT}/roboto-regular-webfont.{EXT}'},
+    )
+);
