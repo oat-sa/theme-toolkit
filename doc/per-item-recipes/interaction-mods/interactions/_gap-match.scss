@@ -1,0 +1,18 @@
+////
+/// TAO CSS SDK
+/// QTI gap match interaction
+/// @group Item interactions
+////
+
+.qti-gapMatchInteraction {
+    .choice-area {
+        float:left;
+        .qti-choice, .deactivated {
+            display: list-item;
+            float: none;
+        }
+    }
+    .instruction-container, .qti-flow-container {
+        clear:left;
+    }
+}

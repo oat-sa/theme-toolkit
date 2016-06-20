@@ -1,0 +1,3 @@
+- merge `.scss` files with you project files
+- copy `fonts` at the root of your css directory
+- adapt the paths in `_font-face.scss` if needed

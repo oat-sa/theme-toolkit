@@ -1,0 +1,29 @@
+////
+/// TAO CSS SDK
+/// All QTI interactions
+/// @group Item interactions
+////
+
+/// center image
+// cannot scoped on .qti-interaction in case the image appears in a text field
+.widget-box.widget-inline.widget-img,
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/// remove instruction container
+.qti-interaction {
+    .instruction-container {
+        display: none;
+    }
+
+    // alternatively you can remove just certain instructions
+    .instruction-container {
+        // can be any of .feedback-error, .feedback-info, .feedback-success, .feedback-warning
+        .feedback-warning {
+            display: none;
+        }
+    }
+}

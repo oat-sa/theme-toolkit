@@ -1,0 +1,15 @@
+////
+/// TAO CSS SDK
+/// QTI text entry interaction
+/// @group Item interactions
+////
+
+// Text entry fixed size
+.textEntryInteraction-placeholder,
+.qti-textEntryInteraction {
+    // fixes problem with older TAO, doesn't hurt on newer
+    box-sizing: content-box;
+
+    width: 4ch;
+    min-width: 4ch;
+}

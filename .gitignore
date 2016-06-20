@@ -39,5 +39,8 @@ jspm_packages
 # Jetbrains IDE files
 .idea
 
+# Plaform specific
+.DS_Store
+
 # theme-toolkit specific
 profiles.json

@@ -1,0 +1,51 @@
+Istok is a new sans serif typeface. At present it has the four fonts with
+support for Latin and Cyrillic. Most glyphs are manually instructed
+using xgridfit but other ones are autoinstructed in fontforge.
+
+The fonts are distributed under the terms of Open Font License or GNU
+General Public License Version 3 with the following exception:
+
+As a special exception, if you create a document which uses this font,
+and embed this font or unaltered portions of this font into the
+document, this font does not by itself cause the resulting document to
+be covered by the GNU General Public License. This exception does not
+however invalidate any other reasons why the document might be covered
+by the GNU General Public License. If you modify this font, you may
+extend this exception to your version of the font, but you are not
+obligated to do so. If you do not wish to do so, delete this exception
+statement from your version.
+
+The font sources have only GNU General Public License Version 3.
+The sources and truetype fonts are available at
+http://code.google.com/p/istok/
+Tarballs are compressed with xz (http://tukaani.org/xz/).
+
+Build and install instructions
+==============================
+
+You need fontforge (http://fontforge.sourceforge.net/), TTX/FontTools
+(http://sourceforge.net/projects/fonttools/), xgridfit
+(http://xgridfit.sourceforge.net/ - version as of April 2010) and
+font-helpers (http://code.google.com/p/font-helpers/ ) in order to build
+the truetype fonts from the sources. Also you should have the GNU make and
+coreutils. At first you must unpack/copy the files from font-helpers into
+the directory where *.sfd files are located. Then type
+
+make
+
+and the truetype fonts will be produced. On systems with X.Org you may do
+
+make install
+
+as root to install the fonts system-wide (/usr/share/fonts/TTF). Otherwise
+copy the *.ttf files into the ~/.fonts/ directory. Then run fc-cache if you have
+fontconfig.
+
+The history of the font
+=======================
+
+The modified version of the CM Bright font was used for design of several
+letters as raw material, other charaters are designed from scratch.
+
+				Andrey V. Panov <panov@canopus.iacp.dvo.ru>
+

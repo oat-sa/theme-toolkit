@@ -1,0 +1,18 @@
+////
+/// TAO CSS SDK
+/// font-face declarations, current item theme
+/// @group Item fonts
+////
+
+$fontPath: 'fonts/open-dyslexic';
+
+@include font-face(
+    // There is also an alternative implementation called OpenDyslexicAlta which has a rounded 'a'
+    'OpenDyslexic',
+    (
+        'bold': #{$fontPath + '/{EXT}/opendyslexic-bold-webfont.{EXT}'},
+        'bold-italic': #{$fontPath + '/{EXT}/opendyslexic-bolditalic-webfont.{EXT}'},
+        'italic': #{$fontPath + '/{EXT}/opendyslexic-italic-webfont.{EXT}'},
+        'regular': #{$fontPath + '/{EXT}/opendyslexic-regular-webfont.{EXT}'},
+    )
+);
