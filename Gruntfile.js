@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: profile.src,
-                    src: ['themes/*/*/theme.scss', '!themes/*/_common/theme.scss'],
+                    src: ['**/theme.scss'],
                     dest: profile.dest,
                     ext: '.css'
                 }]
