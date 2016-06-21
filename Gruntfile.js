@@ -3,19 +3,8 @@ var fs = require('fs');
 module.exports = function(grunt) {
     'use strict';
 
-    var allProfiles;
-    var profile;
-
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
-
-    try {
-        allProfiles = require('./profiles.json');
-    } catch (err) {
-        grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
-    }
-
-    profile = getSelectedProfile(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -24,7 +13,7 @@ module.exports = function(grunt) {
             options: {
                 force: true
             },
-            sass: [profile.dest]
+            sass: [grunt.option('profile').dest]
         },
 
         sass: {
@@ -36,9 +25,9 @@ module.exports = function(grunt) {
             compile: {
                 files: [{
                     expand: true,
-                    cwd: profile.src,
+                    cwd: grunt.option('profile').src,
                     src: ['themes/*/*/theme.scss', '!themes/*/_common/theme.scss'],
-                    dest: profile.dest,
+                    dest: grunt.option('profile').dest,
                     ext: '.css'
                 }]
             }
@@ -46,7 +35,7 @@ module.exports = function(grunt) {
 
         watch: {
             sass: {
-                files: [profile.src + '/**/*.scss'],
+                files: [grunt.option('profile').src + '/**/*.scss'],
                 tasks: ['sass:compile', 'notify:sass'],
                 options: {
                     debounceDelay: 500,
@@ -65,17 +54,27 @@ module.exports = function(grunt) {
         }
     });
 
-    function getSelectedProfile(grunt) {
-        var profile = grunt.option('p');
+    grunt.registerTask('loadProfile', function() {
+        var allProfiles,
+            profile = grunt.option('p');
+
+        try {
+            allProfiles = require('./profiles.json');
+        } catch (err) {
+            grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
+        }
         if (!profile) {
             grunt.fail.fatal('Please select a profile: grunt compile -p={PROFILE}');
         }
         if (!allProfiles[profile]) {
             grunt.fail.fatal('Unknown profile ' + profile + '');
         }
-        return allProfiles[profile];
-    }
+        console.log('i\'m setting the profile optoion');
+        grunt.option.set('profile', allProfiles[profile]);
+    });
 
-    grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
-    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
+
+    grunt.registerTask('compile', 'Compile themes', ['loadProfile', 'clean:sass', 'sass:compile']);
+    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['loadProfile', 'watch:sass']);
+
 };

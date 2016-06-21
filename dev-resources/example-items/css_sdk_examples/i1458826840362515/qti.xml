@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14047373393343112" title="CSS Examples III" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint22">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier"/>
+  <responseDeclaration identifier="RESPONSE_1" cardinality="multiple" baseType="identifier"/>
+  <responseDeclaration identifier="RESPONSE_2" cardinality="multiple" baseType="pair">
+    <correctResponse>
+      <value><![CDATA[associablehotspot_1 associablehotspot_6]]></value>
+      <value><![CDATA[associablehotspot_2 associablehotspot_5]]></value>
+      <value><![CDATA[associablehotspot_3 associablehotspot_4]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="RESPONSE_3" cardinality="multiple" baseType="directedPair"/>
+  <responseDeclaration identifier="RESPONSE_4" cardinality="multiple" baseType="point"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <stylesheet href="style/custom/tao-user-styles.css" title="" type="text/css" media="all"/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <h1>CSS Example III</h1>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <hotspotInteraction responseIdentifier="RESPONSE" maxChoices="0" minChoices="0" class="responsive">
+          <prompt>
+            <strong>Hotspot Interaction</strong>
+          </prompt>
+          <object data="grid.png" type="image/png" width="640" height="121"/>
+          <hotspotChoice identifier="hotspot_1" fixed="false" shape="rect" coords="20,20,100,100"/>
+          <hotspotChoice identifier="hotspot_2" fixed="false" shape="rect" coords="124,20,204,100"/>
+          <hotspotChoice identifier="hotspot_3" fixed="false" shape="rect" coords="228,20,308,100"/>
+          <hotspotChoice identifier="hotspot_4" fixed="false" shape="rect" coords="332,20,412,100"/>
+          <hotspotChoice identifier="hotspot_5" fixed="false" shape="rect" coords="436,20,516,100"/>
+          <hotspotChoice identifier="hotspot_6" fixed="false" shape="rect" coords="540,20,620,100"/>
+        </hotspotInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <graphicOrderInteraction responseIdentifier="RESPONSE_1" maxChoices="0" minChoices="0" class="responsive">
+          <prompt>
+            <strong>Graphic Order Interaction</strong>
+          </prompt>
+          <object data="grid.png" type="image/png" width="640" height="121"/>
+          <hotspotChoice identifier="hotspot_7" fixed="false" shape="rect" coords="20,20,100,100"/>
+          <hotspotChoice identifier="hotspot_8" fixed="false" shape="rect" coords="124,20,204,100"/>
+          <hotspotChoice identifier="hotspot_9" fixed="false" shape="rect" coords="228,20,308,100"/>
+          <hotspotChoice identifier="hotspot_10" fixed="false" shape="rect" coords="332,20,412,100"/>
+          <hotspotChoice identifier="hotspot_11" fixed="false" shape="rect" coords="436,20,516,100"/>
+          <hotspotChoice identifier="hotspot_12" fixed="false" shape="rect" coords="540,20,620,100"/>
+        </graphicOrderInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <graphicAssociateInteraction responseIdentifier="RESPONSE_2" maxAssociations="0" minAssociations="0" class="responsive">
+          <prompt>
+            <strong>Graphic Associate Interaction</strong>
+          </prompt>
+          <object data="grid.png" type="image/png" width="640" height="121"/>
+          <associableHotspot identifier="associablehotspot_1" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="20,20,100,100"/>
+          <associableHotspot identifier="associablehotspot_2" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="124,20,204,100"/>
+          <associableHotspot identifier="associablehotspot_3" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="228,20,308,100"/>
+          <associableHotspot identifier="associablehotspot_4" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="332,20,412,100"/>
+          <associableHotspot identifier="associablehotspot_5" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="436,20,516,100"/>
+          <associableHotspot identifier="associablehotspot_6" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="540,20,620,100"/>
+        </graphicAssociateInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <graphicGapMatchInteraction responseIdentifier="RESPONSE_3" class="responsive">
+          <prompt>
+            <strong>Graphic Gap Interaction</strong>
+          </prompt>
+          <object data="grid.png" type="image/png" width="640" height="121"/>
+          <gapImg identifier="gapimg_1" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_45.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_2" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_75.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_3" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_c-italic.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_4" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_greater.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_5" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_greater-equal.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_6" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_less.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_7" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_less-equal.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_8" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_minus.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_9" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_plus.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <gapImg identifier="gapimg_10" fixed="false" matchMin="0" matchMax="0">
+            <object data="140_plus.png" type="image/png" width="80" height="80"/>
+          </gapImg>
+          <associableHotspot identifier="associablehotspot_7" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="20,20,100,100"/>
+          <associableHotspot identifier="associablehotspot_8" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="124,20,204,100"/>
+          <associableHotspot identifier="associablehotspot_9" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="228,20,308,100"/>
+          <associableHotspot identifier="associablehotspot_10" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="332,20,412,100"/>
+          <associableHotspot identifier="associablehotspot_11" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="436,20,516,100"/>
+          <associableHotspot identifier="associablehotspot_12" fixed="false" matchMax="0" matchMin="0" shape="rect" coords="540,20,620,100"/>
+        </graphicGapMatchInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <selectPointInteraction responseIdentifier="RESPONSE_4" maxChoices="0" minChoices="0" class="responsive">
+          <prompt>
+            <strong>Select Point Interaction</strong>
+          </prompt>
+          <object data="grid.png" type="image/png" width="640" height="121"/>
+        </selectPointInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_1"/>
+          <correct identifier="RESPONSE_1"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <not>
+          <isNull>
+            <variable identifier="RESPONSE_3"/>
+          </isNull>
+        </not>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <mapResponse identifier="RESPONSE_3"/>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <not>
+          <isNull>
+            <variable identifier="RESPONSE_4"/>
+          </isNull>
+        </not>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <mapResponsePoint identifier="RESPONSE_4"/>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+  </responseProcessing>
+</assessmentItem>

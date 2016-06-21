@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14047338643733110" title="CSS Examples II" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint22">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier"/>
+  <responseDeclaration identifier="RESPONSE_1" cardinality="multiple" baseType="directedPair"/>
+  <responseDeclaration identifier="RESPONSE_2" cardinality="single" baseType="identifier"/>
+  <responseDeclaration identifier="RESPONSE_3" cardinality="single" baseType="string"/>
+  <responseDeclaration identifier="RESPONSE_4" cardinality="single" baseType="integer"/>
+  <responseDeclaration identifier="RESPONSE_5" cardinality="single" baseType="string"/>
+  <responseDeclaration identifier="RESPONSE_6" cardinality="single" baseType="integer"/>
+  <responseDeclaration identifier="RESPONSE_7" cardinality="single" baseType="file"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <stylesheet href="style/custom/tao-user-styles.css" title="" type="text/css" media="all"/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <h1>CSS Example II</h1>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <hottextInteraction responseIdentifier="RESPONSE" maxChoices="0" minChoices="0">
+          <prompt>
+            <strong>Hottext Interaction</strong>
+          </prompt>
+          <p>Lorem ipsum dolor sit amet, 
+<hottext identifier="hottext_1" fixed="false">consectetur</hottext>
+ adipisicing ...</p>
+        </hottextInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <gapMatchInteraction responseIdentifier="RESPONSE_1" shuffle="false">
+          <prompt>
+            <strong>Gap Match Interaction</strong>
+          </prompt>
+          <gapText identifier="choice_1" fixed="false" matchMax="1" matchMin="0">choice #1</gapText>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing ...</p>
+        </gapMatchInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12"><strong>Inline Choice Interaction</strong><br/><br/>
+Lorem ipsum dolor <inlineChoiceInteraction responseIdentifier="RESPONSE_2" shuffle="false" required="false"><inlineChoice identifier="choice_2" fixed="false" showHide="show">choice #1</inlineChoice><inlineChoice identifier="choice_3" fixed="false" showHide="show">choice #2</inlineChoice><inlineChoice identifier="choice_4" fixed="false" showHide="show">choice #3</inlineChoice></inlineChoiceInteraction>
+ sit amet, consectetur adipisicing ...</div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12"><strong>Text Entry Interaction</strong><br/><br/>
+Lorem ipsum dolor <textEntryInteraction responseIdentifier="RESPONSE_3" base="10" placeholderText=""/>
+ sit amet, consectetur adipisicing ...</div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <sliderInteraction responseIdentifier="RESPONSE_4" lowerBound="0" upperBound="100" step="1" stepLabel="false" orientation="horizontal" reverse="false">
+          <prompt>
+            <strong>Slider Interaction</strong>
+          </prompt>
+        </sliderInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <extendedTextInteraction responseIdentifier="RESPONSE_5" base="10" minStrings="0" format="plain">
+          <prompt>
+            <strong>Extended Text Interaction</strong>
+          </prompt>
+        </extendedTextInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <mediaInteraction responseIdentifier="RESPONSE_6" autostart="false" minPlays="0" maxPlays="0" loop="false">
+          <prompt>
+            <strong>Media Interaction</strong>
+          </prompt>
+          <object data="small.mp4" type="video/mp4" width="480" height="270"/>
+        </mediaInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <uploadInteraction responseIdentifier="RESPONSE_7">
+          <prompt>
+            <strong>Upload Interaction</strong>
+          </prompt>
+        </uploadInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_1"/>
+          <correct identifier="RESPONSE_1"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_4"/>
+          <correct identifier="RESPONSE_4"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_5"/>
+          <correct identifier="RESPONSE_5"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_6"/>
+          <correct identifier="RESPONSE_6"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_7"/>
+          <correct identifier="RESPONSE_7"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_3"/>
+          <correct identifier="RESPONSE_3"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+  </responseProcessing>
+</assessmentItem>

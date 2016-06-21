@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/qtiv2p1_imscpv1p2_v1p0.xsd" identifier="MANIFEST-tao56f3ef5035d535-00215244">
+    <metadata>
+        <schema>QTIv2.1 Package</schema>
+        <schemaversion>1.0.0</schemaversion>
+    </metadata>
+    <organizations/>
+    <resources>
+                <resource identifier="i1458826617776011" type="imsqti_item_xmlv2p1" href="i1458826617776011/qti.xml">
+            <file href="i1458826617776011/qti.xml"/>
+                        <file href="i1458826617776011/style/custom/tao-user-styles.css"/>
+                    </resource>
+            <resource identifier="i1458826746593113" type="imsqti_item_xmlv2p1" href="i1458826746593113/qti.xml">
+            <file href="i1458826746593113/qti.xml"/>
+                        <file href="i1458826746593113/small.mp4"/>
+                        <file href="i1458826746593113/style/custom/tao-user-styles.css"/>
+                    </resource><resource identifier="i1458826840362515" type="imsqti_item_xmlv2p1" href="i1458826840362515/qti.xml">
+            <file href="i1458826840362515/qti.xml"/>
+                        <file href="i1458826840362515/grid.png"/>
+                        <file href="i1458826840362515/140_45.png"/>
+                        <file href="i1458826840362515/140_75.png"/>
+                        <file href="i1458826840362515/140_c-italic.png"/>
+                        <file href="i1458826840362515/140_greater.png"/>
+                        <file href="i1458826840362515/140_greater-equal.png"/>
+                        <file href="i1458826840362515/140_less.png"/>
+                        <file href="i1458826840362515/140_less-equal.png"/>
+                        <file href="i1458826840362515/140_minus.png"/>
+                        <file href="i1458826840362515/140_plus.png"/>
+                        <file href="i1458826840362515/style/custom/tao-user-styles.css"/>
+                    </resource></resources>
+</manifest>
