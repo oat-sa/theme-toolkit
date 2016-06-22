@@ -58,8 +58,9 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-                    port: 9001//,
-                    // base: 'www-root'
+                    port: 9001,
+                    base: 'dev'
+                    // , open: true
                 }
             }
         }
@@ -89,3 +90,7 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
 
 };
+
+// todo: add task to automatically clone
+// git clone https://github.com/oat-sa/tao-core.git tao
+// git clone https://github.com/oat-sa/extension-tao-itemqti.git taoQtiItem

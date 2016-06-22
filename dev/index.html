@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>portable shared lib "asset" Test</title>
-    <base href="../tao/views/" />
+    <base href="tao/views/" />
 
     <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
     <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
@@ -14,11 +14,11 @@
     <script type="text/javascript">
 
         //load the config
-        require(['/tao/ClientConfig/config'], function(){
+        require(['../../config/config'], function(){
             console.log("getting here!");
 
             //load the test
-            require(['item-loader.js'], function(){
+            require(['../../item-loader.js'], function(){
 
                 console.log("and now there!");
             });
