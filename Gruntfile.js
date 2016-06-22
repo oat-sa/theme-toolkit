@@ -6,6 +6,8 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
+    var profile = { dest: '', src: ''}; //getProfile(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -13,7 +15,7 @@ module.exports = function(grunt) {
             options: {
                 force: true
             },
-            sass: [grunt.option('profile').dest]
+            sass: [profile.dest]
         },
 
         sass: {
@@ -25,9 +27,9 @@ module.exports = function(grunt) {
             compile: {
                 files: [{
                     expand: true,
-                    cwd: grunt.option('profile').src,
+                    cwd: profile.src,
                     src: ['themes/*/*/theme.scss', '!themes/*/_common/theme.scss'],
-                    dest: grunt.option('profile').dest,
+                    dest: profile.dest,
                     ext: '.css'
                 }]
             }
@@ -35,7 +37,7 @@ module.exports = function(grunt) {
 
         watch: {
             sass: {
-                files: [grunt.option('profile').src + '/**/*.scss'],
+                files: [profile.src + '/**/*.scss'],
                 tasks: ['sass:compile', 'notify:sass'],
                 options: {
                     debounceDelay: 500,
@@ -51,10 +53,19 @@ module.exports = function(grunt) {
                     message: 'Sass files compiled'
                 }
             }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    port: 9001//,
+                    // base: 'www-root'
+                }
+            }
         }
     });
 
-    grunt.registerTask('loadProfile', function() {
+    function getProfile(grunt) {
         var allProfiles,
             profile = grunt.option('p');
 
@@ -69,12 +80,12 @@ module.exports = function(grunt) {
         if (!allProfiles[profile]) {
             grunt.fail.fatal('Unknown profile ' + profile + '');
         }
-        console.log('i\'m setting the profile optoion');
-        grunt.option.set('profile', allProfiles[profile]);
-    });
+        return profile;
+    };
 
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('compile', 'Compile themes', ['loadProfile', 'clean:sass', 'sass:compile']);
-    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['loadProfile', 'watch:sass']);
+    grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
+    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
 
 };
