@@ -15,17 +15,37 @@
 
         //load the config
         require(['../../config/config'], function(){
-            console.log("getting here!");
 
             //load the test
             require(['../../item-loader.js'], function(){
 
-                console.log("and now there!");
             });
         });
     </script>
+
+    <style>
+        .top-bar {
+            position: fixed;
+            padding: 5px;
+            text-align: center;
+            width: 100%;
+            background: black;
+            z-index: 1;
+            top: 0px;
+            height: 38px;
+            border-bottom: 2px solid white;
+        }
+        .item-runner {
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-<div id="item-runner"></div>
+<div class="top-bar">
+    <select class="theme-changer">
+        <option disabled>select a theme</option>
+    </select>
+</div>
+<div class="item-runner"></div>
 </body>
 </html>

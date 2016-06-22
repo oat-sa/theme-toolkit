@@ -1,13 +1,14 @@
-/* */
 define([
     'jquery',
     'lodash',
     'taoQtiItem/runner/qtiItemRunner',
+    'ui/themes',
     'json!../../items/i1458826617776011/qti.json'
-], function($, _, qtiItemRunner, data){
+], function($, _, qtiItemRunner, themes, data){
     'use strict';
 
-    var runner;
+    var runner,
+        $container = $('.item-runner');
 
     //override asset loading in order to resolve it from the runtime location
     var strategies = [{
@@ -24,19 +25,34 @@ define([
         }
     }];
 
-    var $container = $('#item-runner');
+
+    // fill available themes
+    var $themeChanger = $('.theme-changer');
+    var defaultTheme = themes.get('items').default;
+    themes.getAvailable('items').forEach(function(theme) {
+        var optionConfig = {
+            text: theme.name,
+            value: theme.id,
+            selected: (theme.id === defaultTheme) ? true : false
+        };
+        var $option = $('<option/>', optionConfig);
+        $themeChanger.append($option);
+    });
+
+    $themeChanger.on('change', function changeTheme(e) {
+        $('.qti-item').trigger('themechange', [e.target.value]);
+    });
+
 
     qtiItemRunner('qti', data)
         .on('render', function() {
-            console.log('rendered !!!!');
+            // console.log('rendered !!!!');
         })
-        // .on('statechange', function(state){
-        //     document.getElementById('response-display').textContent = JSON.stringify(state);
-        // })
         .assets(strategies)
         .init()
         .render($container);
 
 });
-    /* */
+
+
 
