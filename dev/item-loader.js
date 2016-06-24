@@ -17,7 +17,7 @@ define([
         name : 'portableElementLocation',
         handle : function handlePortableElementLocation(url){
             if(/assets/.test(url.toString())){
-                return 'dev/items/i1458826617776011/' + url.toString();
+                return '../../items/i1458826840362515/' + url.toString(); // todo: correct this !
             }
         }
     }, {

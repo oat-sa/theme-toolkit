@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14044788506527107" title="CSS Examples I" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint22">
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14044788506527107" title="CSS Examples I" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint29">
   <responseDeclaration identifier="RESPONSE_1" cardinality="multiple" baseType="identifier"/>
   <responseDeclaration identifier="RESPONSE_2" cardinality="ordered" baseType="identifier"/>
   <responseDeclaration identifier="RESPONSE_3" cardinality="multiple" baseType="pair"/>
   <responseDeclaration identifier="RESPONSE_4" cardinality="multiple" baseType="directedPair"/>
+  <responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier"/>
+  <responseDeclaration identifier="RESPONSE_5" cardinality="multiple" baseType="pair"/>
   <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
   <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
   <itemBody>
@@ -15,7 +17,9 @@
     <div class="grid-row">
       <div class="col-12">
         <choiceInteraction responseIdentifier="RESPONSE_1" shuffle="false" maxChoices="0" minChoices="0" orientation="vertical">
-          <prompt>Example choice interaction</prompt>
+          <prompt>
+            <strong>Choice interaction</strong>
+          </prompt>
           <simpleChoice identifier="choice_1" fixed="false" showHide="show">choice #1</simpleChoice>
           <simpleChoice identifier="choice_2" fixed="false" showHide="show">choice #2</simpleChoice>
           <simpleChoice identifier="choice_3" fixed="false" showHide="show">choice #3</simpleChoice>
@@ -24,34 +28,73 @@
     </div>
     <div class="grid-row">
       <div class="col-12">
-        <orderInteraction responseIdentifier="RESPONSE_2" shuffle="false" maxChoices="0" minChoices="0" orientation="vertical">
-          <prompt>Example order interaction</prompt>
+        <orderInteraction responseIdentifier="RESPONSE_2" shuffle="false" maxChoices="2" minChoices="0" orientation="vertical">
+          <prompt>
+            <strong>Order interaction (vertical, 2 choices max)</strong>
+          </prompt>
           <simpleChoice identifier="choice_4" fixed="false" showHide="show">choice #1</simpleChoice>
-          <simpleChoice identifier="choice_5" fixed="false" showHide="show">choice #2</simpleChoice>
+          <simpleChoice identifier="choice_5" fixed="false" showHide="show">choice #2 choice #2 choice #2 choice #2 choice #2 choice #2 choice #2 choice #2 choice #2 choice #2</simpleChoice>
           <simpleChoice identifier="choice_6" fixed="false" showHide="show">choice #3</simpleChoice>
         </orderInteraction>
       </div>
     </div>
     <div class="grid-row">
       <div class="col-12">
+        <orderInteraction responseIdentifier="RESPONSE" shuffle="false" orientation="horizontal">
+          <prompt>
+            <p>
+              <strong>Order interaction (horizontal, no limit)</strong>
+            </p>
+          </prompt>
+          <simpleChoice identifier="choice_13" fixed="false" showHide="show">choice #1</simpleChoice>
+          <simpleChoice identifier="choice_14" fixed="false" showHide="show">choice #2</simpleChoice>
+          <simpleChoice identifier="choice_15" fixed="false" showHide="show">choice #3</simpleChoice>
+        </orderInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
         <associateInteraction responseIdentifier="RESPONSE_3" shuffle="false" maxAssociations="0" minAssociations="0">
-          <prompt>Example associate interaction</prompt>
-          <simpleAssociableChoice identifier="choice_7" fixed="false" showHide="show" matchMax="0" matchMin="0">choice #1</simpleAssociableChoice>
-          <simpleAssociableChoice identifier="choice_8" fixed="false" showHide="show" matchMax="0" matchMin="0">choice #2</simpleAssociableChoice>
+          <prompt>
+            <strong>Associate interaction (infinite, max use 2)</strong>
+          </prompt>
+          <simpleAssociableChoice identifier="choice_7" fixed="false" showHide="show" matchMax="2" matchMin="0">choice #1</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="choice_8" fixed="false" showHide="show" matchMax="2" matchMin="0">choice #2</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="choice_18" fixed="false" showHide="show" matchMax="2" matchMin="0">choice #3</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="choice_19" fixed="false" showHide="show" matchMax="2" matchMin="0">choice #4</simpleAssociableChoice>
+        </associateInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <associateInteraction responseIdentifier="RESPONSE_5" shuffle="true" maxAssociations="2" minAssociations="0">
+          <prompt>
+            <p>
+              <strong>Associate interaction (finite)</strong>
+            </p>
+          </prompt>
+          <simpleAssociableChoice identifier="choice_16" fixed="false" showHide="show" matchMax="1" matchMin="0">choice #1</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="choice_17" fixed="false" showHide="show" matchMax="1" matchMin="0">choice #2</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="choice_20" fixed="false" showHide="show" matchMax="1" matchMin="0">choice #3</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="choice_21" fixed="false" showHide="show" matchMax="1" matchMin="0">choice #4</simpleAssociableChoice>
         </associateInteraction>
       </div>
     </div>
     <div class="grid-row">
       <div class="col-12">
         <matchInteraction responseIdentifier="RESPONSE_4" shuffle="false" maxAssociations="0" minAssociations="0">
-          <prompt>Example match interaction</prompt>
+          <prompt>
+            <strong>Match interaction</strong>
+          </prompt>
           <simpleMatchSet>
             <simpleAssociableChoice identifier="choice_9" fixed="false" showHide="show" matchMax="0" matchMin="0">choice #1</simpleAssociableChoice>
             <simpleAssociableChoice identifier="choice_10" fixed="false" showHide="show" matchMax="0" matchMin="0">choice #2</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="choice_23" fixed="false" showHide="show" matchMax="1" matchMin="0">1 use</simpleAssociableChoice>
           </simpleMatchSet>
           <simpleMatchSet>
             <simpleAssociableChoice identifier="choice_11" fixed="false" showHide="show" matchMax="0" matchMin="0">choice #1</simpleAssociableChoice>
             <simpleAssociableChoice identifier="choice_12" fixed="false" showHide="show" matchMax="0" matchMin="0">choice #2</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="choice_22" fixed="false" showHide="show" matchMax="1" matchMin="0">1 use</simpleAssociableChoice>
           </simpleMatchSet>
         </matchInteraction>
       </div>
@@ -89,8 +132,36 @@
     <responseCondition>
       <responseIf>
         <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
           <variable identifier="RESPONSE_3"/>
           <correct identifier="RESPONSE_3"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_5"/>
+          <correct identifier="RESPONSE_5"/>
         </match>
         <setOutcomeValue identifier="SCORE">
           <sum>

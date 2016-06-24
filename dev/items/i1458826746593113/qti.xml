@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14047338643733110" title="CSS Examples II" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint22">
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14047338643733110" title="CSS Examples II" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint29">
   <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier"/>
   <responseDeclaration identifier="RESPONSE_1" cardinality="multiple" baseType="directedPair"/>
   <responseDeclaration identifier="RESPONSE_2" cardinality="single" baseType="identifier"/>
@@ -8,8 +8,9 @@
   <responseDeclaration identifier="RESPONSE_5" cardinality="single" baseType="string"/>
   <responseDeclaration identifier="RESPONSE_6" cardinality="single" baseType="integer"/>
   <responseDeclaration identifier="RESPONSE_7" cardinality="single" baseType="file"/>
+  <responseDeclaration identifier="RESPONSE_8" cardinality="single" baseType="boolean"/>
   <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
-  <stylesheet href="style/custom/tao-user-styles.css" title="" type="text/css" media="all"/>
+  <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
   <itemBody>
     <div class="grid-row">
       <div class="col-12">
@@ -30,24 +31,52 @@
     </div>
     <div class="grid-row">
       <div class="col-12">
-        <gapMatchInteraction responseIdentifier="RESPONSE_1" shuffle="false">
+        <gapMatchInteraction responseIdentifier="RESPONSE_1" shuffle="true">
           <prompt>
             <strong>Gap Match Interaction</strong>
           </prompt>
-          <gapText identifier="choice_1" fixed="false" matchMax="1" matchMin="0">choice #1</gapText>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing ...</p>
+          <gapText identifier="choice_5" fixed="false" matchMax="2" matchMin="0">produces</gapText>
+          <gapText identifier="choice_1" fixed="false" matchMax="1" matchMin="0">raises</gapText>
+          <gapText identifier="choice_6" fixed="false" matchMax="1" matchMin="0">shape</gapText>
+          <gapText identifier="choice_7" fixed="false" matchMax="2" matchMin="0">perfect</gapText>
+          <gapText identifier="choice_8" fixed="false" matchMax="1" matchMin="0">value</gapText>
+          <gapText identifier="choice_10" fixed="false" matchMax="2" matchMin="0">respect</gapText>
+          <gapText identifier="choice_9" fixed="false" matchMax="1" matchMin="0">nature</gapText>
+          <p>Tao 
+<gap identifier="undefined_1" fixed="false" required="false"/>
+ them<br/>
+Virtue 
+<gap identifier="undefined_2" fixed="false" required="false"/>
+ them<br/>
+Things 
+<gap identifier="undefined_3" fixed="false" required="false"/>
+ them<br/>
+Forces 
+<gap identifier="undefined_4" fixed="false" required="false"/>
+ them</p>
         </gapMatchInteraction>
       </div>
     </div>
     <div class="grid-row">
       <div class="col-12"><strong>Inline Choice Interaction</strong><br/><br/>
 Lorem ipsum dolor <inlineChoiceInteraction responseIdentifier="RESPONSE_2" shuffle="false" required="false"><inlineChoice identifier="choice_2" fixed="false" showHide="show">choice #1</inlineChoice><inlineChoice identifier="choice_3" fixed="false" showHide="show">choice #2</inlineChoice><inlineChoice identifier="choice_4" fixed="false" showHide="show">choice #3</inlineChoice></inlineChoiceInteraction>
+
+
  sit amet, consectetur adipisicing ...</div>
     </div>
     <div class="grid-row">
       <div class="col-12"><strong>Text Entry Interaction</strong><br/><br/>
 Lorem ipsum dolor <textEntryInteraction responseIdentifier="RESPONSE_3" base="10" placeholderText=""/>
+
+
  sit amet, consectetur adipisicing ...</div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <p><strong>End Attempt interaction</strong> (whatever that is...)</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing ... <endAttemptInteraction responseIdentifier="RESPONSE_8" title="End Attempt"/>
+ </p>
+      </div>
     </div>
     <div class="grid-row">
       <div class="col-12">
@@ -119,6 +148,48 @@ Lorem ipsum dolor <textEntryInteraction responseIdentifier="RESPONSE_3" base="10
     <responseCondition>
       <responseIf>
         <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_3"/>
+          <correct identifier="RESPONSE_3"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_8"/>
+          <correct identifier="RESPONSE_8"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
           <variable identifier="RESPONSE_4"/>
           <correct identifier="RESPONSE_4"/>
         </match>
@@ -163,34 +234,6 @@ Lorem ipsum dolor <textEntryInteraction responseIdentifier="RESPONSE_3" base="10
         <match>
           <variable identifier="RESPONSE_7"/>
           <correct identifier="RESPONSE_7"/>
-        </match>
-        <setOutcomeValue identifier="SCORE">
-          <sum>
-            <variable identifier="SCORE"/>
-            <baseValue baseType="integer">1</baseValue>
-          </sum>
-        </setOutcomeValue>
-      </responseIf>
-    </responseCondition>
-    <responseCondition>
-      <responseIf>
-        <match>
-          <variable identifier="RESPONSE_2"/>
-          <correct identifier="RESPONSE_2"/>
-        </match>
-        <setOutcomeValue identifier="SCORE">
-          <sum>
-            <variable identifier="SCORE"/>
-            <baseValue baseType="integer">1</baseValue>
-          </sum>
-        </setOutcomeValue>
-      </responseIf>
-    </responseCondition>
-    <responseCondition>
-      <responseIf>
-        <match>
-          <variable identifier="RESPONSE_3"/>
-          <correct identifier="RESPONSE_3"/>
         </match>
         <setOutcomeValue identifier="SCORE">
           <sum>

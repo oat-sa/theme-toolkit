@@ -1,6 +1,6 @@
 {
     "identifier": "i14047338643733110",
-    "serial": "item_576cdbc074eb1100259264",
+    "serial": "item_576d068814452176220867",
     "qtiClass": "assessmentItem",
     "attributes": {
         "identifier": "i14047338643733110",
@@ -14,11 +14,11 @@
         "class": ""
     },
     "body": {
-        "serial": "container_containeritembody_576cdbc074e94671544778",
-        "body": "\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        <h1>CSS Example II<\/h1>\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_hottextinteraction_576cdbc0781f3856180539}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_gapmatchinteraction_576cdbc07c447428545570}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\"><strong>Inline Choice Interaction<\/strong><br\/><br\/>\nLorem ipsum dolor\u00a0{{interaction_inlinechoiceinteraction_576cdbc07fa42293430468}}\n sit amet, consectetur adipisicing ...<\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\"><strong>Text Entry Interaction<\/strong><br\/><br\/>\nLorem ipsum dolor {{interaction_textentryinteraction_576cdbc0803a2352249828}}\n sit amet, consectetur adipisicing ...<\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_sliderinteraction_576cdbc081487118748537}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_extendedtextinteraction_576cdbc08329a865855926}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_mediainteraction_576cdbc0856ed488453963}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_uploadinteraction_576cdbc087eb4036968145}}\n      <\/div>\n    <\/div>\n  ",
+        "serial": "container_containeritembody_576d068814435359928754",
+        "body": "\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        <h1>CSS Example II<\/h1>\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_hottextinteraction_576d068815c64105870549}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_gapmatchinteraction_576d06881b6bc713215316}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\"><strong>Inline Choice Interaction<\/strong><br\/><br\/>\nLorem ipsum dolor\u00a0{{interaction_inlinechoiceinteraction_576d06881f103587726586}}\n\n\n sit amet, consectetur adipisicing ...<\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\"><strong>Text Entry Interaction<\/strong><br\/><br\/>\nLorem ipsum dolor {{interaction_textentryinteraction_576d06881f399528567662}}\n\n\n sit amet, consectetur adipisicing ...<\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        <p><strong>End Attempt interaction<\/strong> (whatever that is...)<\/p>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing ...\u00a0{{interaction_endattemptinteraction_576d06881f867234579388}}\n\u00a0<\/p>\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_sliderinteraction_576d06881f996883635837}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_extendedtextinteraction_576d068820de8504263080}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_mediainteraction_576d068822076998111556}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_uploadinteraction_576d0688233e5084856515}}\n      <\/div>\n    <\/div>\n  ",
         "elements": {
-            "interaction_hottextinteraction_576cdbc0781f3856180539": {
-                "serial": "interaction_hottextinteraction_576cdbc0781f3856180539",
+            "interaction_hottextinteraction_576d068815c64105870549": {
+                "serial": "interaction_hottextinteraction_576d068815c64105870549",
                 "qtiClass": "hottextInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE",
@@ -26,68 +26,136 @@
                     "minChoices": 0
                 },
                 "body": {
-                    "serial": "container_containerhottext_576cdbc078934285071735",
-                    "body": "\n          \n          <p>Lorem ipsum dolor sit amet, \n{{choice_hottext_576cdbc079dfd087276083}}\n adipisicing ...<\/p>\n        ",
+                    "serial": "container_containerhottext_576d0688160b7644889335",
+                    "body": "\n          \n          <p>Lorem ipsum dolor sit amet, \n{{choice_hottext_576d068817def067125491}}\n adipisicing ...<\/p>\n        ",
                     "elements": {
-                        "choice_hottext_576cdbc079dfd087276083": {
+                        "choice_hottext_576d068817def067125491": {
                             "identifier": "hottext_1",
-                            "serial": "choice_hottext_576cdbc079dfd087276083",
+                            "serial": "choice_hottext_576d068817def067125491",
                             "qtiClass": "hottext",
                             "attributes": {
                                 "identifier": "hottext_1",
                                 "fixed": false
                             },
                             "body": {
-                                "serial": "container_containerstatic_576cdbc079fa5692160500",
+                                "serial": "container_containerstatic_576d068818057127097099",
                                 "body": "consectetur",
                                 "elements": {},
                                 "debug": {
-                                    "relatedItem": "item_576cdbc074eb1100259264"
+                                    "relatedItem": "item_576d068814452176220867"
                                 }
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbc074eb1100259264"
+                                "relatedItem": "item_576d068814452176220867"
                             }
                         }
                     },
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbc07868c449883126",
+                    "serial": "container_containerstatic_576d068816036326229156",
                     "body": "\n            <strong>Hottext Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 }
             },
-            "interaction_gapmatchinteraction_576cdbc07c447428545570": {
-                "serial": "interaction_gapmatchinteraction_576cdbc07c447428545570",
+            "interaction_gapmatchinteraction_576d06881b6bc713215316": {
+                "serial": "interaction_gapmatchinteraction_576d06881b6bc713215316",
                 "qtiClass": "gapMatchInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_1",
-                    "shuffle": false
+                    "shuffle": true
                 },
                 "body": {
-                    "serial": "container_containergap_576cdbc07c75b560188332",
-                    "body": "\n          \n          \n          <p>Lorem ipsum dolor sit amet, consectetur adipisicing ...<\/p>\n        ",
-                    "elements": {},
+                    "serial": "container_containergap_576d06881b863809490542",
+                    "body": "\n          \n          \n          \n          \n          \n          \n          \n          \n          <p>Tao \n{{choice_gap_576d06881d7d0648134143}}\n them<br\/>\nVirtue \n{{choice_gap_576d06881d935595627706}}\n them<br\/>\nThings \n{{choice_gap_576d06881d9a3857030446}}\n them<br\/>\nForces \n{{choice_gap_576d06881da02487419561}}\n them<\/p>\n        ",
+                    "elements": {
+                        "choice_gap_576d06881d7d0648134143": {
+                            "identifier": "undefined_1",
+                            "serial": "choice_gap_576d06881d7d0648134143",
+                            "qtiClass": "gap",
+                            "attributes": {
+                                "identifier": "undefined_1",
+                                "fixed": false,
+                                "required": false
+                            },
+                            "debug": {
+                                "relatedItem": "item_576d068814452176220867"
+                            }
+                        },
+                        "choice_gap_576d06881d935595627706": {
+                            "identifier": "undefined_2",
+                            "serial": "choice_gap_576d06881d935595627706",
+                            "qtiClass": "gap",
+                            "attributes": {
+                                "identifier": "undefined_2",
+                                "fixed": false,
+                                "required": false
+                            },
+                            "debug": {
+                                "relatedItem": "item_576d068814452176220867"
+                            }
+                        },
+                        "choice_gap_576d06881d9a3857030446": {
+                            "identifier": "undefined_3",
+                            "serial": "choice_gap_576d06881d9a3857030446",
+                            "qtiClass": "gap",
+                            "attributes": {
+                                "identifier": "undefined_3",
+                                "fixed": false,
+                                "required": false
+                            },
+                            "debug": {
+                                "relatedItem": "item_576d068814452176220867"
+                            }
+                        },
+                        "choice_gap_576d06881da02487419561": {
+                            "identifier": "undefined_4",
+                            "serial": "choice_gap_576d06881da02487419561",
+                            "qtiClass": "gap",
+                            "attributes": {
+                                "identifier": "undefined_4",
+                                "fixed": false,
+                                "required": false
+                            },
+                            "debug": {
+                                "relatedItem": "item_576d068814452176220867"
+                            }
+                        }
+                    },
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "choices": {
-                    "choice_gaptext_576cdbc07e1f5781480053": {
+                    "choice_gaptext_576d06881cede357762411": {
+                        "identifier": "choice_5",
+                        "serial": "choice_gaptext_576d06881cede357762411",
+                        "qtiClass": "gapText",
+                        "attributes": {
+                            "identifier": "choice_5",
+                            "fixed": false,
+                            "matchMax": 2,
+                            "matchMin": 0
+                        },
+                        "debug": {
+                            "relatedItem": "item_576d068814452176220867"
+                        },
+                        "text": "produces"
+                    },
+                    "choice_gaptext_576d06881d009378811720": {
                         "identifier": "choice_1",
-                        "serial": "choice_gaptext_576cdbc07e1f5781480053",
+                        "serial": "choice_gaptext_576d06881d009378811720",
                         "qtiClass": "gapText",
                         "attributes": {
                             "identifier": "choice_1",
@@ -96,22 +164,97 @@
                             "matchMin": 0
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbc074eb1100259264"
+                            "relatedItem": "item_576d068814452176220867"
                         },
-                        "text": "choice #1"
+                        "text": "raises"
+                    },
+                    "choice_gaptext_576d06881d066638829153": {
+                        "identifier": "choice_6",
+                        "serial": "choice_gaptext_576d06881d066638829153",
+                        "qtiClass": "gapText",
+                        "attributes": {
+                            "identifier": "choice_6",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "debug": {
+                            "relatedItem": "item_576d068814452176220867"
+                        },
+                        "text": "shape"
+                    },
+                    "choice_gaptext_576d06881d0b6527350640": {
+                        "identifier": "choice_7",
+                        "serial": "choice_gaptext_576d06881d0b6527350640",
+                        "qtiClass": "gapText",
+                        "attributes": {
+                            "identifier": "choice_7",
+                            "fixed": false,
+                            "matchMax": 2,
+                            "matchMin": 0
+                        },
+                        "debug": {
+                            "relatedItem": "item_576d068814452176220867"
+                        },
+                        "text": "perfect"
+                    },
+                    "choice_gaptext_576d06881d105527429037": {
+                        "identifier": "choice_8",
+                        "serial": "choice_gaptext_576d06881d105527429037",
+                        "qtiClass": "gapText",
+                        "attributes": {
+                            "identifier": "choice_8",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "debug": {
+                            "relatedItem": "item_576d068814452176220867"
+                        },
+                        "text": "value"
+                    },
+                    "choice_gaptext_576d06881d152837228004": {
+                        "identifier": "choice_10",
+                        "serial": "choice_gaptext_576d06881d152837228004",
+                        "qtiClass": "gapText",
+                        "attributes": {
+                            "identifier": "choice_10",
+                            "fixed": false,
+                            "matchMax": 2,
+                            "matchMin": 0
+                        },
+                        "debug": {
+                            "relatedItem": "item_576d068814452176220867"
+                        },
+                        "text": "respect"
+                    },
+                    "choice_gaptext_576d06881d19c852366416": {
+                        "identifier": "choice_9",
+                        "serial": "choice_gaptext_576d06881d19c852366416",
+                        "qtiClass": "gapText",
+                        "attributes": {
+                            "identifier": "choice_9",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "debug": {
+                            "relatedItem": "item_576d068814452176220867"
+                        },
+                        "text": "nature"
                     }
                 },
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbc07c550638405010",
+                    "serial": "container_containerstatic_576d06881b7d0004426594",
                     "body": "\n            <strong>Gap Match Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 }
             },
-            "interaction_inlinechoiceinteraction_576cdbc07fa42293430468": {
-                "serial": "interaction_inlinechoiceinteraction_576cdbc07fa42293430468",
+            "interaction_inlinechoiceinteraction_576d06881f103587726586": {
+                "serial": "interaction_inlinechoiceinteraction_576d06881f103587726586",
                 "qtiClass": "inlineChoiceInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_2",
@@ -119,12 +262,12 @@
                     "required": false
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "choices": {
-                    "choice_inlinechoice_576cdbc08006c852106385": {
+                    "choice_inlinechoice_576d06881f205729283053": {
                         "identifier": "choice_2",
-                        "serial": "choice_inlinechoice_576cdbc08006c852106385",
+                        "serial": "choice_inlinechoice_576d06881f205729283053",
                         "qtiClass": "inlineChoice",
                         "attributes": {
                             "identifier": "choice_2",
@@ -132,13 +275,13 @@
                             "showHide": "show"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbc074eb1100259264"
+                            "relatedItem": "item_576d068814452176220867"
                         },
                         "text": "choice #1"
                     },
-                    "choice_inlinechoice_576cdbc0800f4608694825": {
+                    "choice_inlinechoice_576d06881f266982314036": {
                         "identifier": "choice_3",
-                        "serial": "choice_inlinechoice_576cdbc0800f4608694825",
+                        "serial": "choice_inlinechoice_576d06881f266982314036",
                         "qtiClass": "inlineChoice",
                         "attributes": {
                             "identifier": "choice_3",
@@ -146,13 +289,13 @@
                             "showHide": "show"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbc074eb1100259264"
+                            "relatedItem": "item_576d068814452176220867"
                         },
                         "text": "choice #2"
                     },
-                    "choice_inlinechoice_576cdbc080139811680926": {
+                    "choice_inlinechoice_576d06881f2ab098343569": {
                         "identifier": "choice_4",
-                        "serial": "choice_inlinechoice_576cdbc080139811680926",
+                        "serial": "choice_inlinechoice_576d06881f2ab098343569",
                         "qtiClass": "inlineChoice",
                         "attributes": {
                             "identifier": "choice_4",
@@ -160,14 +303,14 @@
                             "showHide": "show"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbc074eb1100259264"
+                            "relatedItem": "item_576d068814452176220867"
                         },
                         "text": "choice #3"
                     }
                 }
             },
-            "interaction_textentryinteraction_576cdbc0803a2352249828": {
-                "serial": "interaction_textentryinteraction_576cdbc0803a2352249828",
+            "interaction_textentryinteraction_576d06881f399528567662": {
+                "serial": "interaction_textentryinteraction_576d06881f399528567662",
                 "qtiClass": "textEntryInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_3",
@@ -175,12 +318,24 @@
                     "placeholderText": ""
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "choices": {}
             },
-            "interaction_sliderinteraction_576cdbc081487118748537": {
-                "serial": "interaction_sliderinteraction_576cdbc081487118748537",
+            "interaction_endattemptinteraction_576d06881f867234579388": {
+                "serial": "interaction_endattemptinteraction_576d06881f867234579388",
+                "qtiClass": "endAttemptInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_8",
+                    "title": "End Attempt"
+                },
+                "debug": {
+                    "relatedItem": "item_576d068814452176220867"
+                },
+                "choices": {}
+            },
+            "interaction_sliderinteraction_576d06881f996883635837": {
+                "serial": "interaction_sliderinteraction_576d06881f996883635837",
                 "qtiClass": "sliderInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_4",
@@ -192,20 +347,20 @@
                     "reverse": false
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "choices": {},
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbc082085814114519",
+                    "serial": "container_containerstatic_576d06881fc20854907527",
                     "body": "\n            <strong>Slider Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 }
             },
-            "interaction_extendedtextinteraction_576cdbc08329a865855926": {
-                "serial": "interaction_extendedtextinteraction_576cdbc08329a865855926",
+            "interaction_extendedtextinteraction_576d068820de8504263080": {
+                "serial": "interaction_extendedtextinteraction_576d068820de8504263080",
                 "qtiClass": "extendedTextInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_5",
@@ -214,20 +369,20 @@
                     "format": "plain"
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "choices": {},
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbc084062668901997",
+                    "serial": "container_containerstatic_576d068820fee550755480",
                     "body": "\n            <strong>Extended Text Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 }
             },
-            "interaction_mediainteraction_576cdbc0856ed488453963": {
-                "serial": "interaction_mediainteraction_576cdbc0856ed488453963",
+            "interaction_mediainteraction_576d068822076998111556": {
+                "serial": "interaction_mediainteraction_576d068822076998111556",
                 "qtiClass": "mediaInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_6",
@@ -237,19 +392,19 @@
                     "loop": false
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "choices": {},
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbc0861ff359322980",
+                    "serial": "container_containerstatic_576d068822207340026003",
                     "body": "\n            <strong>Media Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 },
                 "object": {
-                    "serial": "object_576cdbc087bb8623570155",
+                    "serial": "object_576d0688232e7707663463",
                     "qtiClass": "object",
                     "attributes": {
                         "data": "small.mp4",
@@ -262,32 +417,32 @@
                     }
                 }
             },
-            "interaction_uploadinteraction_576cdbc087eb4036968145": {
-                "serial": "interaction_uploadinteraction_576cdbc087eb4036968145",
+            "interaction_uploadinteraction_576d0688233e5084856515": {
+                "serial": "interaction_uploadinteraction_576d0688233e5084856515",
                 "qtiClass": "uploadInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_7"
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbc074eb1100259264"
+                    "relatedItem": "item_576d068814452176220867"
                 },
                 "choices": {},
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbc088175949071225",
+                    "serial": "container_containerstatic_576d068823492097623541",
                     "body": "\n            <strong>Upload Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbc074eb1100259264"
+                        "relatedItem": "item_576d068814452176220867"
                     }
                 }
             }
         },
         "debug": {
-            "relatedItem": "item_576cdbc074eb1100259264"
+            "relatedItem": "item_576d068814452176220867"
         }
     },
     "debug": {
-        "relatedItem": "item_576cdbc074eb1100259264"
+        "relatedItem": "item_576d068814452176220867"
     },
     "namespaces": {
         "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1",
@@ -298,8 +453,8 @@
         "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1": "http:\/\/www.imsglobal.org\/xsd\/qti\/qtiv2p1\/imsqti_v2p1.xsd"
     },
     "stylesheets": {
-        "stylesheet_576cdbc075753250618278": {
-            "serial": "stylesheet_576cdbc075753250618278",
+        "stylesheet_576d068814a89208716166": {
+            "serial": "stylesheet_576d068814a89208716166",
             "qtiClass": "stylesheet",
             "attributes": {
                 "href": "style\/custom\/tao-user-styles.css",
@@ -308,14 +463,14 @@
                 "title": ""
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             }
         }
     },
     "outcomes": {
-        "outcomedeclaration_576cdbc0767c2416401718": {
+        "outcomedeclaration_576d068815438812834324": {
             "identifier": "SCORE",
-            "serial": "outcomedeclaration_576cdbc0767c2416401718",
+            "serial": "outcomedeclaration_576d068815438812834324",
             "qtiClass": "outcomeDeclaration",
             "attributes": {
                 "identifier": "SCORE",
@@ -323,15 +478,15 @@
                 "baseType": "float"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "defaultValue": null
         }
     },
     "responses": {
-        "responsedeclaration_576cdbc075f01390709013": {
+        "responsedeclaration_576d068814efd631534884": {
             "identifier": "RESPONSE",
-            "serial": "responsedeclaration_576cdbc075f01390709013",
+            "serial": "responsedeclaration_576d068814efd631534884",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE",
@@ -339,7 +494,7 @@
                 "baseType": "identifier"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -350,9 +505,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbc07621a335545206": {
+        "responsedeclaration_576d0688150d0911707455": {
             "identifier": "RESPONSE_1",
-            "serial": "responsedeclaration_576cdbc07621a335545206",
+            "serial": "responsedeclaration_576d0688150d0911707455",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_1",
@@ -360,7 +515,7 @@
                 "baseType": "directedPair"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -371,9 +526,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbc0762a6037018215": {
+        "responsedeclaration_576d068815135380907437": {
             "identifier": "RESPONSE_2",
-            "serial": "responsedeclaration_576cdbc0762a6037018215",
+            "serial": "responsedeclaration_576d068815135380907437",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_2",
@@ -381,7 +536,7 @@
                 "baseType": "identifier"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -392,9 +547,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbc07631a060261622": {
+        "responsedeclaration_576d06881518c422453297": {
             "identifier": "RESPONSE_3",
-            "serial": "responsedeclaration_576cdbc07631a060261622",
+            "serial": "responsedeclaration_576d06881518c422453297",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_3",
@@ -402,7 +557,7 @@
                 "baseType": "string"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -413,9 +568,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbc07638d266384837": {
+        "responsedeclaration_576d0688151e3588863994": {
             "identifier": "RESPONSE_4",
-            "serial": "responsedeclaration_576cdbc07638d266384837",
+            "serial": "responsedeclaration_576d0688151e3588863994",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_4",
@@ -423,7 +578,7 @@
                 "baseType": "integer"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -434,9 +589,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbc076450158984807": {
+        "responsedeclaration_576d068815239986070425": {
             "identifier": "RESPONSE_5",
-            "serial": "responsedeclaration_576cdbc076450158984807",
+            "serial": "responsedeclaration_576d068815239986070425",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_5",
@@ -444,7 +599,7 @@
                 "baseType": "string"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -455,9 +610,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbc07653f869199152": {
+        "responsedeclaration_576d06881528d503879838": {
             "identifier": "RESPONSE_6",
-            "serial": "responsedeclaration_576cdbc07653f869199152",
+            "serial": "responsedeclaration_576d06881528d503879838",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_6",
@@ -465,7 +620,7 @@
                 "baseType": "integer"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -476,9 +631,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbc0765f1909296998": {
+        "responsedeclaration_576d0688152f1116177802": {
             "identifier": "RESPONSE_7",
-            "serial": "responsedeclaration_576cdbc0765f1909296998",
+            "serial": "responsedeclaration_576d0688152f1116177802",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_7",
@@ -486,7 +641,28 @@
                 "baseType": "file"
             },
             "debug": {
-                "relatedItem": "item_576cdbc074eb1100259264"
+                "relatedItem": "item_576d068814452176220867"
+            },
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/match_correct",
+            "correctResponses": [],
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        },
+        "responsedeclaration_576d068815347400903075": {
+            "identifier": "RESPONSE_8",
+            "serial": "responsedeclaration_576d068815347400903075",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_8",
+                "cardinality": "single",
+                "baseType": "boolean"
+            },
+            "debug": {
+                "relatedItem": "item_576d068814452176220867"
             },
             "mapping": [],
             "areaMapping": [],
@@ -500,11 +676,11 @@
     },
     "feedbacks": {},
     "responseProcessing": {
-        "serial": "response_templatesdriven_576cdbc08a672577978957",
+        "serial": "response_templatesdriven_576d0688263b6266175382",
         "qtiClass": "responseProcessing",
         "attributes": [],
         "debug": {
-            "relatedItem": "item_576cdbc074eb1100259264"
+            "relatedItem": "item_576d068814452176220867"
         },
         "processingType": "templateDriven",
         "responseRules": [
@@ -672,6 +848,55 @@
                                 "qtiClass": "correct",
                                 "attributes": {
                                     "identifier": "RESPONSE_3"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "integer"
+                                        },
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE_8"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE_8"
                                 }
                             }
                         ]
