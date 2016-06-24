@@ -7,6 +7,7 @@ setup procedure:
 
 todo:
 
+- add new items
 - define overall process
 - generate correct ui/themes data in config file 
 - item switcher ?
@@ -21,3 +22,6 @@ todo:
 // git clone https://github.com/oat-sa/extension-tao-itemqti.git taoQtiItem
 // git clone https://github.com/oat-sa/extension-tao-item.git taoItems
 
+php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826617776011/qti.xml
+php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826746593113/qti.xml
+php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826840362515/qti.xml

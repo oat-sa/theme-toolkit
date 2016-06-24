@@ -1,0 +1,1241 @@
+{
+    "identifier": "i14047373393343112",
+    "serial": "item_576cdbd142fa1631683338",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "i14047373393343112",
+        "title": "CSS Examples III",
+        "label": "",
+        "xml:lang": "en-US",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.1.0-sprint15",
+        "class": ""
+    },
+    "body": {
+        "serial": "container_containeritembody_576cdbd142f85341477592",
+        "body": "\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        <h1>CSS Example III<\/h1>\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_hotspotinteraction_576cdbd14570a456160588}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicorderinteraction_576cdbd147cb8449835600}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicassociateinteraction_576cdbd1492a2910211974}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicgapmatchinteraction_576cdbd14a9e7278368394}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_selectpointinteraction_576cdbd14c718221415195}}\n      <\/div>\n    <\/div>\n  ",
+        "elements": {
+            "interaction_hotspotinteraction_576cdbd14570a456160588": {
+                "serial": "interaction_hotspotinteraction_576cdbd14570a456160588",
+                "qtiClass": "hotspotInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "maxChoices": 0,
+                    "minChoices": 0,
+                    "class": "responsive"
+                },
+                "debug": {
+                    "relatedItem": "item_576cdbd142fa1631683338"
+                },
+                "choices": {
+                    "choice_hotspotchoice_576cdbd1476e2659321794": {
+                        "identifier": "hotspot_1",
+                        "serial": "choice_hotspotchoice_576cdbd1476e2659321794",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_1",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "20,20,100,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd147890181515643": {
+                        "identifier": "hotspot_2",
+                        "serial": "choice_hotspotchoice_576cdbd147890181515643",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_2",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "124,20,204,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd1478d8764392798": {
+                        "identifier": "hotspot_3",
+                        "serial": "choice_hotspotchoice_576cdbd1478d8764392798",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_3",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "228,20,308,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd14791c734201994": {
+                        "identifier": "hotspot_4",
+                        "serial": "choice_hotspotchoice_576cdbd14791c734201994",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_4",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "332,20,412,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd14795b364412638": {
+                        "identifier": "hotspot_5",
+                        "serial": "choice_hotspotchoice_576cdbd14795b364412638",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_5",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "436,20,516,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd147999904155706": {
+                        "identifier": "hotspot_6",
+                        "serial": "choice_hotspotchoice_576cdbd147999904155706",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_6",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "540,20,620,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_576cdbd145a9a041274980",
+                    "body": "\n            <strong>Hotspot Interaction<\/strong>\n          ",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_576cdbd142fa1631683338"
+                    }
+                },
+                "object": {
+                    "serial": "object_576cdbd1479f6246498222",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "grid.png",
+                        "type": "image\/png",
+                        "width": 640,
+                        "height": 121
+                    },
+                    "debug": {
+                        "relatedItem": ""
+                    }
+                }
+            },
+            "interaction_graphicorderinteraction_576cdbd147cb8449835600": {
+                "serial": "interaction_graphicorderinteraction_576cdbd147cb8449835600",
+                "qtiClass": "graphicOrderInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_1",
+                    "maxChoices": 0,
+                    "minChoices": 0,
+                    "class": "responsive"
+                },
+                "debug": {
+                    "relatedItem": "item_576cdbd142fa1631683338"
+                },
+                "choices": {
+                    "choice_hotspotchoice_576cdbd148e72115538358": {
+                        "identifier": "hotspot_7",
+                        "serial": "choice_hotspotchoice_576cdbd148e72115538358",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_7",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "20,20,100,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd148ec9338072207": {
+                        "identifier": "hotspot_8",
+                        "serial": "choice_hotspotchoice_576cdbd148ec9338072207",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_8",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "124,20,204,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd148f05445404591": {
+                        "identifier": "hotspot_9",
+                        "serial": "choice_hotspotchoice_576cdbd148f05445404591",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_9",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "228,20,308,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd148f41910580868": {
+                        "identifier": "hotspot_10",
+                        "serial": "choice_hotspotchoice_576cdbd148f41910580868",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_10",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "332,20,412,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd148f7e503541728": {
+                        "identifier": "hotspot_11",
+                        "serial": "choice_hotspotchoice_576cdbd148f7e503541728",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_11",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "436,20,516,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_hotspotchoice_576cdbd148fb8232598851": {
+                        "identifier": "hotspot_12",
+                        "serial": "choice_hotspotchoice_576cdbd148fb8232598851",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "hotspot_12",
+                            "fixed": false,
+                            "shape": "rect",
+                            "coords": "540,20,620,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_576cdbd147e0a744150292",
+                    "body": "\n            <strong>Graphic Order Interaction<\/strong>\n          ",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_576cdbd142fa1631683338"
+                    }
+                },
+                "object": {
+                    "serial": "object_576cdbd149004015991738",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "grid.png",
+                        "type": "image\/png",
+                        "width": 640,
+                        "height": 121
+                    },
+                    "debug": {
+                        "relatedItem": ""
+                    }
+                }
+            },
+            "interaction_graphicassociateinteraction_576cdbd1492a2910211974": {
+                "serial": "interaction_graphicassociateinteraction_576cdbd1492a2910211974",
+                "qtiClass": "graphicAssociateInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_2",
+                    "maxAssociations": 0,
+                    "minAssociations": 0,
+                    "class": "responsive"
+                },
+                "debug": {
+                    "relatedItem": "item_576cdbd142fa1631683338"
+                },
+                "choices": {
+                    "choice_associablehotspot_576cdbd14a437478455074": {
+                        "identifier": "associablehotspot_1",
+                        "serial": "choice_associablehotspot_576cdbd14a437478455074",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_1",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "20,20,100,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14a555529027144": {
+                        "identifier": "associablehotspot_2",
+                        "serial": "choice_associablehotspot_576cdbd14a555529027144",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_2",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "124,20,204,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14a5ab726332689": {
+                        "identifier": "associablehotspot_3",
+                        "serial": "choice_associablehotspot_576cdbd14a5ab726332689",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_3",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "228,20,308,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14a5fa272046377": {
+                        "identifier": "associablehotspot_4",
+                        "serial": "choice_associablehotspot_576cdbd14a5fa272046377",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_4",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "332,20,412,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14a645185901232": {
+                        "identifier": "associablehotspot_5",
+                        "serial": "choice_associablehotspot_576cdbd14a645185901232",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_5",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "436,20,516,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14a692384524012": {
+                        "identifier": "associablehotspot_6",
+                        "serial": "choice_associablehotspot_576cdbd14a692384524012",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_6",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "540,20,620,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_576cdbd149424303064316",
+                    "body": "\n            <strong>Graphic Associate Interaction<\/strong>\n          ",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_576cdbd142fa1631683338"
+                    }
+                },
+                "object": {
+                    "serial": "object_576cdbd14a6f2077479435",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "grid.png",
+                        "type": "image\/png",
+                        "width": 640,
+                        "height": 121
+                    },
+                    "debug": {
+                        "relatedItem": ""
+                    }
+                }
+            },
+            "interaction_graphicgapmatchinteraction_576cdbd14a9e7278368394": {
+                "serial": "interaction_graphicgapmatchinteraction_576cdbd14a9e7278368394",
+                "qtiClass": "graphicGapMatchInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_3",
+                    "class": "responsive"
+                },
+                "debug": {
+                    "relatedItem": "item_576cdbd142fa1631683338"
+                },
+                "choices": {
+                    "choice_associablehotspot_576cdbd14c2ba205269344": {
+                        "identifier": "associablehotspot_7",
+                        "serial": "choice_associablehotspot_576cdbd14c2ba205269344",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_7",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "20,20,100,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14c312398980879": {
+                        "identifier": "associablehotspot_8",
+                        "serial": "choice_associablehotspot_576cdbd14c312398980879",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_8",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "124,20,204,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14c35b360299861": {
+                        "identifier": "associablehotspot_9",
+                        "serial": "choice_associablehotspot_576cdbd14c35b360299861",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_9",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "228,20,308,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14c3b0642294335": {
+                        "identifier": "associablehotspot_10",
+                        "serial": "choice_associablehotspot_576cdbd14c3b0642294335",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_10",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "332,20,412,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14c3f9138882645": {
+                        "identifier": "associablehotspot_11",
+                        "serial": "choice_associablehotspot_576cdbd14c3f9138882645",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_11",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "436,20,516,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    },
+                    "choice_associablehotspot_576cdbd14c446973236484": {
+                        "identifier": "associablehotspot_12",
+                        "serial": "choice_associablehotspot_576cdbd14c446973236484",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "associablehotspot_12",
+                            "fixed": false,
+                            "matchMax": 0,
+                            "matchMin": 0,
+                            "shape": "rect",
+                            "coords": "540,20,620,100"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_576cdbd14aa5c717099875",
+                    "body": "\n            <strong>Graphic Gap Interaction<\/strong>\n          ",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_576cdbd142fa1631683338"
+                    }
+                },
+                "object": {
+                    "serial": "object_576cdbd14c4a7635233015",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "grid.png",
+                        "type": "image\/png",
+                        "width": 640,
+                        "height": 121
+                    },
+                    "debug": {
+                        "relatedItem": ""
+                    }
+                },
+                "gapImgs": {
+                    "choice_gapimg_576cdbd14b9ce198517589": {
+                        "identifier": "gapimg_1",
+                        "serial": "choice_gapimg_576cdbd14b9ce198517589",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_1",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14bc34598564604",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_45.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14bcb4186667504": {
+                        "identifier": "gapimg_2",
+                        "serial": "choice_gapimg_576cdbd14bcb4186667504",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_2",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14bd0d616740200",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_75.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14bd69356040239": {
+                        "identifier": "gapimg_3",
+                        "serial": "choice_gapimg_576cdbd14bd69356040239",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_3",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14bdbb969686474",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_c-italic.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14be11611358478": {
+                        "identifier": "gapimg_4",
+                        "serial": "choice_gapimg_576cdbd14be11611358478",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_4",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14be63740990848",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_greater.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14beb7991379933": {
+                        "identifier": "gapimg_5",
+                        "serial": "choice_gapimg_576cdbd14beb7991379933",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_5",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14bf08843184635",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_greater-equal.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14bf5b774909920": {
+                        "identifier": "gapimg_6",
+                        "serial": "choice_gapimg_576cdbd14bf5b774909920",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_6",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14bfad837275887",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_less.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14c000253819801": {
+                        "identifier": "gapimg_7",
+                        "serial": "choice_gapimg_576cdbd14c000253819801",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_7",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14c04e180099158",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_less-equal.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14c0a2851381442": {
+                        "identifier": "gapimg_8",
+                        "serial": "choice_gapimg_576cdbd14c0a2851381442",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_8",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14c0ef382198577",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_minus.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14c145792579506": {
+                        "identifier": "gapimg_9",
+                        "serial": "choice_gapimg_576cdbd14c145792579506",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_9",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14c19a259158102",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_plus.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    },
+                    "choice_gapimg_576cdbd14c1e7214540500": {
+                        "identifier": "gapimg_10",
+                        "serial": "choice_gapimg_576cdbd14c1e7214540500",
+                        "qtiClass": "gapImg",
+                        "attributes": {
+                            "identifier": "gapimg_10",
+                            "fixed": false,
+                            "matchMin": "0",
+                            "matchMax": "0"
+                        },
+                        "debug": {
+                            "relatedItem": "item_576cdbd142fa1631683338"
+                        },
+                        "object": {
+                            "serial": "object_576cdbd14c230394293576",
+                            "qtiClass": "object",
+                            "attributes": {
+                                "data": "140_plus.png",
+                                "type": "image\/png",
+                                "width": 80,
+                                "height": 80
+                            },
+                            "debug": {
+                                "relatedItem": "item_576cdbd142fa1631683338"
+                            }
+                        }
+                    }
+                }
+            },
+            "interaction_selectpointinteraction_576cdbd14c718221415195": {
+                "serial": "interaction_selectpointinteraction_576cdbd14c718221415195",
+                "qtiClass": "selectPointInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_4",
+                    "maxChoices": 0,
+                    "minChoices": 0,
+                    "class": "responsive"
+                },
+                "debug": {
+                    "relatedItem": "item_576cdbd142fa1631683338"
+                },
+                "choices": {},
+                "prompt": {
+                    "serial": "container_containerstatic_576cdbd14c7ac652675736",
+                    "body": "\n            <strong>Select Point Interaction<\/strong>\n          ",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_576cdbd142fa1631683338"
+                    }
+                },
+                "object": {
+                    "serial": "object_576cdbd14d103542463002",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "grid.png",
+                        "type": "image\/png",
+                        "width": 640,
+                        "height": 121
+                    },
+                    "debug": {
+                        "relatedItem": ""
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_576cdbd142fa1631683338"
+        }
+    },
+    "debug": {
+        "relatedItem": "item_576cdbd142fa1631683338"
+    },
+    "namespaces": {
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1",
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance"
+    },
+    "schemaLocations": {
+        "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1": "http:\/\/www.imsglobal.org\/xsd\/qti\/qtiv2p1\/imsqti_v2p1.xsd"
+    },
+    "stylesheets": {
+        "stylesheet_576cdbd143783383468311": {
+            "serial": "stylesheet_576cdbd143783383468311",
+            "qtiClass": "stylesheet",
+            "attributes": {
+                "href": "style\/custom\/tao-user-styles.css",
+                "type": "text\/css",
+                "media": "all",
+                "title": ""
+            },
+            "debug": {
+                "relatedItem": "item_576cdbd142fa1631683338"
+            }
+        }
+    },
+    "outcomes": {
+        "outcomedeclaration_576cdbd144a35626000726": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_576cdbd144a35626000726",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "debug": {
+                "relatedItem": "item_576cdbd142fa1631683338"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_576cdbd143ce2616885715": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_576cdbd143ce2616885715",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "multiple",
+                "baseType": "identifier"
+            },
+            "debug": {
+                "relatedItem": "item_576cdbd142fa1631683338"
+            },
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/match_correct",
+            "correctResponses": [],
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        },
+        "responsedeclaration_576cdbd143f4b324104925": {
+            "identifier": "RESPONSE_1",
+            "serial": "responsedeclaration_576cdbd143f4b324104925",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_1",
+                "cardinality": "multiple",
+                "baseType": "identifier"
+            },
+            "debug": {
+                "relatedItem": "item_576cdbd142fa1631683338"
+            },
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/match_correct",
+            "correctResponses": [],
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        },
+        "responsedeclaration_576cdbd14400e239875813": {
+            "identifier": "RESPONSE_2",
+            "serial": "responsedeclaration_576cdbd14400e239875813",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_2",
+                "cardinality": "multiple",
+                "baseType": "pair"
+            },
+            "debug": {
+                "relatedItem": "item_576cdbd142fa1631683338"
+            },
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/match_correct",
+            "correctResponses": [
+                "associablehotspot_1 associablehotspot_6",
+                "associablehotspot_2 associablehotspot_5",
+                "associablehotspot_3 associablehotspot_4"
+            ],
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        },
+        "responsedeclaration_576cdbd144892098049032": {
+            "identifier": "RESPONSE_3",
+            "serial": "responsedeclaration_576cdbd144892098049032",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_3",
+                "cardinality": "multiple",
+                "baseType": "directedPair"
+            },
+            "debug": {
+                "relatedItem": "item_576cdbd142fa1631683338"
+            },
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/map_response",
+            "correctResponses": [],
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        },
+        "responsedeclaration_576cdbd144911247550006": {
+            "identifier": "RESPONSE_4",
+            "serial": "responsedeclaration_576cdbd144911247550006",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_4",
+                "cardinality": "multiple",
+                "baseType": "point"
+            },
+            "debug": {
+                "relatedItem": "item_576cdbd142fa1631683338"
+            },
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/map_response_point",
+            "correctResponses": [],
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        }
+    },
+    "feedbacks": {},
+    "responseProcessing": {
+        "serial": "response_templatesdriven_576cdbd14e2f5718113072",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "debug": {
+            "relatedItem": "item_576cdbd142fa1631683338"
+        },
+        "processingType": "templateDriven",
+        "responseRules": [
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "integer"
+                                        },
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE_1"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE_1"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "integer"
+                                        },
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE_2"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE_2"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "integer"
+                                        },
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "not",
+                        "expressions": [
+                            {
+                                "qtiClass": "isNull",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "RESPONSE_3"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "mapResponse",
+                                        "attributes": {
+                                            "identifier": "RESPONSE_3"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "not",
+                        "expressions": [
+                            {
+                                "qtiClass": "isNull",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "RESPONSE_4"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "mapResponsePoint",
+                                        "attributes": {
+                                            "identifier": "RESPONSE_4"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "apipAccessibility": ""
+}
