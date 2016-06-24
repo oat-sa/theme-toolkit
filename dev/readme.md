@@ -11,5 +11,13 @@ todo:
 - generate correct ui/themes data in config file 
 - item switcher ?
 - live reload on recompile
+- write somewhere in act extension that themes need to be compiled with theme-toolkit
+- remove profile parameter dependency in grunt cli
 
+
+
+// todo: add task to automatically clone
+// git clone https://github.com/oat-sa/tao-core.git tao
+// git clone https://github.com/oat-sa/extension-tao-itemqti.git taoQtiItem
+// git clone https://github.com/oat-sa/extension-tao-item.git taoItems
 

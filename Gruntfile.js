@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
-    var profile = { dest: '', src: ''}; //getProfile(grunt);
+    var profile = getProfile(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: profile.src,
-                    src: ['themes/*/*/theme.scss', '!themes/*/_common/theme.scss'],
+                    src: ['**/theme.scss'],
                     dest: profile.dest,
                     ext: '.css'
                 }]
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
         if (!allProfiles[profile]) {
             grunt.fail.fatal('Unknown profile ' + profile + '');
         }
-        return profile;
+        return allProfiles[profile];
     };
 
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -90,8 +90,3 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
 
 };
-
-// todo: add task to automatically clone
-// git clone https://github.com/oat-sa/tao-core.git tao
-// git clone https://github.com/oat-sa/extension-tao-itemqti.git taoQtiItem
-// git clone https://github.com/oat-sa/extension-tao-item.git taoItems
