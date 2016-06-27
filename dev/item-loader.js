@@ -3,9 +3,9 @@ define([
     'lodash',
     'taoQtiItem/runner/qtiItemRunner',
     'ui/themes',
-    'json!../../items/i1458826617776011/qti.json',
-    'json!../../items/i1458826746593113/qti.json',
-    'json!../../items/i1458826840362515/qti.json'
+    'json!../../../items/i1458826617776011/qti.json',
+    'json!../../../items/i1458826746593113/qti.json',
+    'json!../../../items/i1458826840362515/qti.json'
 ], function($, _, qtiItemRunner, themes, item1, item2, item3){
     'use strict';
 
@@ -13,9 +13,9 @@ define([
         $container = $('.item-runner'),
 
         availableItems = {
-            item1: { id: 'item1', data: item1, name:'interactions 1', folder: '../../items/i1458826617776011' },
-            item2: { id: 'item2', data: item2, name:'interactions 2', folder: '../../items/i1458826746593113' },
-            item3: { id: 'item3', data: item3, name:'interactions 3', folder: '../../items/i1458826840362515' }
+            item1: { id: 'item1', data: item1, name:'interactions 1', folder: 'items/i1458826617776011' },
+            item2: { id: 'item2', data: item2, name:'interactions 2', folder: 'items/i1458826746593113' },
+            item3: { id: 'item3', data: item3, name:'interactions 3', folder: 'items/i1458826840362515' }
         },
         currentItemId = 'item1',
         currentThemeId;
