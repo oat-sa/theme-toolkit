@@ -1,6 +1,6 @@
 {
     "identifier": "i14047373393343112",
-    "serial": "item_576cdbd142fa1631683338",
+    "serial": "item_5771258d82d58771848754",
     "qtiClass": "assessmentItem",
     "attributes": {
         "identifier": "i14047373393343112",
@@ -14,11 +14,11 @@
         "class": ""
     },
     "body": {
-        "serial": "container_containeritembody_576cdbd142f85341477592",
-        "body": "\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        <h1>CSS Example III<\/h1>\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_hotspotinteraction_576cdbd14570a456160588}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicorderinteraction_576cdbd147cb8449835600}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicassociateinteraction_576cdbd1492a2910211974}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicgapmatchinteraction_576cdbd14a9e7278368394}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_selectpointinteraction_576cdbd14c718221415195}}\n      <\/div>\n    <\/div>\n  ",
+        "serial": "container_containeritembody_5771258d82d3d883251553",
+        "body": "\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        <h1>CSS Example III<\/h1>\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_hotspotinteraction_5771258d843bb893017748}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicorderinteraction_5771258d85ec0225157243}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicassociateinteraction_5771258d872be490214964}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_graphicgapmatchinteraction_5771258d88663303263984}}\n      <\/div>\n    <\/div>\n    <div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_selectpointinteraction_5771258d89deb676460334}}\n      <\/div>\n    <\/div>\n  ",
         "elements": {
-            "interaction_hotspotinteraction_576cdbd14570a456160588": {
-                "serial": "interaction_hotspotinteraction_576cdbd14570a456160588",
+            "interaction_hotspotinteraction_5771258d843bb893017748": {
+                "serial": "interaction_hotspotinteraction_5771258d843bb893017748",
                 "qtiClass": "hotspotInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE",
@@ -27,12 +27,12 @@
                     "class": "responsive"
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbd142fa1631683338"
+                    "relatedItem": "item_5771258d82d58771848754"
                 },
                 "choices": {
-                    "choice_hotspotchoice_576cdbd1476e2659321794": {
+                    "choice_hotspotchoice_5771258d85af4585832517": {
                         "identifier": "hotspot_1",
-                        "serial": "choice_hotspotchoice_576cdbd1476e2659321794",
+                        "serial": "choice_hotspotchoice_5771258d85af4585832517",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_1",
@@ -41,12 +41,12 @@
                             "coords": "20,20,100,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd147890181515643": {
+                    "choice_hotspotchoice_5771258d85c57600059339": {
                         "identifier": "hotspot_2",
-                        "serial": "choice_hotspotchoice_576cdbd147890181515643",
+                        "serial": "choice_hotspotchoice_5771258d85c57600059339",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_2",
@@ -55,12 +55,12 @@
                             "coords": "124,20,204,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd1478d8764392798": {
+                    "choice_hotspotchoice_5771258d85c9c490684350": {
                         "identifier": "hotspot_3",
-                        "serial": "choice_hotspotchoice_576cdbd1478d8764392798",
+                        "serial": "choice_hotspotchoice_5771258d85c9c490684350",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_3",
@@ -69,12 +69,12 @@
                             "coords": "228,20,308,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd14791c734201994": {
+                    "choice_hotspotchoice_5771258d85cd7492821614": {
                         "identifier": "hotspot_4",
-                        "serial": "choice_hotspotchoice_576cdbd14791c734201994",
+                        "serial": "choice_hotspotchoice_5771258d85cd7492821614",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_4",
@@ -83,12 +83,12 @@
                             "coords": "332,20,412,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd14795b364412638": {
+                    "choice_hotspotchoice_5771258d85d10932615911": {
                         "identifier": "hotspot_5",
-                        "serial": "choice_hotspotchoice_576cdbd14795b364412638",
+                        "serial": "choice_hotspotchoice_5771258d85d10932615911",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_5",
@@ -97,12 +97,12 @@
                             "coords": "436,20,516,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd147999904155706": {
+                    "choice_hotspotchoice_5771258d85d44015454506": {
                         "identifier": "hotspot_6",
-                        "serial": "choice_hotspotchoice_576cdbd147999904155706",
+                        "serial": "choice_hotspotchoice_5771258d85d44015454506",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_6",
@@ -111,23 +111,23 @@
                             "coords": "540,20,620,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     }
                 },
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbd145a9a041274980",
+                    "serial": "container_containerstatic_5771258d84715143582663",
                     "body": "\n            <strong>Hotspot Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbd142fa1631683338"
+                        "relatedItem": "item_5771258d82d58771848754"
                     }
                 },
                 "object": {
-                    "serial": "object_576cdbd1479f6246498222",
+                    "serial": "object_5771258d85d8f824734293",
                     "qtiClass": "object",
                     "attributes": {
-                        "data": "grid.png",
+                        "data": "assets\/grid.png",
                         "type": "image\/png",
                         "width": 640,
                         "height": 121
@@ -137,8 +137,8 @@
                     }
                 }
             },
-            "interaction_graphicorderinteraction_576cdbd147cb8449835600": {
-                "serial": "interaction_graphicorderinteraction_576cdbd147cb8449835600",
+            "interaction_graphicorderinteraction_5771258d85ec0225157243": {
+                "serial": "interaction_graphicorderinteraction_5771258d85ec0225157243",
                 "qtiClass": "graphicOrderInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_1",
@@ -147,12 +147,12 @@
                     "class": "responsive"
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbd142fa1631683338"
+                    "relatedItem": "item_5771258d82d58771848754"
                 },
                 "choices": {
-                    "choice_hotspotchoice_576cdbd148e72115538358": {
+                    "choice_hotspotchoice_5771258d86f3c368686577": {
                         "identifier": "hotspot_7",
-                        "serial": "choice_hotspotchoice_576cdbd148e72115538358",
+                        "serial": "choice_hotspotchoice_5771258d86f3c368686577",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_7",
@@ -161,12 +161,12 @@
                             "coords": "20,20,100,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd148ec9338072207": {
+                    "choice_hotspotchoice_5771258d87038998942603": {
                         "identifier": "hotspot_8",
-                        "serial": "choice_hotspotchoice_576cdbd148ec9338072207",
+                        "serial": "choice_hotspotchoice_5771258d87038998942603",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_8",
@@ -175,12 +175,12 @@
                             "coords": "124,20,204,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd148f05445404591": {
+                    "choice_hotspotchoice_5771258d870a7742115879": {
                         "identifier": "hotspot_9",
-                        "serial": "choice_hotspotchoice_576cdbd148f05445404591",
+                        "serial": "choice_hotspotchoice_5771258d870a7742115879",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_9",
@@ -189,12 +189,12 @@
                             "coords": "228,20,308,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd148f41910580868": {
+                    "choice_hotspotchoice_5771258d870e6686295985": {
                         "identifier": "hotspot_10",
-                        "serial": "choice_hotspotchoice_576cdbd148f41910580868",
+                        "serial": "choice_hotspotchoice_5771258d870e6686295985",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_10",
@@ -203,12 +203,12 @@
                             "coords": "332,20,412,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd148f7e503541728": {
+                    "choice_hotspotchoice_5771258d87120731612616": {
                         "identifier": "hotspot_11",
-                        "serial": "choice_hotspotchoice_576cdbd148f7e503541728",
+                        "serial": "choice_hotspotchoice_5771258d87120731612616",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_11",
@@ -217,12 +217,12 @@
                             "coords": "436,20,516,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_hotspotchoice_576cdbd148fb8232598851": {
+                    "choice_hotspotchoice_5771258d8715e372732999": {
                         "identifier": "hotspot_12",
-                        "serial": "choice_hotspotchoice_576cdbd148fb8232598851",
+                        "serial": "choice_hotspotchoice_5771258d8715e372732999",
                         "qtiClass": "hotspotChoice",
                         "attributes": {
                             "identifier": "hotspot_12",
@@ -231,23 +231,23 @@
                             "coords": "540,20,620,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     }
                 },
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbd147e0a744150292",
+                    "serial": "container_containerstatic_5771258d86014302138042",
                     "body": "\n            <strong>Graphic Order Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbd142fa1631683338"
+                        "relatedItem": "item_5771258d82d58771848754"
                     }
                 },
                 "object": {
-                    "serial": "object_576cdbd149004015991738",
+                    "serial": "object_5771258d871aa328984331",
                     "qtiClass": "object",
                     "attributes": {
-                        "data": "grid.png",
+                        "data": "assets\/grid.png",
                         "type": "image\/png",
                         "width": 640,
                         "height": 121
@@ -257,8 +257,8 @@
                     }
                 }
             },
-            "interaction_graphicassociateinteraction_576cdbd1492a2910211974": {
-                "serial": "interaction_graphicassociateinteraction_576cdbd1492a2910211974",
+            "interaction_graphicassociateinteraction_5771258d872be490214964": {
+                "serial": "interaction_graphicassociateinteraction_5771258d872be490214964",
                 "qtiClass": "graphicAssociateInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_2",
@@ -267,12 +267,12 @@
                     "class": "responsive"
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbd142fa1631683338"
+                    "relatedItem": "item_5771258d82d58771848754"
                 },
                 "choices": {
-                    "choice_associablehotspot_576cdbd14a437478455074": {
+                    "choice_associablehotspot_5771258d88256238434202": {
                         "identifier": "associablehotspot_1",
-                        "serial": "choice_associablehotspot_576cdbd14a437478455074",
+                        "serial": "choice_associablehotspot_5771258d88256238434202",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_1",
@@ -283,12 +283,12 @@
                             "coords": "20,20,100,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14a555529027144": {
+                    "choice_associablehotspot_5771258d88362249019965": {
                         "identifier": "associablehotspot_2",
-                        "serial": "choice_associablehotspot_576cdbd14a555529027144",
+                        "serial": "choice_associablehotspot_5771258d88362249019965",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_2",
@@ -299,12 +299,12 @@
                             "coords": "124,20,204,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14a5ab726332689": {
+                    "choice_associablehotspot_5771258d883bb002944307": {
                         "identifier": "associablehotspot_3",
-                        "serial": "choice_associablehotspot_576cdbd14a5ab726332689",
+                        "serial": "choice_associablehotspot_5771258d883bb002944307",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_3",
@@ -315,12 +315,12 @@
                             "coords": "228,20,308,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14a5fa272046377": {
+                    "choice_associablehotspot_5771258d8840b624550090": {
                         "identifier": "associablehotspot_4",
-                        "serial": "choice_associablehotspot_576cdbd14a5fa272046377",
+                        "serial": "choice_associablehotspot_5771258d8840b624550090",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_4",
@@ -331,12 +331,12 @@
                             "coords": "332,20,412,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14a645185901232": {
+                    "choice_associablehotspot_5771258d88457530777045": {
                         "identifier": "associablehotspot_5",
-                        "serial": "choice_associablehotspot_576cdbd14a645185901232",
+                        "serial": "choice_associablehotspot_5771258d88457530777045",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_5",
@@ -347,12 +347,12 @@
                             "coords": "436,20,516,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14a692384524012": {
+                    "choice_associablehotspot_5771258d884a3610011925": {
                         "identifier": "associablehotspot_6",
-                        "serial": "choice_associablehotspot_576cdbd14a692384524012",
+                        "serial": "choice_associablehotspot_5771258d884a3610011925",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_6",
@@ -363,23 +363,23 @@
                             "coords": "540,20,620,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     }
                 },
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbd149424303064316",
+                    "serial": "container_containerstatic_5771258d873fc559839487",
                     "body": "\n            <strong>Graphic Associate Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbd142fa1631683338"
+                        "relatedItem": "item_5771258d82d58771848754"
                     }
                 },
                 "object": {
-                    "serial": "object_576cdbd14a6f2077479435",
+                    "serial": "object_5771258d88503707983277",
                     "qtiClass": "object",
                     "attributes": {
-                        "data": "grid.png",
+                        "data": "assets\/grid.png",
                         "type": "image\/png",
                         "width": 640,
                         "height": 121
@@ -389,20 +389,20 @@
                     }
                 }
             },
-            "interaction_graphicgapmatchinteraction_576cdbd14a9e7278368394": {
-                "serial": "interaction_graphicgapmatchinteraction_576cdbd14a9e7278368394",
+            "interaction_graphicgapmatchinteraction_5771258d88663303263984": {
+                "serial": "interaction_graphicgapmatchinteraction_5771258d88663303263984",
                 "qtiClass": "graphicGapMatchInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_3",
                     "class": "responsive"
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbd142fa1631683338"
+                    "relatedItem": "item_5771258d82d58771848754"
                 },
                 "choices": {
-                    "choice_associablehotspot_576cdbd14c2ba205269344": {
+                    "choice_associablehotspot_5771258d89b3b350144617": {
                         "identifier": "associablehotspot_7",
-                        "serial": "choice_associablehotspot_576cdbd14c2ba205269344",
+                        "serial": "choice_associablehotspot_5771258d89b3b350144617",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_7",
@@ -413,12 +413,12 @@
                             "coords": "20,20,100,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14c312398980879": {
+                    "choice_associablehotspot_5771258d89b8c946724902": {
                         "identifier": "associablehotspot_8",
-                        "serial": "choice_associablehotspot_576cdbd14c312398980879",
+                        "serial": "choice_associablehotspot_5771258d89b8c946724902",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_8",
@@ -429,12 +429,12 @@
                             "coords": "124,20,204,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14c35b360299861": {
+                    "choice_associablehotspot_5771258d89bda096380280": {
                         "identifier": "associablehotspot_9",
-                        "serial": "choice_associablehotspot_576cdbd14c35b360299861",
+                        "serial": "choice_associablehotspot_5771258d89bda096380280",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_9",
@@ -445,12 +445,12 @@
                             "coords": "228,20,308,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14c3b0642294335": {
+                    "choice_associablehotspot_5771258d89c25390195490": {
                         "identifier": "associablehotspot_10",
-                        "serial": "choice_associablehotspot_576cdbd14c3b0642294335",
+                        "serial": "choice_associablehotspot_5771258d89c25390195490",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_10",
@@ -461,12 +461,12 @@
                             "coords": "332,20,412,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14c3f9138882645": {
+                    "choice_associablehotspot_5771258d89c70059306135": {
                         "identifier": "associablehotspot_11",
-                        "serial": "choice_associablehotspot_576cdbd14c3f9138882645",
+                        "serial": "choice_associablehotspot_5771258d89c70059306135",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_11",
@@ -477,12 +477,12 @@
                             "coords": "436,20,516,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     },
-                    "choice_associablehotspot_576cdbd14c446973236484": {
+                    "choice_associablehotspot_5771258d89cba339040625": {
                         "identifier": "associablehotspot_12",
-                        "serial": "choice_associablehotspot_576cdbd14c446973236484",
+                        "serial": "choice_associablehotspot_5771258d89cba339040625",
                         "qtiClass": "associableHotspot",
                         "attributes": {
                             "identifier": "associablehotspot_12",
@@ -493,23 +493,23 @@
                             "coords": "540,20,620,100"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         }
                     }
                 },
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbd14aa5c717099875",
+                    "serial": "container_containerstatic_5771258d886cb614499546",
                     "body": "\n            <strong>Graphic Gap Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbd142fa1631683338"
+                        "relatedItem": "item_5771258d82d58771848754"
                     }
                 },
                 "object": {
-                    "serial": "object_576cdbd14c4a7635233015",
+                    "serial": "object_5771258d89d1e412521494",
                     "qtiClass": "object",
                     "attributes": {
-                        "data": "grid.png",
+                        "data": "assets\/grid.png",
                         "type": "image\/png",
                         "width": 640,
                         "height": 121
@@ -519,9 +519,9 @@
                     }
                 },
                 "gapImgs": {
-                    "choice_gapimg_576cdbd14b9ce198517589": {
+                    "choice_gapimg_5771258d8943a503484611": {
                         "identifier": "gapimg_1",
-                        "serial": "choice_gapimg_576cdbd14b9ce198517589",
+                        "serial": "choice_gapimg_5771258d8943a503484611",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_1",
@@ -530,25 +530,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14bc34598564604",
+                            "serial": "object_5771258d894f2030841081",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_45.png",
+                                "data": "assets\/140_45.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14bcb4186667504": {
+                    "choice_gapimg_5771258d8955d271850720": {
                         "identifier": "gapimg_2",
-                        "serial": "choice_gapimg_576cdbd14bcb4186667504",
+                        "serial": "choice_gapimg_5771258d8955d271850720",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_2",
@@ -557,25 +557,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14bd0d616740200",
+                            "serial": "object_5771258d895af073380410",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_75.png",
+                                "data": "assets\/140_75.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14bd69356040239": {
+                    "choice_gapimg_5771258d89608240634945": {
                         "identifier": "gapimg_3",
-                        "serial": "choice_gapimg_576cdbd14bd69356040239",
+                        "serial": "choice_gapimg_5771258d89608240634945",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_3",
@@ -584,25 +584,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14bdbb969686474",
+                            "serial": "object_5771258d89654232608846",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_c-italic.png",
+                                "data": "assets\/140_c-italic.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14be11611358478": {
+                    "choice_gapimg_5771258d896a7216419224": {
                         "identifier": "gapimg_4",
-                        "serial": "choice_gapimg_576cdbd14be11611358478",
+                        "serial": "choice_gapimg_5771258d896a7216419224",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_4",
@@ -611,25 +611,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14be63740990848",
+                            "serial": "object_5771258d896f1544668790",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_greater.png",
+                                "data": "assets\/140_greater.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14beb7991379933": {
+                    "choice_gapimg_5771258d89745210639180": {
                         "identifier": "gapimg_5",
-                        "serial": "choice_gapimg_576cdbd14beb7991379933",
+                        "serial": "choice_gapimg_5771258d89745210639180",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_5",
@@ -638,25 +638,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14bf08843184635",
+                            "serial": "object_5771258d8978a226065679",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_greater-equal.png",
+                                "data": "assets\/140_greater-equal.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14bf5b774909920": {
+                    "choice_gapimg_5771258d897e1345464752": {
                         "identifier": "gapimg_6",
-                        "serial": "choice_gapimg_576cdbd14bf5b774909920",
+                        "serial": "choice_gapimg_5771258d897e1345464752",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_6",
@@ -665,25 +665,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14bfad837275887",
+                            "serial": "object_5771258d8982c508760072",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_less.png",
+                                "data": "assets\/140_less.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14c000253819801": {
+                    "choice_gapimg_5771258d8987c341690586": {
                         "identifier": "gapimg_7",
-                        "serial": "choice_gapimg_576cdbd14c000253819801",
+                        "serial": "choice_gapimg_5771258d8987c341690586",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_7",
@@ -692,25 +692,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14c04e180099158",
+                            "serial": "object_5771258d898c4476382329",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_less-equal.png",
+                                "data": "assets\/140_less-equal.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14c0a2851381442": {
+                    "choice_gapimg_5771258d89912471080353": {
                         "identifier": "gapimg_8",
-                        "serial": "choice_gapimg_576cdbd14c0a2851381442",
+                        "serial": "choice_gapimg_5771258d89912471080353",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_8",
@@ -719,25 +719,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14c0ef382198577",
+                            "serial": "object_5771258d8995a330261085",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_minus.png",
+                                "data": "assets\/140_minus.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14c145792579506": {
+                    "choice_gapimg_5771258d899ab166689347": {
                         "identifier": "gapimg_9",
-                        "serial": "choice_gapimg_576cdbd14c145792579506",
+                        "serial": "choice_gapimg_5771258d899ab166689347",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_9",
@@ -746,25 +746,25 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14c19a259158102",
+                            "serial": "object_5771258d89a1c509856940",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_plus.png",
+                                "data": "assets\/140_plus.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     },
-                    "choice_gapimg_576cdbd14c1e7214540500": {
+                    "choice_gapimg_5771258d89a6e521448539": {
                         "identifier": "gapimg_10",
-                        "serial": "choice_gapimg_576cdbd14c1e7214540500",
+                        "serial": "choice_gapimg_5771258d89a6e521448539",
                         "qtiClass": "gapImg",
                         "attributes": {
                             "identifier": "gapimg_10",
@@ -773,26 +773,26 @@
                             "matchMax": "0"
                         },
                         "debug": {
-                            "relatedItem": "item_576cdbd142fa1631683338"
+                            "relatedItem": "item_5771258d82d58771848754"
                         },
                         "object": {
-                            "serial": "object_576cdbd14c230394293576",
+                            "serial": "object_5771258d89ab2834157384",
                             "qtiClass": "object",
                             "attributes": {
-                                "data": "140_plus.png",
+                                "data": "assets\/140_plus.png",
                                 "type": "image\/png",
                                 "width": 80,
                                 "height": 80
                             },
                             "debug": {
-                                "relatedItem": "item_576cdbd142fa1631683338"
+                                "relatedItem": "item_5771258d82d58771848754"
                             }
                         }
                     }
                 }
             },
-            "interaction_selectpointinteraction_576cdbd14c718221415195": {
-                "serial": "interaction_selectpointinteraction_576cdbd14c718221415195",
+            "interaction_selectpointinteraction_5771258d89deb676460334": {
+                "serial": "interaction_selectpointinteraction_5771258d89deb676460334",
                 "qtiClass": "selectPointInteraction",
                 "attributes": {
                     "responseIdentifier": "RESPONSE_4",
@@ -801,22 +801,22 @@
                     "class": "responsive"
                 },
                 "debug": {
-                    "relatedItem": "item_576cdbd142fa1631683338"
+                    "relatedItem": "item_5771258d82d58771848754"
                 },
                 "choices": {},
                 "prompt": {
-                    "serial": "container_containerstatic_576cdbd14c7ac652675736",
+                    "serial": "container_containerstatic_5771258d89e63761675107",
                     "body": "\n            <strong>Select Point Interaction<\/strong>\n          ",
                     "elements": {},
                     "debug": {
-                        "relatedItem": "item_576cdbd142fa1631683338"
+                        "relatedItem": "item_5771258d82d58771848754"
                     }
                 },
                 "object": {
-                    "serial": "object_576cdbd14d103542463002",
+                    "serial": "object_5771258d8a7b3473469969",
                     "qtiClass": "object",
                     "attributes": {
-                        "data": "grid.png",
+                        "data": "assets\/grid.png",
                         "type": "image\/png",
                         "width": 640,
                         "height": 121
@@ -828,11 +828,11 @@
             }
         },
         "debug": {
-            "relatedItem": "item_576cdbd142fa1631683338"
+            "relatedItem": "item_5771258d82d58771848754"
         }
     },
     "debug": {
-        "relatedItem": "item_576cdbd142fa1631683338"
+        "relatedItem": "item_5771258d82d58771848754"
     },
     "namespaces": {
         "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1",
@@ -842,25 +842,11 @@
     "schemaLocations": {
         "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1": "http:\/\/www.imsglobal.org\/xsd\/qti\/qtiv2p1\/imsqti_v2p1.xsd"
     },
-    "stylesheets": {
-        "stylesheet_576cdbd143783383468311": {
-            "serial": "stylesheet_576cdbd143783383468311",
-            "qtiClass": "stylesheet",
-            "attributes": {
-                "href": "style\/custom\/tao-user-styles.css",
-                "type": "text\/css",
-                "media": "all",
-                "title": ""
-            },
-            "debug": {
-                "relatedItem": "item_576cdbd142fa1631683338"
-            }
-        }
-    },
+    "stylesheets": {},
     "outcomes": {
-        "outcomedeclaration_576cdbd144a35626000726": {
+        "outcomedeclaration_5771258d83b3b702230285": {
             "identifier": "SCORE",
-            "serial": "outcomedeclaration_576cdbd144a35626000726",
+            "serial": "outcomedeclaration_5771258d83b3b702230285",
             "qtiClass": "outcomeDeclaration",
             "attributes": {
                 "identifier": "SCORE",
@@ -868,15 +854,15 @@
                 "baseType": "float"
             },
             "debug": {
-                "relatedItem": "item_576cdbd142fa1631683338"
+                "relatedItem": "item_5771258d82d58771848754"
             },
             "defaultValue": null
         }
     },
     "responses": {
-        "responsedeclaration_576cdbd143ce2616885715": {
+        "responsedeclaration_5771258d83648893884814": {
             "identifier": "RESPONSE",
-            "serial": "responsedeclaration_576cdbd143ce2616885715",
+            "serial": "responsedeclaration_5771258d83648893884814",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE",
@@ -884,7 +870,7 @@
                 "baseType": "identifier"
             },
             "debug": {
-                "relatedItem": "item_576cdbd142fa1631683338"
+                "relatedItem": "item_5771258d82d58771848754"
             },
             "mapping": [],
             "areaMapping": [],
@@ -895,9 +881,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbd143f4b324104925": {
+        "responsedeclaration_5771258d8382b333354131": {
             "identifier": "RESPONSE_1",
-            "serial": "responsedeclaration_576cdbd143f4b324104925",
+            "serial": "responsedeclaration_5771258d8382b333354131",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_1",
@@ -905,7 +891,7 @@
                 "baseType": "identifier"
             },
             "debug": {
-                "relatedItem": "item_576cdbd142fa1631683338"
+                "relatedItem": "item_5771258d82d58771848754"
             },
             "mapping": [],
             "areaMapping": [],
@@ -916,9 +902,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbd14400e239875813": {
+        "responsedeclaration_5771258d8388e187780584": {
             "identifier": "RESPONSE_2",
-            "serial": "responsedeclaration_576cdbd14400e239875813",
+            "serial": "responsedeclaration_5771258d8388e187780584",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_2",
@@ -926,7 +912,7 @@
                 "baseType": "pair"
             },
             "debug": {
-                "relatedItem": "item_576cdbd142fa1631683338"
+                "relatedItem": "item_5771258d82d58771848754"
             },
             "mapping": [],
             "areaMapping": [],
@@ -941,9 +927,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbd144892098049032": {
+        "responsedeclaration_5771258d839ef728122631": {
             "identifier": "RESPONSE_3",
-            "serial": "responsedeclaration_576cdbd144892098049032",
+            "serial": "responsedeclaration_5771258d839ef728122631",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_3",
@@ -951,7 +937,7 @@
                 "baseType": "directedPair"
             },
             "debug": {
-                "relatedItem": "item_576cdbd142fa1631683338"
+                "relatedItem": "item_5771258d82d58771848754"
             },
             "mapping": [],
             "areaMapping": [],
@@ -962,9 +948,9 @@
             },
             "feedbackRules": {}
         },
-        "responsedeclaration_576cdbd144911247550006": {
+        "responsedeclaration_5771258d83a51749981355": {
             "identifier": "RESPONSE_4",
-            "serial": "responsedeclaration_576cdbd144911247550006",
+            "serial": "responsedeclaration_5771258d83a51749981355",
             "qtiClass": "responseDeclaration",
             "attributes": {
                 "identifier": "RESPONSE_4",
@@ -972,7 +958,7 @@
                 "baseType": "point"
             },
             "debug": {
-                "relatedItem": "item_576cdbd142fa1631683338"
+                "relatedItem": "item_5771258d82d58771848754"
             },
             "mapping": [],
             "areaMapping": [],
@@ -986,11 +972,11 @@
     },
     "feedbacks": {},
     "responseProcessing": {
-        "serial": "response_templatesdriven_576cdbd14e2f5718113072",
+        "serial": "response_templatesdriven_5771258d8c129356501073",
         "qtiClass": "responseProcessing",
         "attributes": [],
         "debug": {
-            "relatedItem": "item_576cdbd142fa1631683338"
+            "relatedItem": "item_5771258d82d58771848754"
         },
         "processingType": "templateDriven",
         "responseRules": [

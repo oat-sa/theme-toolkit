@@ -10,7 +10,6 @@
   <responseDeclaration identifier="RESPONSE_7" cardinality="single" baseType="file"/>
   <responseDeclaration identifier="RESPONSE_8" cardinality="single" baseType="boolean"/>
   <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
-  <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
   <itemBody>
     <div class="grid-row">
       <div class="col-12">
@@ -102,7 +101,7 @@ Lorem ipsum dolor <textEntryInteraction responseIdentifier="RESPONSE_3" base="10
           <prompt>
             <strong>Media Interaction</strong>
           </prompt>
-          <object data="small.mp4" type="video/mp4" width="480" height="270"/>
+          <object data="assets/small.mp4" type="video/mp4" width="480" height="270"/>
         </mediaInteraction>
       </div>
     </div>

@@ -10,14 +10,25 @@ define([
     'use strict';
 
     var runner,
-        $container = $('.item-runner');
+        $container = $('.item-runner'),
 
-    //override asset loading in order to resolve it from the runtime location
+        availableItems = {
+            item1: { id: 'item1', data: item1, name:'interactions 1', folder: '../../items/i1458826617776011' },
+            item2: { id: 'item2', data: item2, name:'interactions 2', folder: '../../items/i1458826746593113' },
+            item3: { id: 'item3', data: item3, name:'interactions 3', folder: '../../items/i1458826840362515' }
+        },
+        currentItemId = 'item1',
+        currentThemeId;
+
+
+    // =====================================
+    // Assets resolving
+
     var strategies = [{
         name : 'portableElementLocation',
         handle : function handlePortableElementLocation(url){
             if(/assets/.test(url.toString())){
-                return '../../items/i1458826840362515/' + url.toString(); // todo: correct this !
+                return availableItems[currentItemId].folder + '/' + url.toString();
             }
         }
     }, {
@@ -27,20 +38,25 @@ define([
         }
     }];
 
-    // fill available themes
+
+    // =====================================
+    // Themes handling
+
     var $themeChanger = $('.theme-changer');
     var themeDefault = themes.get('items').default;
-    var themeActive;
+
+    // fill menu
     themes.getAvailable('items').forEach(function(theme) {
         var optionConfig = {
             text: theme.name,
             value: theme.id,
-            selected: (theme.id === themeDefault) ? true : false
+            selected: (theme.id === themeDefault)
         };
         var $option = $('<option/>', optionConfig);
         $themeChanger.append($option);
     });
 
+    // reload css on menu change
     function changeTheme(themeId) {
         $('.qti-item').trigger('themechange', themeId);
     }
@@ -50,39 +66,40 @@ define([
     });
 
 
-    // fill available items
+    // =====================================
+    // Items handling
+
     var $itemChanger = $('.item-changer');
-    var items = {
-        item1: { id: 'item1', data: item1, name:'interactions 1' },
-        item2: { id: 'item2', data: item2, name:'interactions 2' },
-        item3: { id: 'item3', data: item3, name:'interactions 3' }
-    };
     var itemDefault = 'item1';
-    Object.keys(items).forEach(function(itemId) {
-        var item = items[itemId];
+
+    // fill menu
+    Object.keys(availableItems).forEach(function(itemId) {
+        var item = availableItems[itemId];
         var optionConfig = {
             text: item.name,
             value: item.id,
-            selected: (item.id === itemDefault) ? true : false
+            selected: (item.id === itemDefault)
         };
         var $option = $('<option/>', optionConfig);
         $itemChanger.append($option);
     });
 
+    // reload item on menu change
     $itemChanger.on('change', function triggerChangeItem(e) {
-        themeActive = $themeChanger.val();
+        currentThemeId = $themeChanger.val();
         if (runner) {
             runner.clear();
         }
-        var newItem = items[e.target.value].data;
-        renderItem(newItem);
+        currentItemId = e.target.value;
+        var newItemData = availableItems[currentItemId].data;
+        renderItem(newItemData);
     });
 
     function renderItem(itemData) {
         runner = qtiItemRunner('qti', itemData)
             .on('render', function() {
-                if (themeActive) {
-                    changeTheme(themeActive);
+                if (currentThemeId) {
+                    changeTheme(currentThemeId);
                 }
             })
             .assets(strategies)
@@ -93,15 +110,16 @@ define([
     renderItem(item1);
 
 
-
+    // =====================================
     // CSS Reloader
 
-    var $cssReloader = $('.css-reloader');
+    var $cssReloader = $('.css-reloader'),
+        KEYCODE_F2 = 113;
 
     document.addEventListener('keydown', function reloadCss(e) {
-        if (e.keyCode === 113) { // F2
+        if (e.keyCode === KEYCODE_F2) {
             $cssReloader.addClass('btn-toggle');
-            themeActive = $themeChanger.val();
+            currentThemeId = $themeChanger.val();
             var queryString = '?reload=' + new Date().getTime();
 
             $('link[data-type="custom-theme-theme"]').each(function reload() {
@@ -109,17 +127,15 @@ define([
                 var href = $css.attr('href').split("?")[0] + queryString;
                 $css.attr('href', href);
             });
-            changeTheme(themeActive);
+            changeTheme(currentThemeId);
         }
     });
 
     document.addEventListener('keyup', function reloadCssOff(e) {
-        if (e.keyCode === 113) {
+        if (e.keyCode === KEYCODE_F2) {
             $cssReloader.removeClass('btn-toggle');
         }
     })
-
-
 
 });
 
