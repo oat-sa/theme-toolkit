@@ -30,6 +30,7 @@ define([
     // fill available themes
     var $themeChanger = $('.theme-changer');
     var themeDefault = themes.get('items').default;
+    var themeActive;
     themes.getAvailable('items').forEach(function(theme) {
         var optionConfig = {
             text: theme.name,
@@ -40,9 +41,14 @@ define([
         $themeChanger.append($option);
     });
 
-    $themeChanger.on('change', function changeTheme(e) {
-        $('.qti-item').trigger('themechange', [e.target.value]);
+    function changeTheme(themeId) {
+        $('.qti-item').trigger('themechange', themeId);
+    }
+
+    $themeChanger.on('change', function triggerThemeChange(e) {
+        changeTheme(e.target.value);
     });
+
 
     // fill available items
     var $itemChanger = $('.item-changer');
@@ -63,7 +69,8 @@ define([
         $itemChanger.append($option);
     });
 
-    $itemChanger.on('change', function changeTheme(e) {
+    $itemChanger.on('change', function triggerChangeItem(e) {
+        themeActive = $themeChanger.val();
         if (runner) {
             runner.clear();
         }
@@ -74,7 +81,9 @@ define([
     function renderItem(itemData) {
         runner = qtiItemRunner('qti', itemData)
             .on('render', function() {
-                // console.log('rendered !!!!');
+                if (themeActive) {
+                    changeTheme(themeActive);
+                }
             })
             .assets(strategies)
             .init()
@@ -82,6 +91,35 @@ define([
     }
 
     renderItem(item1);
+
+
+
+    // CSS Reloader
+
+    var $cssReloader = $('.css-reloader');
+
+    document.addEventListener('keydown', function reloadCss(e) {
+        if (e.keyCode === 113) { // F2
+            $cssReloader.addClass('btn-toggle');
+            themeActive = $themeChanger.val();
+            var queryString = '?reload=' + new Date().getTime();
+
+            $('link[data-type="custom-theme-theme"]').each(function reload() {
+                var $css = $(this);
+                var href = $css.attr('href').split("?")[0] + queryString;
+                $css.attr('href', href);
+            });
+            changeTheme(themeActive);
+        }
+    });
+
+    document.addEventListener('keyup', function reloadCssOff(e) {
+        if (e.keyCode === 113) {
+            $cssReloader.removeClass('btn-toggle');
+        }
+    })
+
+
 
 });
 

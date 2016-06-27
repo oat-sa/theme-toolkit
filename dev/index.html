@@ -38,16 +38,31 @@
         .item-runner {
             margin-top: 40px;
         }
+        .btn {
+            background: white;
+            color: black !important;
+            text-shadow: none !important;
+            padding: 5px !important;
+            height: auto !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+        }
+        .btn-toggle {
+            background: yellow !important;
+        }
     </style>
 </head>
 <body>
 <div class="top-bar">
-    <select class="theme-changer">
+    <select class="theme-changer" name="themeId">
         <option disabled>select a theme</option>
     </select>
     <select class="item-changer">
         <option disabled>select a item</option>
     </select>
+    <button class="css-reloader btn">
+        RELOAD CSS (F2)
+    </button>
 </div>
 <div class="item-runner"></div>
 </body>
