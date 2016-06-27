@@ -10,11 +10,11 @@ setup procedure:
 
 todo:
 
-- resolve items assets correctly
-- add new items
++ resolve items assets correctly
++ add new items
++ item switcher ?
 - define overall process
 - generate correct ui/themes data in config file 
-- item switcher ?
 - live reload on recompile
 - write somewhere in act extension that themes need to be compiled with theme-toolkit
 - remove profile parameter dependency in grunt cli
