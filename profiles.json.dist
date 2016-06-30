@@ -8,9 +8,9 @@
 
     Example:
     ========
-    "unisa": {
-        "src": "/tao/package-eon/unisaTheme/views/scss",
-        "dest": "/tao/package-eon/unisaTheme/views/css"
+    "client": {
+        "src": "/tao/package-tao/clientTheme/views/scss",
+        "dest": "/tao/package-tao/clientTheme/views/css"
     }
 }
 
