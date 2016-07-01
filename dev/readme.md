@@ -51,8 +51,8 @@ todo:
 
 // todo: add task to automatically clone
 // git clone https://github.com/oat-sa/tao-core.git tao
-// git clone https://github.com/oat-sa/extension-tao-itemqti.git taoQtiItem
 // git clone https://github.com/oat-sa/extension-tao-item.git taoItems
+// git clone https://github.com/oat-sa/extension-tao-itemqti.git taoQtiItem
 
 // to convert items
 php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826617776011/qti.xml

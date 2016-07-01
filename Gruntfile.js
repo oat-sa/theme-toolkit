@@ -10,12 +10,14 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        devDir: 'dev-tmp',
 
         clean: {
             options: {
                 force: true
             },
-            sass: [profile.dest]
+            sass: [profile.dest],
+            git: ['<%=devDir%>/tao', '<%=devDir%>/taoItems', '<%=devDir%>/taoQtiItem']
         },
 
         sass: {
@@ -63,7 +65,35 @@ module.exports = function(grunt) {
                     // , open: true
                 }
             }
+        },
+
+        gitclone: {
+            tao: {
+                options: {
+                    cwd: '<%=devDir%>',
+                    repository: 'https://github.com/oat-sa/tao-core.git',
+                    // branch: 'develop',
+                    directory: 'tao'
+                }
+            },
+            taoItems: {
+                options: {
+                    cwd: '<%=devDir%>',
+                    repository: 'https://github.com/oat-sa/extension-tao-item.git',
+                    // branch: 'develop',
+                    directory: 'taoItems'
+                }
+            },
+            taoQtiItem: {
+                options: {
+                    cwd: '<%=devDir%>',
+                    repository: 'https://github.com/oat-sa/extension-tao-itemqti.git',
+                    // branch: 'develop',
+                    directory: 'taoQtiItem'
+                }
+            }
         }
+
     });
 
     function getProfile(grunt) {
@@ -90,7 +120,8 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-connect');
 
+    grunt.registerTask('init', 'Initialize development directory', ['clean:git', 'gitclone']);
     grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
-    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
+    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']); //todo: remove this ?
 
 };
