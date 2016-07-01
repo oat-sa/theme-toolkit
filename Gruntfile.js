@@ -68,21 +68,28 @@ module.exports = function(grunt) {
 
     function getProfile(grunt) {
         var allProfiles,
-            profile = grunt.option('p');
+            profile = grunt.option('p'),
+            selectedProfile = {};
 
-        try {
-            allProfiles = require('./profiles.json');
-        } catch (err) {
-            grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
+        if (profile) {
+            try {
+                allProfiles = require('./profiles.json');
+            } catch (err) {
+                grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
+            }
+            if (!profile) {
+                grunt.fail.fatal('Please select a profile: grunt compile -p={PROFILE}');
+            }
+            if (!allProfiles[profile]) {
+                grunt.fail.fatal('Unknown profile ' + profile + '');
+            }
+            selectedProfile = allProfiles[profile];
+        } else {
+            grunt.log.subhead('WARNING: as no profile has been specified with the -p option, any compile task will fail');
         }
-        if (!profile) {
-            grunt.fail.fatal('Please select a profile: grunt compile -p={PROFILE}');
-        }
-        if (!allProfiles[profile]) {
-            grunt.fail.fatal('Unknown profile ' + profile + '');
-        }
-        return allProfiles[profile];
-    };
+
+        return selectedProfile;
+    }
 
     grunt.loadNpmTasks('grunt-contrib-connect');
 
