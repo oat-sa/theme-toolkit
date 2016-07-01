@@ -2,8 +2,8 @@
     Format:
     =======
     "profileId": {
-        "src": "/path/to/scss/files"
-        "dest": "/path/to/css/files"
+        "src": "/path/to/scss/folder"
+        "dest": "/path/to/css/folder"
     }
 
     Example:
