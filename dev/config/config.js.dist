@@ -1,0 +1,114 @@
+require.config({
+
+    baseUrl : '__LOCALHOST__/tao/views/js',
+    catchError: true,
+    waitSeconds: 30,
+
+    config : {
+        'context': {
+            root_url                : '__LOCALHOST__/',
+            base_url                : '__LOCALHOST__/tao/',
+            taobase_www             : '__LOCALHOST__/tao/views/',
+            base_www                : '__LOCALHOST__/tao/views/',
+            base_lang               : 'en',
+            locale                  : 'en-US',
+            extension               : '',
+            module                  : '',
+            action                  : '',
+            shownExtension          : '',
+            shownStructure          : '',
+            extensionsLocales       : null,
+            timeout                 : 30,
+        },
+        text: {
+            useXhr: function(){
+                return true;
+            }
+        },
+
+        'ui/themes' : __UI/THEMES__,
+//dynamic lib config
+        'util/locale'        : {"decimalSeparator":".","thousandsSeparator":""},
+        'taoQtiItem/qtiRunner/core/QtiRunner'        : {"inlineModalFeedback":false},
+        'taoQtiItem/qtiCommonRenderer/renderers/config'        : {"associateDragAndDrop":true,"gapMatchDragAndDrop":true,"graphicGapMatchDragAndDrop":true,"orderDragAndDrop":true},
+        'taoQtiItem/controller/creator/index'        : {"plugins":[{"name":"back","module":"taoQtiItem\/qtiCreator\/plugins\/navigation\/back","category":"navigation","position":null}]},
+        'taoQtiTest/controller/runtime/testRunner'        : {"qtiTools":{"markForReview":{"hook":"taoQtiTest\/testRunner\/actionBar\/markForReview","order":"last"},"collapseReview":{"hook":"taoQtiTest\/testRunner\/actionBar\/collapseReview","order":"first"},"comment":{"hook":"taoQtiTest\/testRunner\/actionBar\/comment"},"actHelp":{"hook":"taoAct\/actionBar\/help","order":1},"actFormula":{"hook":"taoAct\/actionBar\/formula","order":2}}},
+        'taoQtiItem/controller/creator/main'        : {"hooks":["xmlEditQtiDebugger\/hooks\/qtiCreatorDebugger\/hook"]},
+        'taoQtiItem/controller/apip-creator/main'        : {"hooks":["xmlEditQtiDebugger\/hooks\/apipCreatorDebugger\/hook"]},
+        'taoQtiTest/controller/runner/runner'        : {"plugins":[{"module":"taoAct\/runner\/plugins\/probes\/latency","category":"probes","position":null},{"module":"taoAct\/runner\/plugins\/navigation\/exit","category":"navigation","position":null},{"module":"taoAct\/runner\/plugins\/tools\/formula","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/tools\/help","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/heartbeat\/heartbeat","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/tools\/scratchpad\/scratchpad","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/controls\/autoPause","category":"controls","position":null},{"module":"taoAct\/runner\/plugins\/controls\/preventCopy","category":"controls","position":null},{"module":"taoAct\/runner\/plugins\/tools\/itemThemeSwitcher","category":"tools","position":null}]},
+        'taoQtiTest/qtiTestRunner.min'        : {"plugins":[{"module":"taoAct\/runner\/plugins\/probes\/latency","category":"probes","position":null},{"module":"taoAct\/runner\/plugins\/navigation\/exit","category":"navigation","position":null},{"module":"taoAct\/runner\/plugins\/tools\/formula","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/tools\/help","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/heartbeat\/heartbeat","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/tools\/scratchpad\/scratchpad","category":"tools","position":null},{"module":"taoAct\/runner\/plugins\/controls\/autoPause","category":"controls","position":null},{"module":"taoAct\/runner\/plugins\/controls\/preventCopy","category":"controls","position":null},{"module":"taoAct\/runner\/plugins\/tools\/itemThemeSwitcher","category":"tools","position":null}]},
+        'taoQtiItem/runtime/qtiBootstrap'        : {"userModules":["taoAct\/userScripts\/toggleHideable","taoAct\/userScripts\/adaptStimulusHeight"]},
+        'taoQtiItem/runtime/qtiBootstrap.min'        : {"userModules":["taoAct\/userScripts\/toggleHideable","taoAct\/userScripts\/adaptStimulusHeight"]},
+    },
+
+    paths : {
+
+//require-js plugins
+        'text'              : 'lib/text/text',
+        'json'              : 'lib/text/json',
+        'css'               : 'lib/require-css/css',
+        'tpl'               : 'tpl',
+
+//jquery and plugins
+        'jquery'            : 'lib/jquery-1.8.0.min',
+        'jqueryui'          : 'lib/jquery-ui-1.8.23.custom.min',
+        'select2'           : 'lib/select2/select2.min',
+        'jquery.autocomplete'  : 'lib/jquery.autocomplete/jquery.autocomplete',
+        'jwysiwyg'          : 'lib/jwysiwyg/jquery.wysiwyg',
+        'jquery.tree'       : 'lib/jsTree/jquery.tree',
+        'jquery.timePicker' : 'lib/jquery.timePicker',
+        'jquery.cookie'     : 'lib/jquery.cookie',
+        'nouislider'        : 'lib/sliders/jquery.nouislider',
+        'jquery.trunc'		: 'lib/jquery.badonkatrunc',
+        'jquery.fileDownload'  : 'lib/jquery.fileDownload',
+        'qtip'              : 'lib/jquery.qtip/jquery.qtip',
+
+//polyfills
+        'polyfill'          : 'lib/polyfill',
+
+//libs
+        'lodash'            : 'lib/lodash.min',
+        'async'             : 'lib/async',
+        'moment'            : 'lib/moment-with-locales.min',
+        'handlebars'        : 'lib/handlebars',
+
+        'class'             : 'lib/class',
+        'raphael'           : 'lib/raphael/raphael',
+        'scale.raphael'     : 'lib/raphael/scale.raphael',
+        'spin'              : 'lib/spin.min',
+        'history'           : 'lib/history/history',
+        'mathJax'           : [
+            '../../../taoQtiItem/views/js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full',
+            '../../../taoQtiItem/views/js/MathJaxFallback'
+        ],
+        'ckeditor'          : 'lib/ckeditor/ckeditor',
+        'interact'          : 'lib/interact',
+
+//locale loader
+        'i18ntr'            : '../locales/en-US',
+
+//extension aliases, and controller loading in prod mode
+        'tao'        : '__LOCALHOST__/tao/views/js',
+        'taoItems'        : '__LOCALHOST__/taoItems/views/js',
+        'taoQtiItem'        : '__LOCALHOST__/taoQtiItem/views/js',
+    },
+
+    shim : {
+        'wfEngine/wfApi/wfApi.min' : ['jquery'],
+        'moment'                : { exports : 'moment' },
+        'ckeditor'              : { exports : 'CKEDITOR' },
+        'ckeditor-jquery'       : ['ckeditor'],
+        'class'                 : { exports : 'Class'},
+
+        'mathJax' : {
+            exports : "MathJax",
+            init : function(){
+                if(window.MathJax){
+                    MathJax.Hub.Config({showMathMenu:false, showMathMenuMSIE:false});//add mathJax config here
+                    MathJax.Hub.Startup.onload();
+                    return MathJax;
+                }
+            }
+        }
+    }
+});

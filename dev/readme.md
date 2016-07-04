@@ -5,9 +5,9 @@
 ## To get up and running
 
 1. init script (grunt or cross platform something): 
-    - clone tao repositories: https://www.npmjs.com/package/grunt-git (async done ?)
-    - copy config file: https://github.com/gruntjs/grunt-contrib-copy
-    - replace vhost: https://www.npmjs.com/package/grunt-replace
+    + clone tao repositories: https://www.npmjs.com/package/grunt-git (async done ?)
+    + copy config file: https://github.com/gruntjs/grunt-contrib-copy
+    + replace vhost: https://www.npmjs.com/package/grunt-replace
     - replace ui/themes with default data
     - copy translation file
     - => this should create a working install with default themes

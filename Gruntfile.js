@@ -92,6 +92,21 @@ module.exports = function(grunt) {
                     directory: 'taoQtiItem'
                 }
             }
+        },
+
+        copy: {
+            init: {
+                // expand: true,
+                // cwd: '<%=devDir%>',
+                src: '<%=devDir%>/config/config.js.dist',
+                dest: '<%=devDir%>/config/config.js',
+                options: {
+                    process: function (content, srcpath) {
+                        return content
+                            .replace(/__LOCALHOST__/g, 'http://localhost:9001');
+                    }
+                }
+            }
         }
 
     });
@@ -112,7 +127,7 @@ module.exports = function(grunt) {
             }
             selectedProfile = allProfiles[profile];
         } else {
-            grunt.log.subhead('WARNING: as no profile has been specified with -p={PROFILE}, any compile task will fail');
+            grunt.log.subhead('WARNING: as no profile has been specified with -p={PROFILE}, any compile or watch task will fail');
         }
 
         return selectedProfile;
