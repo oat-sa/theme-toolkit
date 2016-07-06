@@ -44,9 +44,9 @@ jspm_packages
 
 # theme-toolkit specific
 profiles.json
-dev/tao
-dev/taoQtiItem
-dev/taoItems
+dev-items/tao
+dev-items/taoQtiItem
+dev-items/taoItems
 
 # remove this at some point
 dev-tmp

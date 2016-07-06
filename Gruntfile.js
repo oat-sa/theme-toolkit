@@ -142,11 +142,11 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('init', 'Initialize development directory', ['clean:git', 'gitclone']);
+    grunt.registerTask('init', 'Initialize development directory', [/* * / 'clean:git', 'gitclone', /* */'getCssFiles', 'copy']);
     grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']); //todo: remove this ?
 
-    grunt.registerTask('getCssFiles', 'retrieves all available css files', function getCssFiles(grunt) {
+    grunt.registerTask('getCssFiles', 'retrieves all available css files', function getCssFiles() {
         var done = this.async();
         var defaultTheme;
 
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
                 && file.indexOf('items') !== -1;
         }
 
-        walker(path.join('dev-tmp', 'css'))
+        walker(path.join(grunt.config('devDir'), 'css'))
             .on('file', function(file) {
                 if (isItemCssTheme(file)) {
                     var pathArray = file.split(path.sep);
@@ -194,6 +194,7 @@ module.exports = function(grunt) {
                     path: "__LOCALHOST__/taoQtiItem/views/css/themes/default.css"
                 }
             ]
-        }
+        },
+        default: 'tao'
     };
 };

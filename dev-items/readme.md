@@ -11,6 +11,11 @@ The way it accomplish this is by cloning only the necessary extensions of TAO to
 
 # Overall Process
 
+
+grunt init
+
+can sometimes hang. If it runs for a abnormal amount of time, CTRL+Z
+
 ## To get up and running
 
 1. init script (grunt or cross platform something): 
