@@ -47,7 +47,7 @@ profiles.json
 dev/tao
 dev/taoQtiItem
 dev/taoItems
-css
 
 # remove this at some point
 dev-tmp
+readme.md

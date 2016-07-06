@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        devDir: 'dev-tmp',
+        devDir: 'dev-items',
 
         clean: {
             options: {
