@@ -1,4 +1,7 @@
 var fs = require('fs');
+var path = require('path');
+var walker = require('walker');
+
 
 module.exports = function(grunt) {
     'use strict';
@@ -61,7 +64,7 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     port: 9001,
-                    base: 'dev'
+                    base: '<%=devDir%>'
                     // , open: true
                 }
             }
@@ -95,17 +98,21 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            init: {
-                // expand: true,
-                // cwd: '<%=devDir%>',
+            initConfig: {
                 src: '<%=devDir%>/config/config.js.dist',
                 dest: '<%=devDir%>/config/config.js',
                 options: {
-                    process: function (content, srcpath) {
+                    process: function (content) {
                         return content
-                            .replace(/__LOCALHOST__/g, 'http://localhost:9001');
+                            .replace(/__UI\/THEMES__/g, JSON.stringify(uiThemesTemplate))
+                            .replace(/__LOCALHOST__/g, 'http://localhost:9001')
+                            ;
                     }
                 }
+            },
+            initLocales: {
+                src: '<%=devDir%>/config/messages.json.dist',
+                dest: '<%=devDir%>/tao/views/locales/en-US/messages.json'
             }
         }
 
@@ -139,4 +146,54 @@ module.exports = function(grunt) {
     grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']); //todo: remove this ?
 
+    grunt.registerTask('getCssFiles', 'retrieves all available css files', function getCssFiles(grunt) {
+        var done = this.async();
+        var defaultTheme;
+
+        function isItemCssTheme(file) {
+            return file.indexOf('.css', file.length - '.css'.length) !== -1
+                && file.indexOf('items') !== -1;
+        }
+
+        walker(path.join('dev-tmp', 'css'))
+            .on('file', function(file) {
+                if (isItemCssTheme(file)) {
+                    var pathArray = file.split(path.sep);
+                    var themeId;
+
+                    // replace root dir with localhost
+                    pathArray[0] = '__LOCALHOST__';
+
+                    // use the last folder as id
+                    themeId = pathArray[pathArray.length - 2];
+
+                    // add new entry
+                    uiThemesTemplate.items.available.push({
+                        id: themeId,
+                        name: themeId,
+                        path: pathArray.join('/')
+                    });
+                    if (typeof defaultTheme === "undefined") {
+                        defaultTheme = themeId; // we set the first found theme to be the default
+                    }
+                }
+            })
+            .on('end', function() {
+                uiThemesTemplate.items.default = defaultTheme;
+                done();
+            });
+    });
+
+    var uiThemesTemplate = {
+        items: {
+            base: "__LOCALHOST__/taoQtiItem/views/css/qti-runner.css",
+            available: [
+                {
+                    id: "tao",
+                    name: "TAO",
+                    path: "__LOCALHOST__/taoQtiItem/views/css/themes/default.css"
+                }
+            ]
+        }
+    };
 };

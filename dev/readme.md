@@ -8,9 +8,10 @@
     + clone tao repositories: https://www.npmjs.com/package/grunt-git (async done ?)
     + copy config file: https://github.com/gruntjs/grunt-contrib-copy
     + replace vhost: https://www.npmjs.com/package/grunt-replace
-    - replace ui/themes with default data
-    - copy translation file
-    - => this should create a working install with default themes
+    + replace ui/themes with default data
+    + copy translation file
+    + => this should create a working install with default themes
+    + => and it does!
 2. define profile, compile themes
 3. load themes (= refresh themes config with compiled themes)
 4. launch server
@@ -36,10 +37,11 @@ todo:
 + item switcher ?
 + remove profile parameter dependency in grunt cli
 + define overall process
-
-* check that we can do all the setup in grutn
-
-- generate correct ui/themes data in config file 
++ check that we can do all the setup in grutn
++ generate correct ui/themes data in config file
+ 
+* create init script
+ 
 - live reload on recompile
 - write somewhere in act extension that themes need to be compiled with theme-toolkit
 - improve item resolver to work with directly exported items, instead of looking for assets in a 'asset folder'
