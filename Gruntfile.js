@@ -142,7 +142,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('init', 'Initialize development directory', [/* * / 'clean:git', 'gitclone', /* */'getCssFiles', 'copy']);
+    grunt.registerTask('init', 'Initialize development directory', [/* */ 'clean:git', 'gitclone', /* */'getCssFiles', 'copy']);
     grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']); //todo: remove this ?
 

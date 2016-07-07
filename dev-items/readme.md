@@ -3,18 +3,83 @@
 # Item themes toolkit
  
 The purpose of this tool is to ease the development of items themes. It allows:
+
 - to fast-switch between items themes
 - to fast-switch between a set of pre-defined items containing most TAO interactions
 - without the need of a having to setup a full TAO instance
 
-The way it accomplish this is by cloning only the necessary extensions of TAO to create an item runner instance.
+## Overall Process
 
-# Overall Process
+Here is a high level view of the item themes toolkit setup process. Most of it is automated and it require very little manual intervention.
+
+- **Step 1:** create a stripped-down TAO instance to launch the item runner with the most recent code
+- **Step 2:** compile your boilerplate item themes  
+- **Step 3:** load your themes in the item themes toolkit
+- **Step 4:** develop your themes!
+
+## Detailed procedure
+
+### Step 1: create a "light" TAO instance
+ 
+Make sure you have nodejs and git installed.
+
+`npm install`
+`grunt itemDev:init`
+
+This takes a bit of time but shouldn't take *that* long. If it does, press CTRL+Z to abort and retry.
+The script will git clone the TAO extensions required to create an item runner instance and configure a few files.
+ 
+You can check that TAO has been initialized properly by running
+
+`grunt itemDev:run`
+
+and then pointing your browser to http://localhost:9001.
+You should be able to browse through available items with default TAO styling. Now, you need to register your own themes.
+
+### Step 2: compile your themes
+
+The item theme toolkit will look for css files into `/dev-items/css` directory. Therefore, this is where you need to compile your item themes.
+
+If you haven't done so already, create a profile.json file using the provided profiles.json.dist example. 
+
+The content of the source folder should be based on the CSS SDK as provided in the /scss directory. It is very important to keep the file structure as the script will look for specific folders names and such. You can use the scss folder of this repository, but most likely you will want to use a source folder from a specific project repository. 
+
+To try it out, however, we will compile the default SDK theme. Register the following profile:
+
+"default": {
+    "src": "scss",
+    "dest": "dev-items/css"
+}
+
+and then compile the theme:
+
+`grunt compile -p=default`
+
+Look at the result in the destination repository.
+
+### Step 3: register item themes
+
+`grunt itemDev:refresh`
+
+This command will register every item theme found in the css directory. It is to be run each time you add/rename/remove a theme. It DOESN'T need to be run each time you recompile existing themes. 
+
+You can now refresh your browser: you should see a new entry in the theme dropdown menu named 'default'. This entry correspond to the file:
+dev-items/css/themes/items/default/theme.css
+
+It doesn't cahnge anything yet because we haven't touched at the source files.
 
 
-grunt init
+### Step 4: develop!
 
-can sometimes hang. If it runs for a abnormal amount of time, CTRL+Z
+Edit your SCSS files. For each modification, you need to recompile the themes:
+
+`grunt compile -p=default`
+
+Of course, you may can make this automatic:
+
+`grunt dev -p=default`
+
+Note that you don't have to perform a full refresh of the page in the browser. Pressing F2 key will only reload CSS.
 
 ## To get up and running
 
