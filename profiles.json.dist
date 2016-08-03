@@ -2,15 +2,15 @@
     Format:
     =======
     "profileId": {
-        "src": "/path/to/scss/files"
-        "dest": "/path/to/css/files"
+        "src": "/path/to/scss/folder"
+        "dest": "/path/to/css/folder"
     }
 
     Example:
     ========
-    "unisa": {
-        "src": "/tao/package-eon/unisaTheme/views/scss",
-        "dest": "/tao/package-eon/unisaTheme/views/css"
+    "client": {
+        "src": "/tao/package-tao/clientTheme/views/scss",
+        "dest": "/tao/package-tao/clientTheme/views/css"
     }
 }
 

@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: profile.src,
-                    src: ['themes/*/*/theme.scss', '!themes/*/_common/theme.scss'],
+                    src: ['**/theme.scss'],
                     dest: profile.dest,
                     ext: '.css'
                 }]
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 
         watch: {
             sass: {
-                files: [profile.src + '/**/*.scss'],
+                files:  [profile.src + '/**/*.scss'],
                 tasks: ['sass:compile', 'notify:sass'],
                 options: {
                     debounceDelay: 500,
