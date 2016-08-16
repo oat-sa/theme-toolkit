@@ -1,5 +1,5 @@
 # Working with themes
-The TAO CSS SDK helps you to change the look and feel of either your items or the platform itself.
+The TAO Theme Toolkit - formerly known as TAO CSS SDK - helps you to change the look and feel of either your items or the platform itself.
 
 ## Common scenarios with items
 
