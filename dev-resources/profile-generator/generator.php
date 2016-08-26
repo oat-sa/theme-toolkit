@@ -13,19 +13,17 @@ header('Content-Type: text/plain; charset=utf-8');
 $profiles  = [];
 
 foreach($customers as $customer) {
-	$profiles[] = [
-		$customer => [
-			'src' => sprintf('%s/tao%s/views/scss/themes', $taoPath, ucfirst($customer)),
-			'dest' => sprintf('%s/tao%s/views/css/themes', $taoPath, ucfirst($customer)), 
-		],		
-		$customer . '-items' => [
-			'src' => sprintf('%s/tao%s/views/scss/themes/items', $taoPath, ucfirst($customer)),
-			'dest' => sprintf('%s/tao%s/views/css/themes/items', $taoPath, ucfirst($customer)), 
-		],		
-		$customer . '-platform' => [
-			'src' => sprintf('%s/tao%s/views/scss/themes/platform', $taoPath, ucfirst($customer)),
-			'dest' => sprintf('%s/tao%s/views/css/themes/platform', $taoPath, ucfirst($customer)), 
-		]
+	$profiles[$customer] = [
+		'src' => sprintf('%s/tao%s/views/scss/themes', $taoPath, ucfirst($customer)),
+		'dest' => sprintf('%s/tao%s/views/css/themes', $taoPath, ucfirst($customer)), 
+	];		
+	$profiles[$customer . '-items'] = [
+		'src' => sprintf('%s/tao%s/views/scss/themes/items', $taoPath, ucfirst($customer)),
+		'dest' => sprintf('%s/tao%s/views/css/themes/items', $taoPath, ucfirst($customer)), 
+	];		
+	$profiles[$customer . '-platform'] = [
+		'src' => sprintf('%s/tao%s/views/scss/themes/platform', $taoPath, ucfirst($customer)),
+		'dest' => sprintf('%s/tao%s/views/css/themes/platform', $taoPath, ucfirst($customer)), 
 	];
 }
 
