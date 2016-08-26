@@ -36,8 +36,7 @@ From the project root, run
 npm install
 ```
 
-Create a copy of profiles.json.dist and rename it profiles.json.
-Customise the content according to your local environment. Each profile is composed by a source path (for *.scss files) and an destination path (for *.css files). 
+Create a copy of profiles.json.dist and rename it profiles.json. Customise the content according to your local environment. Each profile is composed by a source path (for *.scss files) and an destination path (for *.css files). For your convenience we have added a profile generator in dev-resources.
 
 ### Tasks
 
