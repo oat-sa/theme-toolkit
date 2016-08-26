@@ -29,7 +29,8 @@ Assumed, your customer is called *Smith* and the extension *taoSmith* you get so
 
 In `generator.php` edit the two first variables:
 - `$taoPath` is the path to your local TAO installation, absolute or relative to your tool-kit.
-- `$customers` is the list of customers you want to create profiles for, entries should be in lower-case. 
+- `$customers` is the list of customers you want to create profiles for, entries should be in lower-case.
+- `$targets` for now there are *platform* and *items*, *(empty string, meaning all)*  will be added automatically 
 
 
 ## Execution
