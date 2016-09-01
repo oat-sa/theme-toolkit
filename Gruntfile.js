@@ -9,18 +9,25 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
-    var profile = getProfile(grunt);
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         devDir: 'dev-items',
+        //devPort: '9001', //todo: implement this as a variable
 
         clean: {
             options: {
                 force: true
             },
-            sass: [profile.dest],
-            git: ['<%=devDir%>/tao', '<%=devDir%>/taoItems', '<%=devDir%>/taoQtiItem']
+            sass: [
+                '<%=profiles.active.dest%>/*/',
+                '!<%=profiles.active.dest%>/.gitignore',
+                '!<%=profiles.active.dest%>/readme.md'
+            ],
+            git: [
+                '<%=devDir%>/tao',
+                '<%=devDir%>/taoItems',
+                '<%=devDir%>/taoQtiItem'
+            ]
         },
 
         sass: {
@@ -32,9 +39,9 @@ module.exports = function(grunt) {
             compile: {
                 files: [{
                     expand: true,
-                    cwd: profile.src,
+                    cwd: '<%=profiles.active.src%>',
                     src: ['**/theme.scss'],
-                    dest: profile.dest,
+                    dest: '<%=profiles.active.dest%>',
                     ext: '.css'
                 }]
             }
@@ -42,7 +49,7 @@ module.exports = function(grunt) {
 
         watch: {
             sass: {
-                files: [profile.src + '/**/*.scss'],
+                files: ['<%=profiles.active.src%>/**/*.scss'],
                 tasks: ['sass:compile', 'notify:sass'],
                 options: {
                     debounceDelay: 500,
@@ -55,11 +62,12 @@ module.exports = function(grunt) {
             sass: {
                 options: {
                     title: '<%=pkg.description%>',
-                    message: 'Sass files compiled'
+                    message: 'Sass files compiled to <%=profiles.active.dest%>'
                 }
             }
         },
 
+        // fixme: what am I doing here?
         connect: {
             server: {
                 options: {
@@ -105,7 +113,7 @@ module.exports = function(grunt) {
                     process: function (content) {
                         return content
                             .replace(/__UI\/THEMES__/g, JSON.stringify(uiThemesTemplate))
-                            .replace(/__LOCALHOST__/g, 'http://localhost:9001')
+                            .replace(/__LOCALHOST__/g, 'http://localhost:9001') //fixme: I need to become a paramter
                             ;
                     }
                 }
@@ -114,39 +122,52 @@ module.exports = function(grunt) {
                 src: '<%=devDir%>/config/messages.json.dist',
                 dest: '<%=devDir%>/tao/views/locales/en-US/messages.json'
             }
-        }
+        },
 
+        profiles: {
+            active: '',
+            user: ''
+        }
     });
 
-    function getProfile(grunt) {
-        var allProfiles,
-            profile = grunt.option('p'),
-            selectedProfile = {};
-
-        if (profile) {
-            try {
-                allProfiles = require('./profiles.json');
-            } catch (err) {
-                grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
-            }
-            if (!allProfiles[profile]) {
-                grunt.fail.fatal('Unknown profile ' + profile + '');
-            }
-            selectedProfile = allProfiles[profile];
-        } else {
-            grunt.log.subhead('WARNING: as no profile has been specified with -p={PROFILE}, any compile or watch task will fail');
-        }
-
-        return selectedProfile;
-    }
 
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('init', 'Initialize development directory', [/* */ 'clean:git', 'gitclone', /* */'getCssFiles', 'copy']);
-    grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
+    grunt.registerTask('compile', 'to be used with a profile id, for example: grunt compile:profileId', function(target) {
+        grunt.task.run([
+            'setUserProfiles',
+            'setActiveProfile:' + target,
+            'clean:sass',
+            'sass:compile',
+            'notify:sass'
+        ]);
+    });
+
+    grunt.registerTask('setUserProfiles', function setUserProfiles() {
+        var userProfiles;
+        try {
+            userProfiles = require('./profiles.json');
+        } catch (err) {
+            grunt.fail.fatal('profiles.json does not exists or is invalid. Please copy and customize profiles.json.dist');
+        }
+        grunt.config(['profiles', 'user'], userProfiles);
+    });
+
+    grunt.registerTask('setActiveProfile', function setActiveProfile(activeProfileId) {
+        var activeProfile = grunt.config(['profiles', 'user', activeProfileId]);
+        if (! activeProfile) {
+            grunt.fail.fatal('no profile found for id ' + activeProfileId);
+        }
+        grunt.config(['profiles', 'active'], activeProfile);
+    });
+
+
+    // Item themes toolkit specific
+
+    grunt.registerTask('init', 'Initialize development directory', [/* */ 'clean:git', 'gitclone', /* */'getItemsCssFiles', 'copy']);
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']); //todo: remove this ?
 
-    grunt.registerTask('getCssFiles', 'retrieves all available css files', function getCssFiles() {
+    grunt.registerTask('getItemsCssFiles', 'detect all available css files', function getItemsCssFiles() {
         var done = this.async();
         var defaultTheme;
 

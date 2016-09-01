@@ -21,17 +21,17 @@ Here is a high level view of the item themes toolkit setup process. Most of it i
 
 ### Step 1: create a "light" TAO instance
  
-Make sure you have nodejs and git installed.
+Make sure you have nodejs and git installed. Run the following commands from the theme toolkit root:
 
 `npm install`
-`grunt itemDev:init`
+`grunt items:init`
 
 This takes a bit of time but shouldn't take *that* long. If it does, press CTRL+Z to abort and retry.
 The script will git clone the TAO extensions required to create an item runner instance and configure a few files.
  
 You can check that TAO has been initialized properly by running
 
-`grunt itemDev:run`
+`grunt items:run`
 
 and then pointing your browser to http://localhost:9001.
 You should be able to browse through available items with default TAO styling. Now, you need to register your own themes.
@@ -44,7 +44,7 @@ If you haven't done so already, create a profile.json file using the provided pr
 
 The content of the source folder should be based on the CSS SDK as provided in the /scss directory. It is very important to keep the file structure as the script will look for specific folders names and such. You can use the scss folder of this repository, but most likely you will want to use a source folder from a specific project repository. 
 
-To try it out, however, we will compile the default SDK theme. Register the following profile:
+To try it out, however, we will compile the default SDK. Register the following profile:
 
 "default": {
     "src": "scss",
@@ -53,31 +53,31 @@ To try it out, however, we will compile the default SDK theme. Register the foll
 
 and then compile the theme:
 
-`grunt compile -p=default`
+`grunt compile:default`
 
 Look at the result in the destination repository.
 
 ### Step 3: register item themes
 
-`grunt itemDev:refresh`
+`grunt items:refresh`
 
-This command will register every item theme found in the css directory. It is to be run each time you add/rename/remove a theme. It DOESN'T need to be run each time you recompile existing themes. 
+This command will register every item theme found in the css directory. For a given set of themes, this is a one-time setup. It is to be run each time you add/rename/remove a theme. It DOESN'T need to be run each time you recompile existing themes. 
 
 You can now refresh your browser: you should see a new entry in the theme dropdown menu named 'default'. This entry correspond to the file:
 dev-items/css/themes/items/default/theme.css
 
-It doesn't cahnge anything yet because we haven't touched at the source files.
+This theme doesn't produce any visible change yet because we haven't touched at the source files.
 
 
 ### Step 4: develop!
 
 Edit your SCSS files. For each modification, you need to recompile the themes:
 
-`grunt compile -p=default`
+`grunt compile:default`
 
-Of course, you may can make this automatic:
+Of course, you may can make this painless:
 
-`grunt dev -p=default`
+`grunt watch:default`
 
 Note that you don't have to perform a full refresh of the page in the browser. Pressing F2 key will only reload CSS.
 
@@ -102,8 +102,8 @@ Note that you don't have to perform a full refresh of the page in the browser. P
 2. define profile, compile themes
 3. reload themes
 
-setup procedure:
-----------------
+manual setup procedure:
+-----------------------
 - copy a clientConfig js file from a working tao install
 - replace vhost with correct IP
 - !!!! generate correct ui/themes data 
@@ -118,15 +118,24 @@ todo:
 + define overall process
 + check that we can do all the setup in grutn
 + generate correct ui/themes data in config file
++ write somewhere in act extension that themes need to be compiled with theme-toolkit
++ create init script
++ main use case documentation
+
+* refactor grunt script to remove parameter dependency 
+- refactor grunt script to implement documented targets 
  
-* create init script
- 
+- namespace everything in gruntfile to "items" in case some "platform" targets are needed someday 
+- all uses cases documentation & targets
 - live reload on recompile
-- write somewhere in act extension that themes need to be compiled with theme-toolkit
 - improve item resolver to work with directly exported items, instead of looking for assets in a 'asset folder'
 - write item update procedure
+- add rubrick blocs markup to test items (test scope, item scope)
+- add scrolling bar somewhere in test items
+- add a video to documentation ? (see lionel build process for an example)
 
 - tool limit: no authoring, select2.png problem,  
+
 - tool longterm road map: retrieve items from tao instance, compile to data directory
 
 
@@ -140,3 +149,4 @@ php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826617776011/qti
 php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826746593113/qti.xml
 php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826840362515/qti.xml
 
+php /tao/package-parcc/taoTool.php --qti-to-json /tao/package-tao/data/taoItems/itemData/i14678948287836113/itemContent/en-US/qti.xml
