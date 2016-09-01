@@ -100,7 +100,9 @@
     }
     $args: join($baseColor, map-get($keyMap, 'args'));
 
-    @return call($fn, $args...);
+    // temp fix, for libsaas throws a compile error with original code
+    // @return call($fn, $args...);
+    @return call($fn, $baseColor, map-get($keyMap, 'args'));
 }
 
 
