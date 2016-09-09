@@ -1,3 +1,6 @@
+# todo
+- debug watch task
+
 # Item themes toolkit
  
 The purpose of this tool is to ease the development of items themes. It allows:
@@ -147,25 +150,5 @@ php /path/to/tao/taoTool.php --qti-to-json dev/items/i1458826840362515/qti.xml
 - add rubrick blocs markup to test items (test scope, item scope)
 - add scrolling bar somewhere in test items
 - retrieve sample items from tao instance, compile to data directory
-
-
-todo:
------
-+ resolve items assets correctly
-+ add new items
-+ item switcher ?
-+ remove profile parameter dependency in grunt cli
-+ define overall process
-+ check that we can do all the setup in grutn
-+ generate correct ui/themes data in config file
-+ write somewhere in act extension that themes need to be compiled with theme-toolkit
-+ create init script
-+ main use case documentation
-* refactor grunt script to remove parameter dependency 
-+ refactor grunt script to implement documented targets 
-+ namespace everything in gruntfile to "items" in case some "platform" targets are needed someday
-+ all uses cases documentation & targets
-
-- debug watch task
 
 
