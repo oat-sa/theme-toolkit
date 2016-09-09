@@ -37,7 +37,7 @@ You can check that TAO has been initialized properly by running
 grunt items-run
 ```
 
-and then pointing your browser to `http://localhost:9001`. You should be able to browse through available items with default TAO styling.
+and then pointing your browser to http://localhost:9001. You should be able to browse through available items with default TAO styling.
 
 Now, you need to add your own themes.
 
@@ -74,7 +74,7 @@ Run:
 grunt items-refresh
 ```
 
-This command will register every item theme found in the css directory. For a given set of themes, this is a one-time setup. It is to be run each time you add/rename/remove a theme, but It DOESN'T NEED to be run each time you recompile existing themes. 
+This command will register every item theme found in the css directory. For a given set of themes, this is a one-time setup. It is to be run each time you add/rename/remove a theme, but It **DOESN'T NEED** to be run each time you recompile existing themes. 
 
 You can now refresh your browser: you should see a new entry in the theme dropdown menu named 'default'. This entry correspond to the file created in Step2: 
 `dev-items/css/themes/items/default/theme.css`
@@ -82,9 +82,7 @@ You can now refresh your browser: you should see a new entry in the theme dropdo
 This theme doesn't produce any visible change yet because we haven't touched at the source files.
 
 
-### Step 4: develop!
-
-Edit your SCSS files. 
+### Step 4: curtomize your themes
 
 For testing purpose, we will make a small modification in the `scss` folder, something that you most likely never want to do (your source files for a specific theme should reside in a client/project specific repository).   
 

@@ -2,6 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var walker = require('walker');
 
+var HOST = 'localhost',
+    PORT = 9001;
 
 module.exports = function(grunt) {
     'use strict';
@@ -77,7 +79,7 @@ module.exports = function(grunt) {
         connect: {
             items: {
                 options: {
-                    port: '<%=itemsPort%>',
+                    port: PORT,
                     base: '<%=itemsDir%>'
                 }
             }
@@ -118,8 +120,7 @@ module.exports = function(grunt) {
                     process: function (content) {
                         return content
                             .replace(/__UI\/THEMES__/g, JSON.stringify(uiThemesTemplate))
-                            .replace(/__LOCALHOST__/g, 'http://localhost:9001') //fixme: why can't I be a parameter?
-                            // .replace(/__LOCALHOST__/g, 'http://<%=itemsHost%>:<%=itemsPort%>');
+                            .replace(/__LOCALHOST__/g, 'http://' + HOST + ':' + PORT);
                     }
                 }
             },
