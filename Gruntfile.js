@@ -11,8 +11,15 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        devDir: 'dev-items',
-        //devPort: '9001', //todo: implement this as a variable
+
+        profiles: {
+            user:   '',   // this will receive the content of profiles.json
+            active: ''    // this will receive the profile selected in the command line (grunt compile:profileId)
+        },
+
+        itemsDir:  'dev-items',
+        itemsHost: 'localhost',
+        itemsPort: '9001',
 
         clean: {
             options: {
@@ -23,10 +30,10 @@ module.exports = function(grunt) {
                 '!<%=profiles.active.dest%>/.gitignore',
                 '!<%=profiles.active.dest%>/readme.md'
             ],
-            git: [
-                '<%=devDir%>/tao',
-                '<%=devDir%>/taoItems',
-                '<%=devDir%>/taoQtiItem'
+            gitItems: [
+                '<%=itemsDir%>/tao',
+                '<%=itemsDir%>/taoItems',
+                '<%=itemsDir%>/taoQtiItem'
             ]
         },
 
@@ -67,13 +74,11 @@ module.exports = function(grunt) {
             }
         },
 
-        // fixme: what am I doing here?
         connect: {
-            server: {
+            items: {
                 options: {
-                    port: 9001,
-                    base: '<%=devDir%>'
-                    // , open: true
+                    port: '<%=itemsPort%>',
+                    base: '<%=itemsDir%>'
                 }
             }
         },
@@ -81,7 +86,7 @@ module.exports = function(grunt) {
         gitclone: {
             tao: {
                 options: {
-                    cwd: '<%=devDir%>',
+                    cwd: '<%=itemsDir%>',
                     repository: 'https://github.com/oat-sa/tao-core.git',
                     // branch: 'develop',
                     directory: 'tao'
@@ -89,7 +94,7 @@ module.exports = function(grunt) {
             },
             taoItems: {
                 options: {
-                    cwd: '<%=devDir%>',
+                    cwd: '<%=itemsDir%>',
                     repository: 'https://github.com/oat-sa/extension-tao-item.git',
                     // branch: 'develop',
                     directory: 'taoItems'
@@ -97,7 +102,7 @@ module.exports = function(grunt) {
             },
             taoQtiItem: {
                 options: {
-                    cwd: '<%=devDir%>',
+                    cwd: '<%=itemsDir%>',
                     repository: 'https://github.com/oat-sa/extension-tao-itemqti.git',
                     // branch: 'develop',
                     directory: 'taoQtiItem'
@@ -106,27 +111,22 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            initConfig: {
-                src: '<%=devDir%>/config/config.js.dist',
-                dest: '<%=devDir%>/config/config.js',
+            itemsConfig: {
+                src: '<%=itemsDir%>/config/config.js.dist',
+                dest: '<%=itemsDir%>/config/config.js',
                 options: {
                     process: function (content) {
                         return content
                             .replace(/__UI\/THEMES__/g, JSON.stringify(uiThemesTemplate))
-                            .replace(/__LOCALHOST__/g, 'http://localhost:9001') //fixme: I need to become a paramter
-                            ;
+                            .replace(/__LOCALHOST__/g, 'http://localhost:9001') //fixme: why can't I be a parameter?
+                            // .replace(/__LOCALHOST__/g, 'http://<%=itemsHost%>:<%=itemsPort%>');
                     }
                 }
             },
-            initLocales: {
-                src: '<%=devDir%>/config/messages.json.dist',
-                dest: '<%=devDir%>/tao/views/locales/en-US/messages.json'
+            itemsLocales: {
+                src: '<%=itemsDir%>/config/messages.json.dist',
+                dest: '<%=itemsDir%>/tao/views/locales/en-US/messages.json'
             }
-        },
-
-        profiles: {
-            active: '',
-            user: ''
         }
     });
 
@@ -143,12 +143,20 @@ module.exports = function(grunt) {
         ]);
     });
 
+    grunt.registerTask('dev', 'to be used with a profile id, for example: grunt dev:profileId', function(target) {
+        grunt.task.run([
+            'setUserProfiles',
+            'setActiveProfile:' + target,
+            'watch:sass'
+        ]);
+    });
+
     grunt.registerTask('setUserProfiles', function setUserProfiles() {
         var userProfiles;
         try {
             userProfiles = require('./profiles.json');
         } catch (err) {
-            grunt.fail.fatal('profiles.json does not exists or is invalid. Please copy and customize profiles.json.dist');
+            grunt.fail.fatal('invalid or missing profiles.json');
         }
         grunt.config(['profiles', 'user'], userProfiles);
     });
@@ -156,7 +164,7 @@ module.exports = function(grunt) {
     grunt.registerTask('setActiveProfile', function setActiveProfile(activeProfileId) {
         var activeProfile = grunt.config(['profiles', 'user', activeProfileId]);
         if (! activeProfile) {
-            grunt.fail.fatal('no profile found for id ' + activeProfileId);
+            grunt.fail.fatal('invalid or missing profile id: ' + activeProfileId);
         }
         grunt.config(['profiles', 'active'], activeProfile);
     });
@@ -164,8 +172,22 @@ module.exports = function(grunt) {
 
     // Item themes toolkit specific
 
-    grunt.registerTask('init', 'Initialize development directory', [/* */ 'clean:git', 'gitclone', /* */'getItemsCssFiles', 'copy']);
-    grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']); //todo: remove this ?
+    grunt.registerTask('items-init', 'initialize the item theme toolkit', [
+        'clean:gitItems',
+        'gitclone',
+        'getItemsCssFiles',
+        'copy:itemsConfig',
+        'copy:itemsLocales'
+    ]);
+
+    grunt.registerTask('items-run', 'launch the item theme toolkit', [
+        'connect:items::keepalive'
+    ]);
+
+    grunt.registerTask('items-refresh', 'scan the css folder for item themes', [
+        'getItemsCssFiles',
+        'copy:itemsConfig'
+    ]);
 
     grunt.registerTask('getItemsCssFiles', 'detect all available css files', function getItemsCssFiles() {
         var done = this.async();
@@ -173,10 +195,10 @@ module.exports = function(grunt) {
 
         function isItemCssTheme(file) {
             return file.indexOf('.css', file.length - '.css'.length) !== -1
-                && file.indexOf('items') !== -1;
+                && file.indexOf('themes/items/') !== -1;
         }
 
-        walker(path.join(grunt.config('devDir'), 'css'))
+        walker(path.join(grunt.config('itemsDir'), 'css'))
             .on('file', function(file) {
                 if (isItemCssTheme(file)) {
                     var pathArray = file.split(path.sep);

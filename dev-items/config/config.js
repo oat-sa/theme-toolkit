@@ -18,7 +18,7 @@ require.config({
             shownExtension          : '',
             shownStructure          : '',
             extensionsLocales       : null,
-            timeout                 : 30,
+            timeout                 : 30
         },
         text: {
             useXhr: function(){
@@ -26,7 +26,7 @@ require.config({
             }
         },
 
-        'ui/themes' : {"items":{"base":"http://localhost:9001/taoQtiItem/views/css/qti-runner.css","available":[{"id":"tao","name":"TAO","path":"http://localhost:9001/taoQtiItem/views/css/themes/default.css"},{"id":"blackOnCream","name":"blackOnCream","path":"http://localhost:9001/css/themes/items/blackOnCream/theme.css"},{"id":"blackOnLightBlue","name":"blackOnLightBlue","path":"http://localhost:9001/css/themes/items/blackOnLightBlue/theme.css"},{"id":"blackOnMagenta","name":"blackOnMagenta","path":"http://localhost:9001/css/themes/items/blackOnMagenta/theme.css"},{"id":"blackOnWhite","name":"blackOnWhite","path":"http://localhost:9001/css/themes/items/blackOnWhite/theme.css"},{"id":"lightYellowOnRoyalBlue","name":"lightYellowOnRoyalBlue","path":"http://localhost:9001/css/themes/items/lightYellowOnRoyalBlue/theme.css"},{"id":"grayOnGreen","name":"grayOnGreen","path":"http://localhost:9001/css/themes/items/grayOnGreen/theme.css"},{"id":"whiteOnBlack","name":"whiteOnBlack","path":"http://localhost:9001/css/themes/items/whiteOnBlack/theme.css"},{"id":"default","name":"default","path":"http://localhost:9001/css/themes/platform/default/theme.css"}],"default":"blackOnCream"},"default":"tao"},
+        'ui/themes' : {"items":{"base":"http://localhost:9001/taoQtiItem/views/css/qti-runner.css","available":[{"id":"tao","name":"TAO","path":"http://localhost:9001/taoQtiItem/views/css/themes/default.css"},{"id":"default","name":"default","path":"http://localhost:9001/css/themes/items/default/theme.css"}],"default":"default"},"default":"tao"},
 //dynamic lib config
         'util/locale'        : {"decimalSeparator":".","thousandsSeparator":""},
         'taoQtiItem/qtiRunner/core/QtiRunner'        : {"inlineModalFeedback":false},
