@@ -1,5 +1,3 @@
-**WARNING: for now, those are development notes and not a proper readme**
-
 # Item themes toolkit
  
 The purpose of this tool is to ease the development of items themes. It allows:
@@ -76,8 +74,7 @@ grunt items-refresh
 
 This command will register every item theme found in the css directory. For a given set of themes, this is a one-time setup. It is to be run each time you add/rename/remove a theme, but It **DOESN'T NEED** to be run each time you recompile existing themes. 
 
-You can now refresh your browser: you should see a new entry in the theme dropdown menu named 'default'. This entry correspond to the file created in Step2: 
-`dev-items/css/themes/items/default/theme.css`
+You can now refresh your browser: you should see a new entry in the theme dropdown menu named 'default'. This entry correspond to the file created in Step2 (`dev-items/css/themes/items/default/theme.css`)
 
 This theme doesn't produce any visible change yet because we haven't touched at the source files.
 
@@ -111,37 +108,46 @@ grunt dev:default
 
 Note that you don't have to perform a full refresh of the page in the browser. Pressing `F2` key will only reload CSS.
 
-## To get up and running
+## How to:
 
-1. init script (grunt or cross platform something): 
-    + clone tao repositories: https://www.npmjs.com/package/grunt-git (async done ?)
-    + copy config file: https://github.com/gruntjs/grunt-contrib-copy
-    + replace vhost: https://www.npmjs.com/package/grunt-replace
-    + replace ui/themes with default data
-    + copy translation file
-    + => this should create a working install with default themes
-    + => and it does!
-2. define profile, compile themes
-3. load themes (= refresh themes config with compiled themes)
-4. launch server
-5. develop themes!
+### Update to the latest version of tao code
 
-## To update to the latest version of tao code
+Run the init task again to clone directories :
+```
+grunt items-init
+```
 
-1. run the init task again to clone directories
+### Switch project/client
 
-## To switch client or project
+- create a new profile in `profiles.json`
+- compile the themes 
+```
+grunt compile:newProfile
+```
+- reload the themes in the toolkit 
+```
+grunt items-refresh
+```
 
-1. clear CSS directory
-2. define profile, compile themes
-3. reload themes
+### Convert sample items from XML to JSON
 
-manual setup procedure:
------------------------
-- copy a clientConfig js file from a working tao install
-- replace vhost with correct IP
-- !!!! generate correct ui/themes data 
-- copy a tao/views/locales/en-US/messages.json from a working tao install
+If you want to update the sample items or add your own, you need to convert the xml into Json. For now, the procedure is a bit tedious : you need to copy the `taoTool.php` file to the root of a full working TAO instance, then run:
+
+```
+php /path/to/tao/taoTool.php --qti-to-json dev/items/i1458826617776011/qti.xml
+php /path/to/tao/taoTool.php --qti-to-json dev/items/i1458826746593113/qti.xml
+php /path/to/tao/taoTool.php --qti-to-json dev/items/i1458826840362515/qti.xml
+```
+
+## Improvements ideas...
+
+- live reload on recompile
+- improve item resolver to work with directly exported items, instead of looking for assets in a 'asset folder'
+- write item update procedure
+- add rubrick blocs markup to test items (test scope, item scope)
+- add scrolling bar somewhere in test items
+- retrieve sample items from tao instance, compile to data directory
+
 
 todo:
 -----
@@ -158,30 +164,8 @@ todo:
 * refactor grunt script to remove parameter dependency 
 + refactor grunt script to implement documented targets 
 + namespace everything in gruntfile to "items" in case some "platform" targets are needed someday
++ all uses cases documentation & targets
 
 - debug watch task
-- all uses cases documentation & targets
-
-- live reload on recompile
-- improve item resolver to work with directly exported items, instead of looking for assets in a 'asset folder'
-- write item update procedure
-- add rubrick blocs markup to test items (test scope, item scope)
-- add scrolling bar somewhere in test items
-- add a video to documentation ? (see lionel build process for an example)
-
-- tool limit: no authoring, select2.png problem,  
-
-- tool longterm road map: retrieve items from tao instance, compile to data directory
 
 
-// todo: add task to automatically clone
-// git clone https://github.com/oat-sa/tao-core.git tao
-// git clone https://github.com/oat-sa/extension-tao-item.git taoItems
-// git clone https://github.com/oat-sa/extension-tao-itemqti.git taoQtiItem
-
-// to convert items
-php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826617776011/qti.xml
-php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826746593113/qti.xml
-php /tao/package-parcc/taoTool.php --qti-to-json dev/items/i1458826840362515/qti.xml
-
-php /tao/package-parcc/taoTool.php --qti-to-json /tao/package-tao/data/taoItems/itemData/i14678948287836113/itemContent/en-US/qti.xml
