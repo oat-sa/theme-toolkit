@@ -114,8 +114,8 @@
                     }
                     ul {
                         @include submenu($menuActiveBg);
-                                }
-                            }
+                    }
+                }
                 & > ul > li, & > .settings-menu > ul > li {
                     &:hover {
                         & > a, & >.a, .reduced-menu-trigger {

@@ -19,7 +19,18 @@ html {
         /// action bar
         @include action-bar($actionBarBg, $actionBarText);
 
+        /// tabs
+        @include active-tab($activeTabBg, $activeTabText);
+
         /// everything else
+
+        #tao-main-logo {
+        }
+
+        // scroll fix in iFrame for iOS
+        #qti-content {
+            -webkit-overflow-scrolling: touch;
+        }
     }
 }
 
