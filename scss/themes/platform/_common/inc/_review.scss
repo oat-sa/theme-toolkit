@@ -1,0 +1,124 @@
+////
+/// TAO CSS SDK
+/// Review panel
+////
+
+.test-sidebar-left {
+  border-right: 1px solid $uiClickableDefaultBg;
+}
+
+.qti-navigator {
+  color: $textColor;
+  text-shadow: none !important;
+  background-color: $panelBg;
+
+  [class^="icon-"], [class*=" icon-"] {
+    text-shadow: none !important;
+  }
+
+  // appearances
+  .qti-navigator-info {
+    & > .qti-navigator-label {
+      background-color: $textColor;
+      color: $itemBg;
+      border-top: 1px solid $textColor;
+    }
+
+    li {
+      border-bottom: 1px solid $borderColor;
+    }
+  }
+
+  .qti-navigator-filter {
+    span {
+      background-color: $textColor;
+      color: $itemBg;
+      border-radius: 0;
+      border: 1px solid $panelBg;
+
+      &:hover {
+        background-color: $uiClickableHoverBg;
+        color: $itemBg;
+      }
+    }
+    &.active {
+      span {
+        background-color: $uiClickableActiveBg;
+        color: $textColor;
+      }
+    }
+  }
+  .qti-navigator-linear,
+  .qti-navigator-linear-part {
+    background-color: whiten($panelBg, 0.3);
+  }
+
+  .qti-navigator-part {
+    & > .qti-navigator-label {
+      background-color: $textColor;
+      color: $itemBg;
+      &:hover {
+        color: $textColor;
+        background-color: $uiClickableHoverBg;
+      }
+    }
+    &.active {
+      & > .qti-navigator-label {
+        background-color: $textColor;
+
+        &:hover {
+          background-color: $uiClickableHoverBg;
+        }
+      }
+    }
+  }
+  .qti-navigator-section {
+    & > .qti-navigator-label {
+      border-bottom: 1px solid $borderColor;
+      &:hover {
+        background-color: $uiClickableHoverBg;
+      }
+    }
+    &.active {
+      & > .qti-navigator-label {
+        background-color: $panelBg;
+
+        &:hover {
+          background-color: $uiClickableHoverBg;
+        }
+      }
+    }
+  }
+  .qti-navigator-item {
+    background-color: $panelBg;
+    &.active {
+      background-color: $uiClickableActiveBg;
+      color: $textColor;
+    }
+    &:hover {
+      background-color: $uiClickableHoverBg;
+      color: $textColor;
+    }
+    &.disabled {
+      color: $disabledColor !important;
+      background-color: $disabledBg !important;
+      text-shadow: none !important;
+    }
+  }
+  .qti-navigator-collapsible {
+    background-color: $uiClickableDefaultBg;
+    color: $textColor;
+
+    &:hover {
+      background-color: $uiClickableActiveBg;
+    }
+
+    .icon {
+      color: $textColor;
+    }
+  }
+
+  .qti-navigator-message {
+    background-color: whiten($panelBg, 0.3);
+  }
+}
