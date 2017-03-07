@@ -1,1 +1,0 @@
-Typical HTML structure of items and interactions
