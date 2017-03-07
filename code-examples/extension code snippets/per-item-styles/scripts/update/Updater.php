@@ -17,29 +17,22 @@
  * Copyright (c) 2016 (original work) Open Assessment Technologies SA;
  */
 
-// replace __MY_EXTENSION_ID__
-namespace oat\__MY_EXTENSION_ID__\scripts\install;
+namespace oat\__myExtensionId__\scripts\update;
 
-use oat\taoQtiItem\model\themes\ItemThemeInstaller;
-use oat\oatbox\extension\InstallAction;
+use \common_ext_ExtensionUpdater;
+use oat\__myExtensionId__\scripts\install\AddCssBlocksHook;
 
-/**
- * You can check the result of this script by opening:
- * tao/config/tao/themes.conf.php
- */
-class SetItemThemes extends InstallAction
+
+class Updater extends common_ext_ExtensionUpdater
 {
-
-    public function __invoke($params)
+    public function update($initialVersion)
     {
+        if ($this->isVersion('0.1.0')) { // <- current version according to manifest.php
 
-        $themes = [
-            'default' => 'The default theme', // equivalent to 'taoFooDefault' => 'The default theme'
-            'other'   => 'The other one'
-        ];
+            $setPlatformTheme = new AddCssBlocksHook();
+            $setPlatformTheme([]);
 
-        $itemThemeInstaller = new ItemThemeInstaller('taoFoo'); // 'taoFoo' is the id of your extension
-        $itemThemeInstaller->add($themes);
-        $itemThemeInstaller->setDefault('default');
+            $this->setVersion('0.2.0'); // <- new version, update this in manifest.php too
+        }
     }
 }

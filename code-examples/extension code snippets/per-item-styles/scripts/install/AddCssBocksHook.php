@@ -15,28 +15,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  * Copyright (c) 2016 (original work) Open Assessment Technologies SA;
- *
- *
  */
 
-namespace oat\__customerExtension__\scripts\update;
+namespace oat\__myExtensionId__\scripts\install;
 
-use oat\__customerExtension__\scripts\install\AddCssBlocksHook;
-use \common_ext_ExtensionUpdater;
+use oat\taoQtiItem\model\HookRegistry;
 
-
-class Updater extends common_ext_ExtensionUpdater
+class AddCssBlocksHook extends \common_ext_action_InstallAction
 {
-    public function update($initialVersion)
+    public function __invoke($params)
     {
-        $currentVersion = $initialVersion;
+        HookRegistry::getRegistry()->set('__myExtensionId__Creator', 'oat\__myExtensionId__\model\CreatorHook');
 
-        if ($currentVersion === 'A.B.C') {
-
-            $addCssBlocksHook = new AddCssBlocksHook();
-            $addCssBlocksHook([]);
-
-            $this->setVersion('X.Y.Z');
-        }
+        return new \common_report_Report(\common_report_Report::TYPE_SUCCESS, 'CSS blocks hook successfully registered');
     }
 }
+

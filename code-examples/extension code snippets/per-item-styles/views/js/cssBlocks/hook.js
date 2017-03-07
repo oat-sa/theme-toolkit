@@ -14,19 +14,14 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  * Copyright (c) 2015 (original work) Open Assessment Technologies SA;
- *
  */
 
-/**
- *
- * @author dieter <dieter@taotesting.com>
- */
 
 define([
     'jquery',
     'taoQtiItem/qtiCreator/helper/panel',
-    '__customerExtension__/cssBlocks/cssConfig',
-    'tpl!__customerExtension__/cssBlocks/tpl/css-blocks'
+    '__myExtensionId__/cssBlocks/cssConfig',
+    'tpl!__myExtensionId__/cssBlocks/tpl/css-blocks'
 ], function($, panelHelper, cssConfig, listingTpl){
 
     'use strict';
