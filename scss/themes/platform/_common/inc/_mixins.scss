@@ -100,7 +100,7 @@
                     &.active {
                         & > a, & > a:hover {
                             background: colorVariation($menuActiveBg, 'menu', 'active-bg') !important;
-                            color: colorVariation($menuActiveText, 'menu', 'active-text');
+                            color: colorVariation($menuActiveText, 'menu', 'active-text') !important;
                         }
                     }
                     & > .a {
