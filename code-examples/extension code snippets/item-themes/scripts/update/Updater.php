@@ -29,7 +29,7 @@ class Updater extends common_ext_ExtensionUpdater
     {
         if ($this->isVersion('0.1.0')) { // <- current version according to manifest.php
 
-            $setPlatformTheme = new SetItemThemes();
+            $setItemThemes = new SetItemThemes();
             $setItemThemes([]);
 
             $this->setVersion('0.2.0'); // <- new version, update this in manifest.php too

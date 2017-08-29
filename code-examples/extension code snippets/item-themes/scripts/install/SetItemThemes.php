@@ -18,7 +18,7 @@
  */
 
 // replace __MY_EXTENSION_ID__
-namespace oat\__MY_EXTENSION_ID__\scripts\install;
+namespace oat\__myExtensionId__\scripts\install;
 
 use oat\taoQtiItem\model\themes\ItemThemeInstaller;
 use oat\oatbox\extension\InstallAction;
@@ -35,10 +35,10 @@ class SetItemThemes extends InstallAction
 
         $themes = [
             'default' => 'The default theme', // equivalent to 'taoFooDefault' => 'The default theme'
-            'other'   => 'The other one'
+            // 'other'   => 'The other one'
         ];
 
-        $itemThemeInstaller = new ItemThemeInstaller('taoFoo'); // 'taoFoo' is the id of your extension
+        $itemThemeInstaller = new ItemThemeInstaller('__myExtensionId__');
         $itemThemeInstaller->add($themes);
         $itemThemeInstaller->setDefault('default');
     }
