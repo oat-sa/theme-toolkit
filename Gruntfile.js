@@ -1,4 +1,4 @@
-var fs = require('fs');
+var sass = require('node-sass');
 
 module.exports = function(grunt) {
     'use strict';
@@ -31,7 +31,8 @@ module.exports = function(grunt) {
             options: {
                 linefeed: 'lf',
                 sourceMap: true,
-                outputStyle: 'compressed'
+                outputStyle: 'compressed',
+                implementation: sass
             },
             compile: {
                 files: [{
