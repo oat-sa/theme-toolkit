@@ -45,6 +45,18 @@ module.exports = function(grunt) {
             }
         },
 
+        postcss: {
+            options: {
+                map: false,
+                processors: [
+                    require('autoprefixer')({browsers: 'last 4 versions'})
+                ]
+            },
+            dist: {
+                src: [profile.dest + '/**/*.css']
+            }
+        },
+
         watch: {
             sass: {
                 files:  [profile.src + '/**/*.scss'],
@@ -77,6 +89,8 @@ module.exports = function(grunt) {
         return allProfiles[profile];
     }
 
-    grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
+    grunt.loadNpmTasks('grunt-postcss');
+
+    grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile', 'postcss']);
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
 };
