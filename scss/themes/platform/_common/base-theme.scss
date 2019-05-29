@@ -14,7 +14,7 @@ html {
         @include header-footer-color-scheme($headerBg, $headerText, $footerBg, $footerText);
 
         /// navigation
-        @include navigation($menuActiveBg, $menuActiveText);
+        @include navigation($menuActiveBg, $menuActiveText, $headerBg);
 
         /// action bar
         @include action-bar($actionBarBg, $actionBarText);
@@ -31,6 +31,43 @@ html {
         // scroll fix in iFrame for iOS
         #qti-content {
             -webkit-overflow-scrolling: touch;
+        }
+
+        .dark-bar {
+            nav {
+                li {
+                    text-shadow: none;
+                        & > a, & >.a {
+                            color: map-get($colorScheme, 'mainBarText')  !important;
+                        }
+                    ul {
+                        &.menu-dropdown {
+                            box-shadow: 1px 1px 1px 0 rgba(0,0,0,.25);
+                            li {
+                                &.active, &:hover {
+                                    a, .a {
+                                        color: map-get($colorScheme, 'menuActiveText') !important;
+                                    }
+                                }
+                            }
+                            a, .a {
+                                color: map-get($colorScheme, 'mainBarText')  !important;
+                            }
+                        }
+                    }
+                    &:hover {
+                        color: map-get($colorScheme, 'menuActiveText');
+                        background: none !important;
+                        a, .a {
+                            color: map-get($colorScheme, 'menuActiveText') !important;
+                            &:hover {
+                                transition: none;
+                                background: colorVariation(map-get($colorScheme, 'menuActiveBg'), 'menu', 'hover-bg');
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

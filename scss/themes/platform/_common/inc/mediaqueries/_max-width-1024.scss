@@ -8,7 +8,7 @@
     html {
         body {
             &:not(.delivery-scope){
-                @include theme-mobile-navi($menuActiveBg, $menuActiveText);
+                @include theme-mobile-navi($menuActiveBg, $menuActiveText, $headerBg);
             }
             &.oversized-nav {
                 &:not(.delivery-scope) {
