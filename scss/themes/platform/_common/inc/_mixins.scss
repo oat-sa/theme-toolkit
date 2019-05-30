@@ -66,7 +66,10 @@
 //.dark-bar nav li ul
 //.dark-bar nav li ul li a
 /// submenu
+/// @param {string} $menuActiveBg
+/// @param {string} $menuActiveText
 /// @param {string} $headerBg
+/// @param {string} $headerText
 @mixin submenu ($menuActiveBg, $menuActiveText, $headerBg, $headerText)  {
     box-shadow: 1px 1px 1px 0 rgba(0,0,0,.25);
     background: $headerBg !important;
@@ -94,9 +97,10 @@
 
 
 /// navigation
-/// @param {color} $menuActiveBg
-/// @param {color} $menuActiveText
-/// @param {color}  $headerBg
+/// @param {string} $menuActiveBg
+/// @param {string} $menuActiveText
+/// @param {string} $headerBg
+/// @param {string} $headerText
 @mixin navigation($menuActiveBg, $menuActiveText, $headerBg, $headerText) {
     @if($menuActiveBg != '' and $menuActiveText != '') {
         .dark-bar {
@@ -156,6 +160,8 @@
 /// everything required for mobile navi
 /// @param {string} $menuActiveBg
 /// @param {string} $menuActiveText
+/// @param {string} $headerBg
+/// @param {string} $headerText
 @mixin theme-mobile-navi ($menuActiveBg, $menuActiveText, $headerBg, $headerText) {
     @if($headerBg != '' and $menuActiveText != '') {
         .dark-bar {
