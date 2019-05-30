@@ -12,13 +12,14 @@
 /// Gradient format: ((color:#000[, position:0%])[,(...)])
 
 $colorScheme: (
-	mainBarBg:    "",
-	mainBarText:  "",
-	menuActiveBg: "",
-  loadingBar:   "",
-  actionBarBg:  "",
-  footerBg:     "",
-  footerText:   ""
+	mainBarBg:      "",
+	mainBarText:    "",
+  menuActiveBg:   "",
+  menuActiveText: "",
+  loadingBar:     "",
+  actionBarBg:    "",
+  footerBg:       "",
+  footerText:     ""
 );
 
 /// header
@@ -31,7 +32,7 @@ $footerText: map-get($colorScheme, 'footerText');
 
 /// main menu, hover etc. will be computed according to the formulas in _varieties.scss
 $menuActiveBg: map-get($colorScheme, 'menuActiveBg');
-$menuActiveText: map-get($colorScheme, 'mainBarText');
+$menuActiveText: map-get($colorScheme, 'menuActiveText');
 
 /// action bar
 $actionBarBg: map-get($colorScheme, 'actionBarBg');

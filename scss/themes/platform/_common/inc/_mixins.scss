@@ -67,13 +67,20 @@
 //.dark-bar nav li ul li a
 /// submenu
 /// @param {string} $headerBg
-@mixin submenu ($menuActiveBg, $menuActiveText, $headerBg)  {
+@mixin submenu ($menuActiveBg, $menuActiveText, $headerBg, $headerText)  {
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,.25);
     background: $headerBg !important;
     border-color: colorVariation($headerBg, 'menu', 'active-bg') !important;
     li {
         background: colorVariation($headerBg, 'menu', 'active-bg');
         border-color: colorVariation($headerBg, 'menu', 'active-bg');
-        a {
+        &.active, &:hover {
+            a, .a {
+                color: colorVariation($menuActiveText, 'menu', 'hover-text');
+            }
+        }
+        a, .a {
+            color: colorVariation($headerText, 'menu', 'text');
             background: colorVariation($headerBg, 'menu', 'active-bg');
             border: none;
             &:hover {
@@ -90,7 +97,7 @@
 /// @param {color} $menuActiveBg
 /// @param {color} $menuActiveText
 /// @param {color}  $headerBg
-@mixin navigation($menuActiveBg, $menuActiveText, $headerBg) {
+@mixin navigation($menuActiveBg, $menuActiveText, $headerBg, $headerText) {
     @if($menuActiveBg != '' and $menuActiveText != '') {
         .dark-bar {
             nav {
@@ -100,7 +107,7 @@
                         text-shadow: inherit !important;
                     }
                     & > a, & > .a {
-                        color: colorVariation($menuActiveText, 'menu', 'text');
+                        color: colorVariation($headerText, 'menu', 'text');
                     }
                     &.active {
                         & > a, & > a:hover {
@@ -118,7 +125,7 @@
                         }
                     }
                     ul {
-                        @include submenu ($menuActiveBg, $menuActiveText, $headerBg);
+                        @include submenu ($menuActiveBg, $menuActiveText, $headerBg, $headerText);
                     }
                 }
                 & > ul > li, & > .settings-menu > ul > li {
@@ -126,7 +133,7 @@
                         & > a, & >.a {
                             opacity: 1;
                             background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
-                            color: colorVariation($menuActiveText, 'menu', 'hover-text');
+                            color: colorVariation($headerText, 'menu', 'hover-text');
                         }
                     }
 
@@ -139,7 +146,7 @@
         /// & refers to body
         &.oversized-nav {
             &:not(.delivery-scope) {
-                @include theme-mobile-navi($menuActiveBg, $menuActiveText, $headerBg);
+                @include theme-mobile-navi($menuActiveBg, $menuActiveText, $headerBg, $headerText);
             }
         }
     }
@@ -149,18 +156,18 @@
 /// everything required for mobile navi
 /// @param {string} $menuActiveBg
 /// @param {string} $menuActiveText
-@mixin theme-mobile-navi ($menuActiveBg, $menuActiveText, $headerBg) {
+@mixin theme-mobile-navi ($menuActiveBg, $menuActiveText, $headerBg, $headerText) {
     @if($headerBg != '' and $menuActiveText != '') {
         .dark-bar {
             nav {
                 .settings-menu{
                     & > ul {
-                        @include submenu ($menuActiveBg, $menuActiveText, $headerBg);
+                        @include submenu ($menuActiveBg, $menuActiveText, $headerBg, $headerText);
                     }
                     .reduced-menu-trigger {
                         text-shadow: 1px 1px 1px autoTextShadowColor($headerBg, $menuActiveText);
                         padding: 13px 10px 11px;
-                        color: colorVariation($menuActiveText, 'menu', 'text');
+                        color: colorVariation($headerText, 'menu', 'text');
                         &:hover {
                             background: colorVariation($menuActiveBg, 'menu', 'hover-bg') !important;
                             border-color: colorVariation($headerBg, 'menu', 'bg');
@@ -170,7 +177,7 @@
                             opacity: 1;
                         }
                         [class^="icon-"], [class*=" icon-"] {
-                            color:colorVariation($menuActiveText, 'menu', 'text') !important;
+                            color:colorVariation($headerText, 'menu', 'text') !important;
                             text-shadow: inherit !important;
                         }
                     }
