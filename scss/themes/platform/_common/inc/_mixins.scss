@@ -157,11 +157,6 @@
                     & > ul {
                         @include submenu ($menuActiveBg, $menuActiveText, $headerBg);
                     }
-                    &:hover {
-                        .reduced-menu-trigger {
-                            background: colorVariation($headerBg, 'menu', 'hover-bg');
-                        }
-                    }
                     .reduced-menu-trigger {
                         text-shadow: 1px 1px 1px autoTextShadowColor($headerBg, $menuActiveText);
                         padding: 13px 10px 11px;
