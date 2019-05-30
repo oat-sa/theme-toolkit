@@ -123,7 +123,7 @@
                 }
                 & > ul > li, & > .settings-menu > ul > li {
                     &:hover {
-                        & > a, & >.a, .reduced-menu-trigger {
+                        & > a, & >.a {
                             opacity: 1;
                             background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
                             color: colorVariation($menuActiveText, 'menu', 'hover-text');
@@ -167,7 +167,7 @@
                         padding: 13px 10px 11px;
                         color: colorVariation($menuActiveText, 'menu', 'text');
                         &:hover {
-                            background: rgba(255,255,255,0.55) !important;
+                            background: colorVariation($menuActiveBg, 'menu', 'hover-bg') !important;
                             border-color: colorVariation($headerBg, 'menu', 'bg');
                             -webkit-transition: none;
                             transition: none;
