@@ -11,10 +11,10 @@ html {
         @include custom-loading-bar($loadingBar);
 
         /// header/footer colors
-        @include header-footer-color-scheme($headerBg, $headerText, $footerBg, $footerText, $headerText);
+        @include header-footer-color-scheme($headerBg, $headerText, $footerBg, $footerText);
 
         /// navigation
-        @include navigation($menuActiveBg, $menuActiveText, $headerBg);
+        @include navigation($menuActiveBg, $menuActiveText, $headerBg, $headerText);
 
         /// action bar
         @include action-bar($actionBarBg, $actionBarText);
