@@ -14,7 +14,7 @@ html {
         @include header-footer-color-scheme($headerBg, $headerText, $footerBg, $footerText);
 
         /// navigation
-        @include navigation($menuActiveBg, $menuActiveText);
+        @include navigation($menuActiveBg, $menuActiveText, $headerBg, $headerText);
 
         /// action bar
         @include action-bar($actionBarBg, $actionBarText);

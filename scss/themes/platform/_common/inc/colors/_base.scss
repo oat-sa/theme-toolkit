@@ -11,32 +11,36 @@
 /// Backgrounds can be either a single color or a list with values for a gradient.
 /// Gradient format: ((color:#000[, position:0%])[,(...)])
 
-/// use these under the assumption that header and footer have identical color schemes...
-$mainBarBg: '';
-$mainBarText: '';
+$colorScheme: (
+	mainBarBg:      "",
+	mainBarText:    "",
+  menuActiveBg:   "",
+  menuActiveText: "",
+  loadingBar:     "",
+  actionBarBg:    "",
+  footerBg:       "",
+  footerText:     ""
+);
 
-/// ...otherwise set custom values for the header here...
-$headerBg: $mainBarBg;
-$headerText: $mainBarText;
+/// header
+$headerBg: map-get($colorScheme, 'mainBarBg');
+$headerText: map-get($colorScheme, 'mainBarText');
 
-/// ...and for the footer here
-$footerBg: $mainBarBg;
-$footerText: $mainBarText;
-
+/// footer
+$footerBg: map-get($colorScheme, 'footerBg');
+$footerText: map-get($colorScheme, 'footerText');
 
 /// main menu, hover etc. will be computed according to the formulas in _varieties.scss
-$menuActiveBg: '';
-$menuActiveText: $headerText;
-
+$menuActiveBg: map-get($colorScheme, 'menuActiveBg');
+$menuActiveText: map-get($colorScheme, 'menuActiveText');
 
 /// action bar
-$actionBarBg: $menuActiveBg;
-$actionBarText: $menuActiveText;
+$actionBarBg: map-get($colorScheme, 'actionBarBg');
+$actionBarText: map-get($colorScheme, 'mainBarBg');
 
 /// tabs
-$activeTabBg: $actionBarBg;
-$activeTabText: $actionBarText;
+$activeTabBg: map-get($colorScheme, 'actionBarBg');
+$activeTabText: map-get($colorScheme, 'mainBarBg');
 
-
-/// loading bar
-$loadingBar: '';
+/// loadingBar
+$loadingBar: map-get($colorScheme, 'loadingBar');

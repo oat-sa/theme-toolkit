@@ -62,19 +62,33 @@
 
 
 
+
+//.dark-bar nav li ul
+//.dark-bar nav li ul li a
 /// submenu
 /// @param {string} $menuActiveBg
-@mixin submenu ($menuActiveBg)  {
-    background: $menuActiveBg !important;
-    border-color: colorVariation($menuActiveBg, 'menu', 'active-bg') !important;
+/// @param {string} $menuActiveText
+/// @param {string} $headerBg
+/// @param {string} $headerText
+@mixin submenu ($menuActiveBg, $menuActiveText, $headerBg, $headerText)  {
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,.25);
+    background: $headerBg !important;
+    border-color: colorVariation($headerBg, 'menu', 'active-bg') !important;
     li {
-        background: colorVariation($menuActiveBg, 'menu', 'active-bg');
-        border-color: colorVariation($menuActiveBg, 'menu', 'active-bg');
-        a {
-            background: colorVariation($menuActiveBg, 'menu', 'active-bg');
+        background: colorVariation($headerBg, 'menu', 'active-bg');
+        border-color: colorVariation($headerBg, 'menu', 'active-bg');
+        &.active, &:hover {
+            a, .a {
+                color: colorVariation($menuActiveText, 'menu', 'hover-text');
+            }
+        }
+        a, .a {
+            color: colorVariation($headerText, 'menu', 'text');
+            background: colorVariation($headerBg, 'menu', 'active-bg');
             border: none;
             &:hover {
                 background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
+                color: colorVariation($menuActiveText, 'menu', 'hover-text');
             }
         }
     }
@@ -85,7 +99,9 @@
 /// navigation
 /// @param {string} $menuActiveBg
 /// @param {string} $menuActiveText
-@mixin navigation($menuActiveBg, $menuActiveText) {
+/// @param {string} $headerBg
+/// @param {string} $headerText
+@mixin navigation($menuActiveBg, $menuActiveText, $headerBg, $headerText) {
     @if($menuActiveBg != '' and $menuActiveText != '') {
         .dark-bar {
             nav {
@@ -95,7 +111,7 @@
                         text-shadow: inherit !important;
                     }
                     & > a, & > .a {
-                        color: colorVariation($menuActiveText, 'menu', 'text');
+                        color: colorVariation($headerText, 'menu', 'text');
                     }
                     &.active {
                         & > a, & > a:hover {
@@ -113,15 +129,15 @@
                         }
                     }
                     ul {
-                        @include submenu($menuActiveBg);
+                        @include submenu ($menuActiveBg, $menuActiveText, $headerBg, $headerText);
                     }
                 }
                 & > ul > li, & > .settings-menu > ul > li {
                     &:hover {
-                        & > a, & >.a, .reduced-menu-trigger {
+                        & > a, & >.a {
                             opacity: 1;
                             background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
-                            color: colorVariation($menuActiveText, 'menu', 'hover-text');
+                            color: colorVariation($headerText, 'menu', 'hover-text');
                         }
                     }
 
@@ -134,7 +150,7 @@
         /// & refers to body
         &.oversized-nav {
             &:not(.delivery-scope) {
-                @include theme-mobile-navi($menuActiveBg, $menuActiveText);
+                @include theme-mobile-navi($menuActiveBg, $menuActiveText, $headerBg, $headerText);
             }
         }
     }
@@ -144,33 +160,30 @@
 /// everything required for mobile navi
 /// @param {string} $menuActiveBg
 /// @param {string} $menuActiveText
-@mixin theme-mobile-navi ($menuActiveBg, $menuActiveText) {
-    @if($menuActiveBg != '' and $menuActiveText != '') {
+/// @param {string} $headerBg
+/// @param {string} $headerText
+@mixin theme-mobile-navi ($menuActiveBg, $menuActiveText, $headerBg, $headerText) {
+    @if($headerBg != '' and $menuActiveText != '') {
         .dark-bar {
             nav {
                 .settings-menu{
                     & > ul {
-                        @include submenu($menuActiveBg);
-                    }
-                    &:hover {
-                        .reduced-menu-trigger {
-                            background: colorVariation($menuActiveBg, 'menu', 'hover-bg');
-                        }
+                        @include submenu ($menuActiveBg, $menuActiveText, $headerBg, $headerText);
                     }
                     .reduced-menu-trigger {
-                        text-shadow: 1px 1px 1px autoTextShadowColor($menuActiveBg, $menuActiveText);
+                        text-shadow: 1px 1px 1px autoTextShadowColor($headerBg, $menuActiveText);
                         padding: 13px 10px 11px;
-                        color: colorVariation($menuActiveText, 'menu', 'text');
+                        color: colorVariation($headerText, 'menu', 'text');
                         &:hover {
-                            background: colorVariation($menuActiveBg, 'menu', 'bg');
-                            border-color: colorVariation($menuActiveBg, 'menu', 'bg');
+                            background: colorVariation($menuActiveBg, 'menu', 'hover-bg') !important;
+                            border-color: colorVariation($headerBg, 'menu', 'bg');
                             -webkit-transition: none;
                             transition: none;
                             transition-delay: unset;
                             opacity: 1;
                         }
                         [class^="icon-"], [class*=" icon-"] {
-                            color:colorVariation($menuActiveText, 'menu', 'text');
+                            color:colorVariation($headerText, 'menu', 'text') !important;
                             text-shadow: inherit !important;
                         }
                     }
