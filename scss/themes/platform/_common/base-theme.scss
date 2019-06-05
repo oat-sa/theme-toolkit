@@ -27,11 +27,6 @@ html {
         /// height of logo + margin must always be 64px to avoid jump effects
         #tao-main-logo {
         }
-
-        // scroll fix in iFrame for iOS
-        #qti-content {
-            -webkit-overflow-scrolling: touch;
-        }
     }
 }
 
