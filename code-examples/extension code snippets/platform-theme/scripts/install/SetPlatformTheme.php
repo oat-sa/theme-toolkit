@@ -20,9 +20,9 @@
 // replace __myExtensionId__
 namespace oat\__myExtensionId__\scripts\install;
 
+use common_report_Report as Report;
 use oat\oatbox\extension\InstallAction;
 use oat\__myExtensionId__\model\theme\PlatformDefault;// provided your theme class has that name
-use oat\oatbox\service\ServiceManager;
 use oat\tao\model\theme\ThemeService;
 
 /**
@@ -31,14 +31,20 @@ use oat\tao\model\theme\ThemeService;
  */
 class SetPlatformTheme extends InstallAction
 {
+    /**
+     * @param array $params
+     * @return \common_report_Report
+     * @throws \common_exception_Error
+     * @throws \oat\oatbox\service\exception\InvalidServiceManagerException
+     * @throws \common_Exception
+     */
     public function __invoke($params=array())
     {
-        $serviceManager = ServiceManager::getServiceManager();
-        $themeService = $serviceManager->get(ThemeService::SERVICE_ID);
-        
+        $themeService = $this->getServiceManager()->get(ThemeService::SERVICE_ID);
         $themeService->setTheme(new PlatformDefault());
-        $serviceManager->register(ThemeService::SERVICE_ID, $themeService);
 
-        return new \common_report_Report(\common_report_Report::TYPE_SUCCESS, 'Platform theme registered');
+        $this->getServiceManager()->register(ThemeService::SERVICE_ID, $themeService);
+
+        return new Report(Report::TYPE_SUCCESS, 'Platform theme successfully registered');
     }
 }
