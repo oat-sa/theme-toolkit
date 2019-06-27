@@ -22,15 +22,27 @@ namespace oat\__myExtensionId__\scripts\update;
 use \common_ext_ExtensionUpdater;
 use oat\__myExtensionId__\scripts\install\SetPlatformTheme;
 
-
+/**
+ * Class Updater for updating the extension
+ * @package oat\__myExtensionId__\scripts\update
+ */
 class Updater extends common_ext_ExtensionUpdater
 {
+    /**
+     * @param $initialVersion
+     * @return string|void
+     * @throws \common_Exception
+     * @throws \common_exception_Error
+     * @throws \oat\oatbox\service\exception\InvalidServiceManagerException
+     */
     public function update($initialVersion)
     {
         if ($this->isVersion('0.1.0')) { // <- current version according to manifest.php
 
-            $setPlatformTheme = new SetPlatformTheme();
-            $setPlatformTheme([]);
+            $themeInstallingScript = new SetPlatformTheme();
+            $themeInstallingScript->setServiceLocator($this->getServiceManager());
+
+            $this->addReport($themeInstallingScript());
 
             $this->setVersion('0.2.0'); // <- new version, update this in manifest.php too
         }
