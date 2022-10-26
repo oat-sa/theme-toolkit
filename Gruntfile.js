@@ -19,7 +19,7 @@ module.exports = function(grunt) {
             grunt.fail.fatal('Please select a profile: grunt compile -profile={PROFILE}');
         }
         if (!allProfiles[profile]) {
-            grunt.fail.fatal('Unknown profile ' + profile + '');
+            grunt.fail.fatal(`Unknown profile ${profile}`);
         }
         return allProfiles[profile];
     }
