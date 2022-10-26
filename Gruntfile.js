@@ -1,21 +1,30 @@
-var sass = require('sass');
+const sass = require('sass');
 
 module.exports = function(grunt) {
     'use strict';
 
-    var allProfiles;
-    var profile;
-
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
+    let allProfiles;
     try {
         allProfiles = require('./profiles.json');
     } catch (err) {
         grunt.fail.fatal('no profiles.json found. Please copy and customize profiles.json.dist');
     }
 
-    profile = getSelectedProfile(grunt);
+    function getSelectedProfile(grunt) {
+        const profile = grunt.option('profile');
+        if (!profile) {
+            grunt.fail.fatal('Please select a profile: grunt compile -profile={PROFILE}');
+        }
+        if (!allProfiles[profile]) {
+            grunt.fail.fatal('Unknown profile ' + profile + '');
+        }
+        return allProfiles[profile];
+    }
+
+    const profile = getSelectedProfile(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -65,17 +74,6 @@ module.exports = function(grunt) {
             }
         }
     });
-
-    function getSelectedProfile(grunt) {
-        var profile = grunt.option('p');
-        if (!profile) {
-            grunt.fail.fatal('Please select a profile: grunt compile -p={PROFILE}');
-        }
-        if (!allProfiles[profile]) {
-            grunt.fail.fatal('Unknown profile ' + profile + '');
-        }
-        return allProfiles[profile];
-    }
 
     grunt.registerTask('compile', 'Compile themes', ['clean:sass', 'sass:compile']);
     grunt.registerTask('dev', 'automatically recompile themes upon file change', ['watch:sass']);
