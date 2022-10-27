@@ -53,7 +53,7 @@
     }
 
         // in the case of list use a solid color from the middle of the list
-    @elseif (type-of($colors) == 'list') {
+    @else if (type-of($colors) == 'list') {
         $colors: nth($colors, floor(length($colors) / 2));
         @return map-get($colors, 'color');
     }
@@ -140,11 +140,11 @@
         $shadowColor: black;
     }
     // dark text / dark background
-    @elseif($fgBrightness <= 50 and $bgBrightness <= 50){
+    @else if($fgBrightness <= 50 and $bgBrightness <= 50){
         $shadowColor: white;
     }
     // dark text / light background
-    @elseif($fgBrightness <= 50 and $bgBrightness > 50){
+    @else if($fgBrightness <= 50 and $bgBrightness > 50){
         $shadowColor: white;
     }
 
