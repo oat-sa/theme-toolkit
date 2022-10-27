@@ -1,7 +1,20 @@
 {
-  "name": "theme-toolkit",
+  "name": "@oat-sa/theme-toolkit",
   "version": "0.1.0",
   "description": "CSS SDK for TAO",
+  "homepage": "https://github.com/oat-sa/theme-toolkit#readme",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oat-sa/theme-toolkit.git"
+  },
+  "keywords": [
+    "tao",
+    "core",
+    "sdk",
+    "fe",
+    "frontend"
+  ],
   "devDependencies": {
     "grunt": "^1.5.3",
     "grunt-contrib-clean": "^2.0.1",
