@@ -4,6 +4,10 @@
   "description": "CSS SDK for TAO",
   "homepage": "https://github.com/oat-sa/theme-toolkit#readme",
   "license": "GPL-2.0",
+  "scripts": {
+    "compile": "grunt compile -profile=$npm_config_profile",
+    "dev": "grunt dev -profile=$npm_config_profile"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oat-sa/theme-toolkit.git"
